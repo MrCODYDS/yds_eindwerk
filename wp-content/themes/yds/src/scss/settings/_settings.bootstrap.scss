@@ -1,0 +1,46 @@
+/*
+ *  Bootstrap
+ *  Tweak default variables from Bootstrap
+ */
+
+// Font Colors
+$primary: #5375aa;
+$secondary: #ff6e60;
+$light: #94adcb;
+$dark: #6d8ab7;
+$body-color: #30323d;
+$headings-color: #5375aa;
+
+// Font settings
+$font-family-base: 'Raleway', sans-serif;
+$font-weight-base: 300;
+$line-height-base: 1.75;
+
+$link-hover-decoration: none;
+
+// Button settings
+$btn-font-weight: 700;
+
+// Heading settings
+$headings-font-weight: 700;
+$headings-line-height: 1.1;
+
+$h1-font-size: 50px;
+$h2-font-size: 42px;
+$h3-font-size: 30px;
+$h4-font-size: 28px;
+$h5-font-size: 25px;
+$h6-font-size: 22px;
+
+// Activate RFS font-sizes
+$enable-responsive-font-sizes: true;
+
+// Custom spacers
+$spacer: 1rem;
+$spacers: (
+  6: ($spacer * 4.5),
+  7: ($spacer * 6),
+  8: ($spacer * 7.5),
+  9: ($spacer * 9),
+  10: ($spacer * 10.5)
+);

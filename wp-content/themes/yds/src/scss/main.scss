@@ -1,0 +1,9 @@
+//Settings - Override Bootstrap variables, add own settings (fonts, sizes, ...)
+@import 'settings/settings.bootstrap';
+
+// Bootstrap (default)
+@import './node_modules/bootstrap/scss/bootstrap';
+
+// Import components
+@import 'components/components.header';
+@import 'components/components.nav';
