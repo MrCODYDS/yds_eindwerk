@@ -19,7 +19,7 @@ ul {
 .contact-btn {
     a {
         color: $secondary;
-        border: 2px solid red;
+        border: 2px solid $secondary;
         border-radius: 10px;
         padding: .2rem 1rem;
     }
