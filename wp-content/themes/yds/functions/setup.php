@@ -15,3 +15,38 @@ add_action('after_setup_theme', function () {
     add_post_type_support('page', 'excerpt');
 
 });
+
+
+// Add base.php file
+
+function yds_template_path()
+{
+    return Yds_Wrapping::$main_template;
+}
+
+function yds_template_base()
+{
+    return Yds_Wrapping::$base;
+}
+
+class Yds_Wrapping
+{
+
+    static $main_template;
+
+    static $base;
+
+    static function wrap($template)
+    {
+        self::$main_template = $template;
+        self::$base = substr(basename(self::$main_template), 0, -4);
+        if ('index' == self::$base)
+            self::$base = false;
+        $templates = array('base.php');
+        if (self::$base)
+            array_unshift($templates, sprintf('base-%s.php', self::$base));
+        return locate_template($templates);
+    }
+}
+
+add_filter('template_include', array('Yds_Wrapping', 'wrap'), 99);
