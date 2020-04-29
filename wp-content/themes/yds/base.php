@@ -15,7 +15,7 @@
 <?php get_template_part('header'); ?>
 
 <main role="main">
-
+    <?php include yds_template_path(); ?>
 </main>
 
 <?php get_template_part('footer'); ?>

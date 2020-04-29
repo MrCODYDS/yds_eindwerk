@@ -1,7 +1,7 @@
 <?php
 $spacer_top = (get_field('spacing_top_editor')) ? 'pt-5 pt-md-4 pt-lg-5' : '';
 $spacer_bottom = (get_field('spacing_bottom_editor')) ? 'pb-5 pb-md-4 pb-lg-5' : '';
-$text_align = 'text-'.get_field('text_align_editor');
+$text_align = strtolower('text-'.get_field('text_align_editor'));
 $boxed = get_field('boxed_editor');
 $title = get_field('title_editor');
 $text = get_field('text_editor');
