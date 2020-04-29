@@ -44,7 +44,6 @@ $yds_blocks = array(
         'category' => 'yds-default',
         'icon' => 'image-filter',
     ),
-
 );
 
 /**
