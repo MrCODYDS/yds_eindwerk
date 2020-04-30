@@ -8,6 +8,14 @@ $text = get_field('text_hero');
 $cta = get_field('cta_button_hero');
 $cta_settings = get_field('cta_settings_hero');
 
+if ($text_align == "text-center") {
+    $col_display = "d-flex flex-column align-items-center";
+} else if ($text_align == "text-left") {
+    $col_display = "align-items-left";
+} else {
+    $col_display = "align-items-right";
+}
+
 ?>
 
 <section class="block b-hero <?= $text_align; ?>">
@@ -15,7 +23,7 @@ $cta_settings = get_field('cta_settings_hero');
     <div class="b-hero__content py-4 py-md-0">
         <div class="container">
             <div class="row">
-                <div class="col d-flex flex-column align-items-center">
+                <div class="col <?= $col_display ?>">
                     <?php if($title): ?>
                         <h1 class="b-hero__title mb-0"><?= $title; ?></h1>
                     <?php endif; ?>
