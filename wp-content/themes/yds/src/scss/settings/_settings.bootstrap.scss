@@ -15,6 +15,7 @@ $headings-color: #5375aa;
 $font-family-base: 'Oxygen', sans-serif;
 $font-weight-base: 300;
 $line-height-base: 1.75;
+$font-size-base: 1rem;
 
 $link-hover-decoration: none;
 
@@ -44,4 +45,27 @@ $spacers: (
   8: ($spacer * 7.5),
   9: ($spacer * 9),
   10: ($spacer * 10.5)
+);
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Extra extra large screen / extra wide desktop
+  xxl: 1560px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1500px,
 );

@@ -1,0 +1,18 @@
+/*
+ * Block: Flex
+ * Styling flex
+ */
+
+.block-flex {
+    background-color: $light;
+
+    h3, p {
+        color: $white;;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
