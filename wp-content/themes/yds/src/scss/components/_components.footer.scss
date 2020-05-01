@@ -3,12 +3,21 @@
  * Styling footer
  */
 
-.c-footer {
+.c-footer-top {
     background-color: $dark-blue;
 }
 
-.footer-top-content {
+.c-footer-top__content {
+    color: $white;
     h5 {
         color: $white;
+    }
+
+    li{
+        padding: 0;
+    }
+
+    p {
+        margin: 0;
     }
 }
