@@ -1,0 +1,12 @@
+/*
+ * Block: Text image
+ * Styling text image
+ */
+
+.b-text-image__image {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

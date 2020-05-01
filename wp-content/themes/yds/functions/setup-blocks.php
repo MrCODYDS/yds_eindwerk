@@ -31,11 +31,11 @@ $yds_blocks = array(
         'icon' => 'tagcloud',
     ),
     array(
-        'name' => 'block-editor',
-        'title' => __('Block Editor'),
-        'description' => __('A default editor block'),
+        'name' => 'block-text-image',
+        'title' => __('Block Text Image'),
+        'description' => __('A default text image block'),
         'category' => 'yds-default',
-        'icon' => 'edit',
+        'icon' => 'text',
     ),
     array(
         'name' => 'block-hero',
