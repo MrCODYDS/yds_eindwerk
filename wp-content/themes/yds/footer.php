@@ -1,5 +1,5 @@
 <footer class="c-footer">
-    <div class="c-footer-top py-5 py-md-4 py-lg-5">
+    <div class="c-footer-top py-2 py-md-4 py-lg-5">
         <div class="container">
             <div class="row">
                 <div class="c-footer-top__content col-3 d-flex justify-content-center">
@@ -55,11 +55,14 @@
             </div>
         </div>
     </div>
-    <div class="c-footer-bottom py-5 py-md-4 py-lg-5">
+    <div class="c-footer-bottom py-4">
         <div class="container">
-            <div class="footer-bottom row">
-                <div class="col">
+            <div class="row">
+                <div class="col d-flex justify-content-between">
                     <p>Copyright 2020 - Lorem ipsum dolor sit amet consectetur</p>
+                    <nav role="navigation" class="c-nav-legal">
+                        <?php wp_nav_menu(array('container' => 'ul', 'menu_class' => false, 'theme_location' => 'legal_navigation')); ?>
+                    </nav>
                 </div>
             </div>
         </div>

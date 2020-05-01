@@ -13,10 +13,23 @@
         color: $white;
     }
 
-    li{
+    ul, li {
         padding: 0;
     }
 
+    p {
+        margin: 0;
+    }
+}
+
+.c-footer-bottom {
+    background-color: $primary;
+    color: $white;
+
+    li {
+        padding-left: 2rem;
+    }
+    
     p {
         margin: 0;
     }

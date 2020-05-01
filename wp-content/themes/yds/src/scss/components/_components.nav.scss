@@ -2,13 +2,15 @@
  * Component: Nav
  * Styling navigation
  */
-
 ul {
+    list-style: none;
     display: flex;
+    margin: 0;
+}
+
+.c-nav-main ul {
     justify-content: flex-end;
     align-items: center;
-    list-style: none;
-    margin: 0;
     padding: 0;
 
     li {
@@ -27,13 +29,24 @@ ul {
 }
 
 .c-nav-footer {
+    ul {
+        padding: 0;
+    }
+    
     li {
         padding: 0;
+        margin-bottom: 5px;
 
         a {
         color: $white;
         border: none;
         padding: 0;
         }
+    }
+}
+
+.c-nav-legal {
+    a {
+        color: $white;
     }
 }

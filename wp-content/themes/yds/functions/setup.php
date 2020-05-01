@@ -8,6 +8,7 @@ add_action('after_setup_theme', function () {
 
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'yds'),
+        'legal_navigation' => __('Legal Navigation', 'yds'),
         'footer_navigation' => __('Footer Navigation', 'yds'),
     ]);
 
