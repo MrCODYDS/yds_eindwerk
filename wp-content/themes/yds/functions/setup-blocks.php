@@ -38,6 +38,13 @@ $yds_blocks = array(
         'icon' => 'text',
     ),
     array(
+        'name' => 'block-text-extra',
+        'title' => __('Block Text Extra'),
+        'description' => __('A default text extra block.'),
+        'category' => 'yds-default',
+        'icon' => 'text',
+    ),
+    array(
         'name' => 'block-hero',
         'title' => __('Block Hero'),
         'description' => __('A default hero block.'),
