@@ -25,3 +25,15 @@ ul {
         padding: .2rem 1rem;
     }
 }
+
+.c-nav-footer {
+    li {
+        padding: 0;
+
+        a {
+        color: $white;
+        border: none;
+        padding: 0;
+        }
+    }
+}

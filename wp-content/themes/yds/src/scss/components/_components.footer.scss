@@ -3,6 +3,12 @@
  * Styling footer
  */
 
-.footer-top__title {
-    font-size: 16px;
+.c-footer {
+    background-color: $dark-blue;
+}
+
+.footer-top-content {
+    h5 {
+        color: $white;
+    }
 }
