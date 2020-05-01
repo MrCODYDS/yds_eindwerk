@@ -29,11 +29,11 @@ if ($text_align == "text-center") {
                     <?php endif; ?>
 
                     <?php if($text): ?>
-                        <p><?= $text; ?></p>
+                        <p class="m-0"><?= $text; ?></p>
                     <?php endif; ?>
 
                     <?php if($cta): ?>
-                        <a href="<?= $cta_settings["cta_link_hero"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_hero"]; ?>">
+                        <a href="<?= $cta_settings["cta_link_hero"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_hero"]; ?> mt-2">
                             <?= $cta_settings["cta_text_hero"]; ?>
                         </a>
                     <?php endif; ?>
