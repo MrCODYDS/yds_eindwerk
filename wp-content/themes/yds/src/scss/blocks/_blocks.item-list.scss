@@ -1,0 +1,18 @@
+/*
+ * Block: Item List
+ * Styling item list
+ */
+
+ .b-item-list__circle {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    left: -250px;
+    background-color: $light-blue;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .b-item-list__image {
+      height: 500px;
+  }

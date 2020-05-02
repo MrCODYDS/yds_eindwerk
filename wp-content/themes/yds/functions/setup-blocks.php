@@ -51,6 +51,13 @@ $yds_blocks = array(
         'category' => 'yds-default',
         'icon' => 'image-filter',
     ),
+    array(
+        'name' => 'block-item-list',
+        'title' => __('Block Item List'),
+        'description' => __('A default item list block.'),
+        'category' => 'yds-default',
+        'icon' => 'list-view',
+    ),
 );
 
 /**
