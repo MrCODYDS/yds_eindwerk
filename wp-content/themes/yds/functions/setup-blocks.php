@@ -65,6 +65,13 @@ $yds_blocks = array(
         'category' => 'yds-default',
         'icon' => 'tagcloud',
     ),
+    array(
+        'name' => 'block-number-list',
+        'title' => __('Block Number List'),
+        'description' => __('A default numberlist block.'),
+        'category' => 'yds-default',
+        'icon' => 'list-view',
+    ),
 );
 
 /**
