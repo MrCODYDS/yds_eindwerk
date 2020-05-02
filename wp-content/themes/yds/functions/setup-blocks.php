@@ -58,6 +58,13 @@ $yds_blocks = array(
         'category' => 'yds-default',
         'icon' => 'list-view',
     ),
+    array(
+        'name' => 'block-team',
+        'title' => __('Block Team'),
+        'description' => __('A default team block.'),
+        'category' => 'yds-default',
+        'icon' => 'tagcloud',
+    ),
 );
 
 /**
