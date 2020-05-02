@@ -21,6 +21,10 @@
 
 <?php get_template_part('footer'); ?>
 <?php wp_footer(); ?>
-    
+
+<div class="hidden" hidden>
+    <?php include_once('src/sprites/icon-arrow.svg'); ?>
+</div>
+
 </body>
 </html>

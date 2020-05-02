@@ -4,6 +4,9 @@
 // Bootstrap (default)
 @import './node_modules/bootstrap/scss/bootstrap';
 
+// Elements
+@import 'elements/elements.page';
+
 // Import components
 @import 'components/components.header';
 @import 'components/components.nav';

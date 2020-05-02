@@ -3,16 +3,76 @@
  * Styling item list
  */
 
- .b-item-list__circle {
+.b-item-list__circle {
     position: absolute;
     height: 500px;
     width: 500px;
-    left: -250px;
+    right: -250px;
     background-color: $light-blue;
     border-radius: 50%;
     display: inline-block;
-  }
+}
 
-  .b-item-list__image {
-      height: 500px;
-  }
+.b-item-list__circle--left {
+    left: -250px;
+}
+
+
+.b-item-list__image {
+    height: 500px;
+}
+
+.b-item-list__item {
+    background-color: $secondary;
+    color: $white;
+
+    &:first-child {
+        margin-left: 20%;
+
+        @include media-breakpoint-down(lg) {
+            margin-left: 10%;
+        }
+    }
+    
+    &:nth-child(2) {
+        margin-left: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+        @include media-breakpoint-down(lg) {
+            margin-left: 5%;
+        }
+    }
+
+    h3 {
+        color: $white;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.b-item-list__item--right {
+    &:first-child {
+        margin-right: 20%;
+        margin-left: auto;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 10%;
+        }
+    }
+    
+    &:nth-child(2) {
+        margin-right: 10%;
+        margin-left: auto;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 5%;
+        }
+    }
+
+    &:last-child {
+        margin-left: auto;
+    }
+}
