@@ -3,6 +3,10 @@
  * Styling item list
  */
 
+.b-item-list {
+    overflow-x: hidden;
+}
+
 .b-item-list__circle {
     position: absolute;
     height: 500px;
