@@ -1,0 +1,37 @@
+/*
+ * Block: Text extra
+ * Styling text extra
+ */
+
+.b-text-extra__image {
+    img {
+        display: block;
+        width: 80%;
+        height: auto;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+}
+
+.b-text-extra__block {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    bottom: 0;
+    right: 0;
+    background-color: $light-blue;
+
+    @include media-breakpoint-down(lg) {
+        height: 50%;
+    }
+}
+
+.b-text-extra__block--right {
+    right: 0;
+}
+
+.b-text-extra__block--left {
+    left: 0;
+}
