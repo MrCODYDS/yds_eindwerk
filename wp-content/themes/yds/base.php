@@ -6,8 +6,7 @@
     <title><?php bloginfo('name'); ?></title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -23,7 +22,7 @@
 <?php wp_footer(); ?>
 
 <div class="hidden" hidden>
-    <?php include_once('src/sprites/icon-arrow.svg'); ?>
+    <?php include_once('src/sprites/sprites.svg'); ?>
 </div>
 
 </body>

@@ -32,9 +32,7 @@ $repeater = get_field('item_list_itemlist');
                                 <?php endif; ?>
                             </div>
                             <div>
-                                <svg class="icon icon-arrow" style="width: 25px; height: 13px;">
-                                    <use xlink:href="#Page-1"></use>
-                                </svg>
+                            <svg class="icon"><use xlink:href="#<?= $column['list_icon_itemlist'] ?>" /></svg>
                             </div>
                         </div>
                     <?php endforeach; ?>
