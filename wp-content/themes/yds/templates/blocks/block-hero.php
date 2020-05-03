@@ -34,7 +34,7 @@ if ($text_align == "text-center") {
 
                     <?php if($cta): ?>
                         <a href="<?= $cta_settings["cta_link_hero"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_hero"]; ?> mt-2">
-                            <?= $cta_settings["cta_text_hero"]; ?>
+                            <?= $cta_settings["cta_link_hero"]['title']; ?>
                         </a>
                     <?php endif; ?>
                 </div>

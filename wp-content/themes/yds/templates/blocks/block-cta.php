@@ -25,7 +25,7 @@ $cta_settings = get_field('cta_settings');
 
                 <?php if($cta): ?>
                     <a href="<?= $cta_settings['cta_link_cta']['url']; ?>" class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4">
-                        <?= $cta_settings['cta_text_cta']; ?>
+                        <?= $cta_settings['cta_link_cta']['title']; ?>
                     </a>
                 <?php endif; ?>
             </div>

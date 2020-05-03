@@ -28,7 +28,7 @@ $cta_settings = get_field('cta_settings_textextra');
 
                 <?php if($cta): ?>
                     <a href="<?= $cta_settings["cta_link_textextra"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_textextra"]; ?> mt-2">
-                        <?= $cta_settings["cta_text_textextra"]; ?>
+                        <?= $cta_settings["cta_link_textextra"]['title']; ?>
                     </a>
                 <?php endif; ?>
             </div>
