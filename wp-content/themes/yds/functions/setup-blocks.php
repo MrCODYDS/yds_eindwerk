@@ -35,14 +35,14 @@ $yds_blocks = array(
         'title' => __('Block Text Image'),
         'description' => __('A default text image block'),
         'category' => 'yds-default',
-        'icon' => 'text',
+        'icon' => 'format-image',
     ),
     array(
         'name' => 'block-text-extra',
         'title' => __('Block Text Extra'),
         'description' => __('A default text extra block.'),
         'category' => 'yds-default',
-        'icon' => 'text',
+        'icon' => 'format-gallery',
     ),
     array(
         'name' => 'block-hero',
@@ -63,14 +63,14 @@ $yds_blocks = array(
         'title' => __('Block Team'),
         'description' => __('A default team block.'),
         'category' => 'yds-default',
-        'icon' => 'tagcloud',
+        'icon' => 'groups',
     ),
     array(
         'name' => 'block-number-list',
         'title' => __('Block Number List'),
         'description' => __('A default numberlist block.'),
         'category' => 'yds-default',
-        'icon' => 'list-view',
+        'icon' => 'editor-ol',
     ),
 );
 
@@ -115,11 +115,6 @@ function yds_block_categories($categories, $post)
             array(
                 'slug' => 'yds-default',
                 'title' => __('Yds Default Blocks', 'yds'),
-                'icon' => 'wordpress',
-            ),
-            array(
-                'slug' => 'yds-custom',
-                'title' => __('Yds Custom Blocks', 'yds'),
                 'icon' => 'wordpress',
             ),
         )
