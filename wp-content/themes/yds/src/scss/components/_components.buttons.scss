@@ -1,0 +1,36 @@
+/*
+ * Components: Buttons
+ * Custom buttons styling
+ */
+
+.btn {
+    padding: .375rem 1.5rem;
+}
+
+.btn-secondary {
+    color: $white;
+}
+
+.btn-link {
+    color: $white;
+    padding-left: 0;
+}
+
+.btn-white {
+    background-color: $white;
+    border-color: $white;
+    color: $secondary;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: $dark;
+    color: $dark;
+    border-width: 2px;
+}
+
+.btn-dark {
+    background-color: $dark;
+    border-color: $dark;
+    color: $white;
+}
