@@ -11,7 +11,12 @@ $repeater = get_field('item_list_itemlist');
 <section class="block b-item-list <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
         <div class="row">
-            <div class="b-item-list__image col-md-7 col-lg-6 <?php if($icon_align == 'right'): ?>order-md-last offset-xl-1<?php endif; ?> d-flex flex-column justify-content-center mb-3 mb-lg-0">
+            <div class="b-item-list__image col-md-7 col-lg-6
+            <?php if($icon_align == 'right'): ?>
+                order-last offset-xl-1
+            <?php else: ?>
+                order-last order-md-first
+            <?php endif; ?> d-flex flex-column justify-content-center mb-3 mb-lg-0">
                 <div class="b-item-list__circle <?php if($icon_align == 'left'): ?>b-item-list__circle--left<?php endif; ?>"></div>
 
                 <div class="b-item-list__items">
