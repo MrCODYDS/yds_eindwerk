@@ -31,20 +31,20 @@
     color: $white;
 
     &:first-child {
-        margin-left: 20%;
+        margin-left: 8rem;
 
         @include media-breakpoint-down(lg) {
-            margin-left: 10%;
+            margin-left: 4rem;
         }
     }
     
     &:nth-child(2) {
-        margin-left: 10%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-left: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
 
         @include media-breakpoint-down(lg) {
-            margin-left: 5%;
+            margin-left: 2rem;
         }
     }
 
@@ -59,20 +59,20 @@
 
 .b-item-list__item--right {
     &:first-child {
-        margin-right: 20%;
+        margin-right: 8rem;
         margin-left: auto;
 
         @include media-breakpoint-down(lg) {
-            margin-right: 10%;
+            margin-right: 4rem;
         }
     }
     
     &:nth-child(2) {
-        margin-right: 10%;
+        margin-right: 4rem;
         margin-left: auto;
 
         @include media-breakpoint-down(lg) {
-            margin-right: 5%;
+            margin-right: 2rem;
         }
     }
 

@@ -2,10 +2,14 @@
  * Component: Nav
  * Styling navigation
  */
-ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
+.c-nav-main,
+.c-nav-footer,
+.c-nav-legal {
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+    }
 }
 
 .c-nav-main ul {
