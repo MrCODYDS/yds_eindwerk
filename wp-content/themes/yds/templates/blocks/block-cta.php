@@ -15,11 +15,11 @@ $cta_settings = get_field('cta_settings');
             <div class="col">
                 <div class="b-cta__content">
                     <?php if($title): ?>
-                        <h2><?= $title; ?></h2>
+                        <h2 class="m-0"><?= $title; ?></h2>
                     <?php endif; ?>
 
                     <?php if($text): ?>
-                        <p class="mx-0 mx-md-8"><?= $text; ?></p>
+                        <p class="mx-0 mx-md-8 my-3"><?= $text; ?></p>
                     <?php endif; ?>
                 </div>
 
