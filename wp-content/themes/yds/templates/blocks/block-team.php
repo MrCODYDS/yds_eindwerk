@@ -14,7 +14,7 @@ $amount = get_field('number_of_columns_team');
         <div class="row flex-column <?= $text_align; ?>">
             <div class="col">
                 <?php if($title): ?>
-                    <h2><?= $title; ?></h2>
+                    <h2 class="mb-3"><?= $title; ?></h2>
                 <?php endif; ?>
 
                 <?php if($text): ?>
