@@ -40,29 +40,13 @@ $repeater = get_field('item_list_itemlist');
             </div>
             <div class="col-md-5 col-lg-6 col-xl-5 <?php if($icon_align == 'left'): ?>offset-xl-1<?php endif; ?> d-flex flex-column justify-content-center">
                 <?php if($title): ?>
-                    <h2><?= $title; ?></h2>
+                    <h2 class="mb-3"><?= $title; ?></h2>
                 <?php endif; ?>
 
                 <?php if($text): ?>
-                    <p><?= $text; ?></p>
+                    <p class="m-0"><?= $text; ?></p>
                 <?php endif; ?>
             </div>
         </div>
     </div>
 </section>
-
-            <?php foreach($repeater as $column): ?>
-                <?php if($amount == '2'): ?><div class="col-sm-12 col-md-6"><?php endif; ?>
-                <?php if($amount == '3'): ?><div class="col-sm-12 col-md-4"><?php endif; ?>
-
-                    <?= wp_get_attachment_image($column['image_flex'], 'full', false, array("title" => get_the_title($column['image_flex']), 'class' => 'img-fluid mb-3')); ?>
-
-                    <?php if($column['title_flex']): ?>
-                        <h3><?= $column['title_flex']; ?></h3>
-                    <?php endif; ?>
-
-                    <?php if($column['text_flex']): ?>
-                        <p><?= $column['text_flex']; ?></p>
-                    <?php endif; ?>
-                </div>
-            <?php endforeach; ?>

@@ -19,15 +19,15 @@ $cta_settings = get_field('cta_settings_textextra');
             </div>
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start <?php if($image_align == 'left'): ?>offset-lg-1<?php endif; ?>">
                 <?php if($title): ?>
-                    <h2><?= $title; ?></h2>
+                    <h2 class="m-0"><?= $title; ?></h2>
                 <?php endif; ?>
 
                 <?php if($text): ?>
-                    <p><?= $text; ?></p>
+                    <p class="my-3"><?= $text; ?></p>
                 <?php endif; ?>
 
                 <?php if($cta): ?>
-                    <a href="<?= $cta_settings["cta_link_textextra"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_textextra"]; ?> mt-2">
+                    <a href="<?= $cta_settings["cta_link_textextra"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_textextra"]; ?>">
                         <?= $cta_settings["cta_link_textextra"]['title']; ?>
                     </a>
                 <?php endif; ?>
