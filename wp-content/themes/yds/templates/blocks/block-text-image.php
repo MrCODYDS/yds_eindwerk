@@ -11,7 +11,7 @@ $text = get_field('text_textimage');
 <section class="block b-text-image <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
         <div class="row">
-            <div class="b-text-image__image col-lg-5 <?php if($image_align == 'right'): ?>order-md-last offset-lg-1<?php endif; ?> d-flex align-items-center mb-3 mb-lg-0">
+            <div class="b-text-image__image col-lg-5 <?php if($image_align == 'right'): ?>order-lg-last offset-lg-1<?php endif; ?> d-flex align-items-center mb-3 mb-lg-0">
                 <?= wp_get_attachment_image($image, 'full', false, array("title" => get_the_title($image), 'class' => 'img-fluid')) ?>
             </div>
             <div class="col-lg-6 <?php if($image_align == 'left'): ?>offset-lg-1<?php endif; ?> d-flex flex-column justify-content-center">
