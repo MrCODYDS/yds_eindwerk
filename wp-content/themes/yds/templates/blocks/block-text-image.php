@@ -16,11 +16,11 @@ $text = get_field('text_textimage');
             </div>
             <div class="col-lg-6 <?php if($image_align == 'left'): ?>offset-lg-1<?php endif; ?> d-flex flex-column justify-content-center">
                 <?php if($title): ?>
-                    <h2><?= $title; ?></h2>
+                    <h2 class="mb-3"><?= $title; ?></h2>
                 <?php endif; ?>
 
                 <?php if($text): ?>
-                    <p><?= $text; ?></p>
+                    <p class="m-0"><?= $text; ?></p>
                 <?php endif; ?>
             </div>
         </div>
