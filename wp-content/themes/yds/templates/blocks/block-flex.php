@@ -18,11 +18,11 @@ $amount = get_field('number_of_columns_flex');
                     <?= wp_get_attachment_image($column['image_flex'], 'full', false, array("title" => get_the_title($column['image_flex']), 'class' => 'img-fluid mb-3')); ?>
 
                     <?php if($column['title_flex']): ?>
-                        <h3><?= $column['title_flex']; ?></h3>
+                        <h3 class="mb-3"><?= $column['title_flex']; ?></h3>
                     <?php endif; ?>
 
                     <?php if($column['text_flex']): ?>
-                        <p><?= $column['text_flex']; ?></p>
+                        <p class="m-0"><?= $column['text_flex']; ?></p>
                     <?php endif; ?>
                 </div>
             <?php endforeach; ?>
