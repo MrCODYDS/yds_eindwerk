@@ -10,10 +10,13 @@ $cta_settings = get_field('cta_settings_hero');
 
 if ($text_align == "text-center") {
     $col_display = "d-flex flex-column align-items-center";
+    $row_display = "justify-content-center";
 } else if ($text_align == "text-left") {
     $col_display = "align-items-left";
+    $row_display = "justify-content-start";
 } else {
     $col_display = "align-items-right";
+    $row_display = "justify-content-end";
 }
 
 ?>
@@ -22,14 +25,14 @@ if ($text_align == "text-center") {
     <div class="b-hero__img" style="background-image: url(<?= wp_get_attachment_image_url($image,  'full'); ?>)"></div>
     <div class="b-hero__content py-4 py-md-0">
         <div class="container">
-            <div class="row">
-                <div class="col <?= $col_display ?>">
+            <div class="row <?= $row_display; ?>">
+                <div class="col-8 <?= $col_display ?>">
                     <?php if($title): ?>
                         <h1 class="b-hero__title mb-0"><?= $title; ?></h1>
                     <?php endif; ?>
 
                     <?php if($text): ?>
-                        <p class="m-0"><?= $text; ?></p>
+                        <p class="my-3"><?= $text; ?></p>
                     <?php endif; ?>
 
                     <?php if($cta): ?>
