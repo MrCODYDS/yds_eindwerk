@@ -24,7 +24,7 @@ if ($text_align == "text-center") {
     <div class="c-hero__content py-4 py-md-0">
         <div class="container">
             <div class="row <?= $row_display; ?>">
-                <div class="col-8 <?= $col_display ?>">
+                <div class="col-lg-8 <?= $col_display ?>">
                     <?php if($title): ?>
                         <h1 class="c-hero__title mb-0"><?= $title; ?></h1>
                     <?php endif; ?>
