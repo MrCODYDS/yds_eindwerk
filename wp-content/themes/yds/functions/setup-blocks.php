@@ -72,6 +72,13 @@ $yds_blocks = array(
         'category' => 'yds-default',
         'icon' => 'editor-ol',
     ),
+    array(
+        'name' => 'block-form',
+        'title' => __('Block Form'),
+        'description' => __('A default form block.'),
+        'category' => 'yds-default',
+        'icon' => 'feedback',
+    ),
 );
 
 /**
