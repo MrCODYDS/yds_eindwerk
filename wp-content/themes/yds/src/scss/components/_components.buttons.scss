@@ -13,7 +13,14 @@
 
 .btn-link {
     color: $white;
-    padding-left: 0;
+    font-weight: 700;
+    padding: 0;
+    border-bottom: 1px solid $white;
+
+    &--primary {
+        color: $primary;
+        border-bottom: 1px solid $primary;
+    }
 }
 
 .btn-white {

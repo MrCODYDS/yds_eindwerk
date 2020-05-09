@@ -18,6 +18,8 @@
     <?php include yds_template_path(); ?>
 </main>
 
+<?php include 'templates/includes/reservation.php'; ?>
+
 <?php get_template_part('footer'); ?>
 <?php wp_footer(); ?>
 
