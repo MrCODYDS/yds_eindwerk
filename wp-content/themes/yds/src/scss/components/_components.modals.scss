@@ -36,6 +36,17 @@
     }
 }
 
+.form-part--hidden {
+    display: none;
+}
+
+.form-choices,
+.form-dates,
+.form-times,
+.form-people {
+    min-width: 400px;
+}
+
 .form-choices {
     &__content{
         display: flex;
@@ -53,5 +64,24 @@
         width: min-content;
         height: 200px;
         color: $white;
+    }
+}
+
+.form-times__sessions {
+    select {
+        border: 1px solid #4d5061;
+        border-radius: 8px;
+        padding: 5px;
+    }
+}
+
+.timeslots-box,
+.people-box {
+    text-align: center;
+
+    p {
+        border: 1px solid #4d5061;
+        border-radius: 8px;
+        padding: 5px;
     }
 }
