@@ -127,11 +127,37 @@
                     <div class="d-flex justify-content-between w-100 mt-5">
                         <div>
                             <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
-                            <button type="button" data-next="form-times" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                            <button type="button" data-previous="form-times" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
                         </div>
                         <div>
-                            <button type="button" data-next="form-choices" class="btn btn-link btn-link--primary btn-next">Volgende</button>
+                            <button type="button" data-next="form-final" class="btn btn-link btn-link--primary btn-next">Volgende</button>
                             <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-final form-part form-part--hidden">
+                    <p class="mb-3">Kloppen alle onderstaande gegevens?</p>
+                    <div>
+                        <div class="form-final-choices">
+                            <p>Uw keuze: <span>Individuele spelers</span</p>
+                        </div>
+                        <div class="form-final-choices">
+                            <p>Uw gekozen datum: <span>10/05/2020</span</p>
+                        </div>
+                        <div class="form-final-choices">
+                            <p>Uw gekozen tijd: <span>10uur - 12uur</span</p>
+                        </div>
+                        <div class="form-final-choices">
+                            <p>Uw gekozen aantal spelers: <span>3</span</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between w-100 mt-5">
+                        <div>
+                            <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
+                            <button type="button" data-previous="form-people" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Reserveren</button>
                         </div>
                     </div>
                 </div>
