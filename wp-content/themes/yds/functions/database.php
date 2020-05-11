@@ -3,7 +3,7 @@ function addTable() {
     global $wpdb;
 
     // Set table name
-    $table = $wpdb->prefix . 'user_registrations';
+    $table = $wpdb->prefix . 'user_reservations';
 
     $charset_collate = $wpdb->get_charset_collate();
 
@@ -12,7 +12,7 @@ function addTable() {
                 id INT(11) AUTO_INCREMENT,
                 user_id INT(11),
                 reservation_choice VARCHAR(255),
-                reservation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                reservation_date TIMESTAMP NULL DEFAULT NULL,
                 reservation_time VARCHAR(255),
                 reservation_people INT(11),
                 PRIMARY KEY(id)

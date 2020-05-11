@@ -17,7 +17,6 @@ document.querySelector('#show-modal')
 // Make sure that submit button does nothing
 document.querySelector('#reservation-form')
   .addEventListener('submit', (event) => {
-    event.preventDefault();
     toggleModal();
   })
 
@@ -100,7 +99,3 @@ function fillInEndScreen() {
      $('#final-date').text(dateValue);
   });
 }
-
-
-
-

@@ -1,7 +1,20 @@
 <?php
+    if (isset($_POST['insert'])) {
+        global $wpdb;
+        
+        $choice = $_POST['radioChoices'];
+        $timeslot = $_POST['radioTimeslots'];
+        $people = $_POST['radioPeople'];
 
-
-
+        $table = $wpdb->prefix . "user_reservations";
+       
+        $success=$wpdb->insert($table, array(
+            "user_id" => 1,
+            "reservation_choice" => $choice,
+            "reservation_time" => $timeslot,
+            "reservation_people" => $people
+        ));
+    }
 ?>
 
 <section>
@@ -169,7 +182,7 @@
                                 <button type="button" data-previous="form-people" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-primary">Reserveren</button>
+                                <input type="submit" name="insert" class="btn btn-primary" value="Reserveren">
                             </div>
                         </div>
                     </div>
