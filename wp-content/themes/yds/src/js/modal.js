@@ -34,6 +34,8 @@ document.querySelector('.modal__header span')
 function showNext(button) {
   hideAllFormParts();
 
+  fillInEndScreen();
+
   // Get data value
   const data = button.dataset.next;
 
@@ -75,13 +77,29 @@ function hideAllFormParts() {
   });
 }
 
+function fillInEndScreen() {
+  jQuery(document).ready(function ($) {
+    // Fill in selected choice
+    var choiceValue = $("input[name='radioChoices']:checked").val();
+    $('#final-choice').text(choiceValue);
 
+    // Fill in selected time
+    /*var selectedSession = $('select#selectTimes').children("option:selected").text();
+    $('#tijd').text(selectedSession);*/
 
+    // Fill in selected time
+    var timeValue = $("input[name='radioTimeslots']:checked").val();
+    $('#final-time').text(timeValue);
 
+    // Fill in selected persons
+    var peopleValue = $("input[name='radioPeople']:checked").val();
+    $('#final-people').text(peopleValue);
 
-
-
-
+    // Fill in selected date
+     var dateValue = $('#datepicker').val();
+     $('#final-date').text(dateValue);
+  });
+}
 
 
 

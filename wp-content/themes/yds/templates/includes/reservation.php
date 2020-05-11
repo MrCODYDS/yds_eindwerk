@@ -23,25 +23,33 @@
                 <h3 class="mb-5">Reservatie</h3>
                 <div class="form-choices form-part">
                     <p class="mb-3">Maak je keuze</p>
-                    <div class="row form-choices__content">
-                        <div class="form-choices__button col mr-5 mb-5">
+                    <div class="row form-choices__radio">
+                        <input type="radio" id="radioSpelers" name="radioChoices" value="Individuele spelers">
+                        <label for="radioSpelers" class="col mr-5 mb-5">
                             <svg class="icon"><use xlink:href="#badminton" /></svg>
                             <p class="mb-0 mt-4">Individuele spelers</p>
-                        </div>
-                        <div class="form-choices__button col mb-5">
+                        </label>
+
+                        <input type="radio" id="radioClubs" name="radioChoices" value="Clubs">
+                        <label for="radioClubs" class="col mb-5">
                             <svg class="icon"><use xlink:href="#medal" /></svg>
                             <p class="mb-0 mt-4">Clubs</p>
-                        </div>
+                        </label>
+
                         <div class="w-100"></div>
-                        <div class="form-choices__button col mr-5">
+                        <input type="radio" id="radioBedrijf" name="radioChoices" value="Bedrijfsuitje">
+                        <label for="radioBedrijf" class="col mr-5">
                             <svg class="icon"><use xlink:href="#business" /></svg>
                             <p class="mb-0 mt-4">Bedrijfsuitje</p>
-                        </div>
-                        <div class="form-choices__button col">
+                        </label> 
+
+                        <input type="radio" id="radioLorem" name="radioChoices" value="Lorem ipsum">
+                        <label for="radioLorem" class="col">
                             <svg class="icon"><use xlink:href="#badminton" /></svg>
                             <p class="mb-0 mt-4">Lorem ipsum</p>
-                        </div>
+                        </label>
                     </div>
+
                     <div class="w-100 text-right mt-5">
                         <button type="button" data-next="form-dates" class="btn btn-link btn-link--primary btn-next">Volgende</button>
                         <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
@@ -65,7 +73,7 @@
                     <div class="form-times__sessions row flex-column mb-5">
                         <div class="col">
                         <p class="mb-3">Kies de lengte van de sessie</p>
-                            <select name="sessions" id="sessions">
+                            <select name="sessions" id="selectTimes">
                                 <option value="" selected="selected" disabled hidden>Geen tijd gekozen</option>
                                 <option value="1">1 uur</option>
                                 <option value="2">2 uur</option>
@@ -74,21 +82,25 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-times__timeslots row flex-column">
+                    <div class="form-times__timeslots row">
                         <div class="col">
                             <p class="mb-3">Kies het tijdslot</p>
-                            <div class="row">
-                                <div class="timeslots-box col-4 mb-3">
-                                    <p class="m-0">08:00 - 10:00</p>
+                            <div class="row form-timeslots">
+                                <div class="col-auto mb-3">
+                                    <input type="radio" id="radiotimeslot1" name="radioTimeslots" value="08:00 - 10:00">
+                                    <label for="radiotimeslot1">08:00 - 10:00</label>
                                 </div>
-                                <div class="timeslots-box col-4 mb-3">
-                                    <p class="m-0">10:00 - 12:00</p>
+                                <div class="col-auto mb-3">
+                                    <input type="radio" id="radiotimeslot2" name="radioTimeslots" value="10:00 - 12:00">
+                                    <label for="radiotimeslot2">10:00 - 12:00</label>
                                 </div>
-                                <div class="timeslots-box col-4 mb-3">
-                                    <p class="m-0">12:00 - 14:00</p>
+                                <div class="col-auto mb-3">
+                                    <input type="radio" id="radiotimeslot3" name="radioTimeslots" value="12:00 - 14:00">
+                                    <label for="radiotimeslot3">12:00 - 14:00</label>
                                 </div>
-                                <div class="timeslots-box col-4 mb-3">
-                                    <p class="m-0">12:00 - 14:00</p>
+                                <div class="col-auto mb-3">
+                                    <input type="radio" id="radiotimeslot4" name="radioTimeslots" value="14:00 - 16:00">
+                                    <label for="radiotimeslot4">14:00 - 16:00</label>
                                 </div>
                             </div>
                         </div>
@@ -106,22 +118,22 @@
                 </div>
                 <div class="form-people form-part form-part--hidden">
                     <p class="mb-3">Kies het aantal personen</p>
-                    <div class="form-people row">
-                        <div class="col">
-                            <div class="row">
-                                <div class="people-box col-3 mb-3">
-                                    <p class="m-0">1</p>
-                                </div>
-                                <div class="people-box col-3 mb-3">
-                                    <p class="m-0">2</p>
-                                </div>
-                                <div class="people-box col-3 mb-3">
-                                    <p class="m-0">3</p>
-                                </div>
-                                <div class="people-box col-3 mb-3">
-                                    <p class="m-0">4</p>
-                                </div>
-                            </div>
+                    <div class="row form-amountpeople">
+                        <div class="col-auto mb-3">
+                            <input type="radio" id="radioPeople1" name="radioPeople" value="1">
+                            <label for="radioPeople1">1</label>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <input type="radio" id="radioPeople2" name="radioPeople" value="2">
+                            <label for="radioPeople2">2</label>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <input type="radio" id="radioPeople3" name="radioPeople" value="3">
+                            <label for="radioPeople3">3</label>
+                        </div>
+                        <div class="col-auto mb-3">
+                            <input type="radio" id="radioPeople4" name="radioPeople" value="4">
+                            <label for="radioPeople4">4</label>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between w-100 mt-5">
@@ -139,16 +151,16 @@
                     <p class="mb-3">Kloppen alle onderstaande gegevens?</p>
                     <div>
                         <div class="form-final-choices">
-                            <p>Uw keuze: <span>Individuele spelers</span</p>
+                            <p>Uw keuze: <span id="final-choice"></span</p>
                         </div>
-                        <div class="form-final-choices">
-                            <p>Uw gekozen datum: <span>10/05/2020</span</p>
+                        <div class="form-final-date">
+                            <p>Uw gekozen datum: <span id="final-date"></span</p>
                         </div>
-                        <div class="form-final-choices">
-                            <p>Uw gekozen tijd: <span>10uur - 12uur</span</p>
+                        <div class="form-final-time">
+                            <p>Uw gekozen tijd: <span id="final-time"></span</p>
                         </div>
-                        <div class="form-final-choices">
-                            <p>Uw gekozen aantal spelers: <span>3</span</p>
+                        <div class="form-final-people">
+                            <p>Uw gekozen aantal spelers: <span id="final-people"></span</p>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between w-100 mt-5">
@@ -161,7 +173,6 @@
                         </div>
                     </div>
                 </div>
-                <!--<button type="submit">Reserveren</button>-->
             </form>
         </div>
     </div>
