@@ -21,13 +21,13 @@
         display: flex;
         justify-content: flex-end;
         margin-right: -2rem;
-        margin-top: -1rem;
         cursor: pointer;
+        width: 100%;
     }
 
     &__dialog {
         background-color: $white;
-        padding: 2rem 4rem;
+        
 
         input[type=text] {
             width: 100%;
@@ -38,13 +38,6 @@
 
 .form-part--hidden {
     display: none;
-}
-
-.form-choices,
-.form-dates,
-.form-times,
-.form-people {
-    min-width: 400px;
 }
 
 .form-choices__radio {
@@ -69,6 +62,10 @@
         width: min-content;
         height: 200px;
         color: $white;
+
+        @include media-breakpoint-down(sm) {
+            height: 150px;
+        }
     }
 
     label:hover {

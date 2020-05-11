@@ -76,10 +76,10 @@
 }
 
 .ui-datepicker th {
-	padding: .7em .3em;
+	padding: .7rem .3rem;
 	text-align: center;
 	font-weight: bold;
-	border: 0;
+    border: 0;
 }
 
 .ui-datepicker tbody {
@@ -91,10 +91,14 @@
 
     span, a {
         display: block;
-        padding: 15px 25px;
+        padding: .7rem .8rem;
         text-align: center;
         text-decoration: none;
         color: $dark;
+
+        @include media-breakpoint-down(sm) {
+            padding: .7rem .4rem;
+        }
     }
 }
 
