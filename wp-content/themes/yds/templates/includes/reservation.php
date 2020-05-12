@@ -17,14 +17,6 @@
     }
 ?>
 
-<section>
-    <div class="d-flex justify-content-center my-5">
-        <button id="show-modal">Modal</button>
-    </div>
-</section>
-
-
-
 <div class="modal modal--hidden">
     <div class="row justify-content-center w-100">
         <div class="col-11 col-sm-9 col-lg-7 col-xl-5 col-xxl-4 modal__dialog py-3 px-4">

@@ -24,12 +24,19 @@ $cta_settings = get_field('cta_settings');
                 </div>
 
                 <?php if($cta): ?>
-                    <a href="<?= $cta_settings['cta_link_cta']['url']; ?>" class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4">
-                        <?= $cta_settings['cta_link_cta']['title']; ?>
-                    </a>
+                    <?php if($cta_settings['cta_reservation_cta']): ?>
+                        <button class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4 show-modal">
+                            <?= $cta_settings['cta_link_cta']['title']; ?>
+                        </button>
+                    <?php else: ?>
+                        <a href="<?= $cta_settings['cta_link_cta']['url']; ?>" class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4">
+                            <?= $cta_settings['cta_link_cta']['title']; ?>
+                        </a>
+                    <?php endif; ?>
                 <?php endif; ?>
             </div>
         </div>
 
     </div>
 </section>
+

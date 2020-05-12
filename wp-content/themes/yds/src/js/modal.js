@@ -10,9 +10,11 @@ const toggleModal = () => {
     document.querySelector('.form-choices').classList.remove('form-part--hidden');
 };
 
-// When clicked on button with id show-modal do a function
-document.querySelector('#show-modal')
-  .addEventListener('click', toggleModal);
+// Get all buttons with class show-modal & add function on click
+const buttonsModal = document.querySelectorAll('.show-modal');
+buttonsModal.forEach(function(button, index) {
+    button.addEventListener('click', toggleModal);
+});
 
 // Make sure that submit button does nothing
 document.querySelector('#reservation-form')
