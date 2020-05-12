@@ -34,6 +34,11 @@
     border-color: $dark;
     color: $dark;
     border-width: 2px;
+
+    &--blue {
+        border-color: $primary;
+        color: $primary;
+    }
 }
 
 .btn-dark {

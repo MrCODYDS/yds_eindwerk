@@ -1,0 +1,73 @@
+/*
+ * Components: Login
+ * Custom login styling
+ */
+
+.c-login {
+    background-color: $primary;
+}
+
+.c-login-content {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        background-color: $light-blue;
+        width: 70%;
+        height: 400px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+}
+
+.login-part-login {
+    height: 500px;
+    border-radius: 10px;
+
+    @include media-breakpoint-down(sm) {
+        height: 400px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input[type=text],
+    input[type=password] {
+        padding: .8rem;
+        border: 1px solid $light-blue;
+        border-radius: 10px;
+        width: 80%;
+    }
+}
+
+.login-part-register {
+    height: 500px;
+
+    @include media-breakpoint-down(sm) {
+        height: 200px;
+    }
+
+    .register-button {
+        @include media-breakpoint-down(sm) {
+            background-color: $white;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    a {
+        @include media-breakpoint-up(md) {
+            color: $white;
+            border-color: $white;
+        }
+    }
+}
+
+
+

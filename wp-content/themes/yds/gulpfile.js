@@ -6,6 +6,9 @@ gulp.task('sass', function (cb) {
     gulp.src('src/scss/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('dest/'));
+    gulp.src('login/**/*.scss')
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gulp.dest('dest/'));
     cb();
 });
 

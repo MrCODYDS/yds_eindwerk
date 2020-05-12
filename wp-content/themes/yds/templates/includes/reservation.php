@@ -18,7 +18,7 @@
 ?>
 
 <section>
-    <div>
+    <div class="d-flex justify-content-center my-5">
         <button id="show-modal">Modal</button>
     </div>
 </section>
