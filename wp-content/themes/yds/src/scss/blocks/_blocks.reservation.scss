@@ -5,17 +5,15 @@
 
 .b-reservation {
     background-color: $light-blue;
-}
-
-.b-reservation-image {
     overflow: hidden;
 }
 
-.b-reservation-image__asset {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transform: rotate(15deg);
-    width: 100%;
-    height: 130%;
+.b-reservation-image {
+    height: 1000px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    background: no-repeat center center;
+    transform: rotate(15deg) translateY(-50%);
 }
