@@ -65,7 +65,7 @@
 .c-nav-sub {
     li {
         border-right: 1px solid $dark;
-        line-height: 0;
+        line-height: 1;
 
         &:last-child {
             border: none;
@@ -73,6 +73,12 @@
     }
     
     a {
+        font-size: 0.875rem;
+    }
+
+    p {
+        color: $dark;
+        margin-bottom: 0;
         font-size: 0.875rem;
     }
 }

@@ -1,3 +1,9 @@
+<?php
+
+    global $current_user; wp_get_current_user();
+
+?>
+
 <header class="c-header">
     <div class="c-header__top py-1">
         <div class="container">
@@ -5,12 +11,20 @@
                 <div class="col-auto">
                     <nav class="c-nav-sub d-none d-lg-flex">
                         <ul>
-                            <li>
-                                <a href="/login" class="btn btn-link btn-link--dark">Sign In</a>
-                            </li>
-                            <li>
-                                <a href="/register" class=" btn btn-link btn-link--dark">Sign Up</a>
-                            </li>
+                            <?php if(is_user_logged_in()): ?>
+                                <li>
+                                    <a href="/wp-login.php?action=logout" class="btn btn-link btn-link--dark">
+                                        <?php echo "Hi, " . $current_user->user_login ?>
+                                    </a>
+                                </li>
+                            <?php else: ?>
+                                <li>
+                                    <a href="/login" class="btn btn-link btn-link--dark">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="/register" class=" btn btn-link btn-link--dark">Sign Up</a>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     </nav>
                 </div>
