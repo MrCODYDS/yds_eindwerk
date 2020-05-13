@@ -4,10 +4,16 @@
  */
 
 .b-team {
-    background-color: $light-blue;
-    color: $white;
+    color: $primary;
 
-    h2, h3 {
+    &--lightblue {
+        background-color: $light-blue;
         color: $white;
-    }
+
+        h2, h3 {
+            color: $white;
+        }
+    }    
+
+    
 }
