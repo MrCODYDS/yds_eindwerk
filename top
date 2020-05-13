@@ -1,0 +1,232 @@
+[33mcommit b5ba51ef56f2930d759ab58902e37cc7e5488468[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jef Aerts <jef.aerts@intracto.com>
+Date:   Wed May 13 15:04:53 2020 +0200
+
+    YDS: Changed reservation background image
+
+[33mcommit 4623b643147f915fe987465c3bcc28c83957f1ed[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Wed May 13 14:11:39 2020 +0200
+
+    added reservation block & styled
+
+[33mcommit b7348842c71b8d00a148181bdcce26c028c8732e[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Wed May 13 09:54:48 2020 +0200
+
+    added scss file for hamburger menu
+
+[33mcommit c9550f6a8168d694ad7cab5b6b20f26af061dd42[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Wed May 13 09:51:41 2020 +0200
+
+    added signup & signin button in nav & added hamburger basic button
+
+[33mcommit 5963d57b9c7b297a392d6b6da4d480b35b2f440f[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Tue May 12 21:10:39 2020 +0200
+
+    added reservation button option for block-CTA
+
+[33mcommit 6302e2272b8be0765fa377dcd98d502ea493b8f6[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Tue May 12 19:57:42 2020 +0200
+
+    added registerpage & styling
+
+[33mcommit 5161e3f51be1583c43764d8da1d57b4a01e4e8c3[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Tue May 12 17:32:52 2020 +0200
+
+    created custom login-page with styling & added blue variant of btn-outline
+
+[33mcommit 6ecab0f9d03e1cbbef118974f8c5df7422b8ae3d[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 11 20:09:49 2020 +0200
+
+    adding responsiveness for modals
+
+[33mcommit b0ce64c1186057a230a92cd19ae86c267a7b4e9a[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 11 19:36:04 2020 +0200
+
+    added database value transfer after submit
+
+[33mcommit ed05ed36afd70c1544221bea357fce0bf2484711[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 11 17:56:03 2020 +0200
+
+    added correct "add table function"
+
+[33mcommit c7252616938e648c059be32f225867ef469404be[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 11 17:27:30 2020 +0200
+
+    database add table try
+
+[33mcommit 193d817dd25d06354c750d5ca6ec99d0465ac0cd[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 11 15:24:13 2020 +0200
+
+    added styling for modals
+
+[33mcommit 0049fdb9661f19ffb6f1c1ccb57c50a4635c713b[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 11 14:57:36 2020 +0200
+
+    added final-screen modal to show all selected options in form before submit
+
+[33mcommit 74365be0717d0b02a6d1de3bb026c9f3c91bddff[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 10 20:09:37 2020 +0200
+
+    added function for btn-previous & added comments for js files
+
+[33mcommit 67bbea0231a86039abd9619ce75b927c20ebd95e[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 10 15:35:31 2020 +0200
+
+    added modals & functions for next
+
+[33mcommit 66b5eb00ba988fd72070f6d35d5d9e0f342331bd[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sat May 9 20:22:32 2020 +0200
+
+    added first implementation of reservation system
+    
+    - added to base file
+    - added calendar.js & changed asset include names
+    - added main.js with modal script
+    - changed btn-link styling
+    - added styling for calendar
+    - added arrow icon
+    - added modal styling
+
+[33mcommit d92bc7f87d0001343bf83adc453e3aae5fb25070[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Tue May 5 19:18:59 2020 +0200
+
+    added form block
+
+[33mcommit 029977b762eba9ff1080a24c5e9774577d9a8390[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:47:43 2020 +0200
+
+    changed loop for checking number amount block-number-list
+
+[33mcommit 94a3a96f6d79c731831df0649b21bfa8a68c127c[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:36:12 2020 +0200
+
+    added spacing block-text-area & block-item-list
+
+[33mcommit e2a5087c2ff07ad12e3490cbca555a2596f83081[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:31:24 2020 +0200
+
+    added spacing block-cta
+
+[33mcommit 8df8d624c25e47f1c6a5a827b2fad7fbb2be4a54[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:29:38 2020 +0200
+
+    added spacing on title block-team
+
+[33mcommit 2814eaf36c94813b5e342825f8afedfa63cac53e[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:27:55 2020 +0200
+
+    changed order for reponsiveness block-text-image
+
+[33mcommit e0987c19d24b95a15d2a07baf124855439b485a0[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:26:40 2020 +0200
+
+    fixed col responsiveness on hero block & hero
+
+[33mcommit 44a8ca79e0e200eec66e2ab0cd8e89c5d9b24692[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:25:23 2020 +0200
+
+    added spacing block-flex
+
+[33mcommit 8126881256ab05c65b2ace783b197d0f64e4141c[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:24:09 2020 +0200
+
+    added spacing block-text-image
+
+[33mcommit 5bc040cb4d2603f7c8b14fa2db39e7b72186423e[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Mon May 4 14:22:09 2020 +0200
+
+    added hero for front-page & changed text-align option for hero and hero-block
+
+[33mcommit 047cd88e17810a208124aebe09443ef4756faf1e[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 18:15:44 2020 +0200
+
+    changed nav margin percentage to rem
+
+[33mcommit eec2064232b290e8d448d968e0174dbe97d1594a[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 18:04:12 2020 +0200
+
+    changed icons for blocks & deleted yds-custom
+
+[33mcommit 1147d01056ec167e34d0e4816b83dba483d35874[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 17:57:48 2020 +0200
+
+    adding feedback header col-auto
+
+[33mcommit df157c509e2f961075506d837ade7d36d2d4f66f[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 17:47:15 2020 +0200
+
+    adding svg icons & styling & changed font link
+
+[33mcommit b83b3682432a6c429bd3d2b4a8cc8d4a1fdc5846[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 16:00:32 2020 +0200
+
+    added styling for buttons
+
+[33mcommit e75a6fe03474391d2771470b1756ee1452f1c5ba[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 15:19:46 2020 +0200
+
+    added number per item option
+
+[33mcommit 8e9befd4b657016683f4f1332e947d433dededa6[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 14:56:36 2020 +0200
+
+    Changed CTA option for blocks
+
+[33mcommit eb31aad66e011ce790f5cc62c487dc3596fd3aec[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sun May 3 14:41:39 2020 +0200
+
+    Changed styling block-hero & added responsiveness block-itemlist
+
+[33mcommit 5f4a6c55fce91a224ae823ddf0e8ea561adc23e8[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sat May 2 21:31:55 2020 +0200
+
+    added block-number-list & styling & responsiveness
+
+[33mcommit 189eac0530fa8cace54099d0af607c4cb7e88cff[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sat May 2 19:47:22 2020 +0200
+
+    added block-team & styling & responsiveness
+
+[33mcommit 5d645b9f4bd2a030e4616acfa432698f96f5d2dd[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.noreply.github.com>
+Date:   Sat May 2 16:58:57 2020 +0200
+
+    added block-cta & styling & responsiveness
+
+[33mcommit 9e4c51887c3abd137d964ccf0281f991e427034d[m
+Author: Yarne De Smet <32762817+MrCODYDS@users.
