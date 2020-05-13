@@ -11,14 +11,14 @@ $amount = get_field('number_of_columns_team');
 ?>
 <div class="block b-team <?php if($background): ?>b-team--lightblue<?php endif; ?> <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
-        <div class="row flex-column <?= $text_align; ?>">
+        <div class="row flex-column <?= $text_align; ?> mb-4">
             <div class="col">
                 <?php if($title): ?>
-                    <h2 class="mb-5"><?= $title; ?></h2>
+                    <h2><?= $title; ?></h2>
                 <?php endif; ?>
 
                 <?php if($text): ?>
-                    <p class="mb-4"><?= $text; ?></p>
+                    <p><?= $text; ?></p>
                 <?php endif; ?>
             </div>
         </div>

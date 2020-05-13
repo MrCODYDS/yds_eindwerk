@@ -16,10 +16,16 @@
     font-weight: 700;
     padding: 0;
     border-bottom: 1px solid $white;
+    border-radius: 0;
 
     &--primary {
         color: $primary;
         border-bottom: 1px solid $primary;
+    }
+
+    &--dark {
+        color: $dark;
+        border: none;
     }
 }
 
@@ -38,6 +44,11 @@
     &--blue {
         border-color: $primary;
         color: $primary;
+    }
+    
+    &--secondary {
+        border-color: $secondary;
+        color: $secondary;
     }
 }
 

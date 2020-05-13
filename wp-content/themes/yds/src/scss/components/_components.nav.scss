@@ -4,7 +4,8 @@
  */
 .c-nav-main,
 .c-nav-footer,
-.c-nav-legal {
+.c-nav-legal,
+.c-nav-sub {
     ul {
         list-style: none;
         display: flex;
@@ -12,7 +13,8 @@
     }
 }
 
-.c-nav-main ul {
+.c-nav-main ul,
+.c-nav-sub ul {
     justify-content: flex-end;
     align-items: center;
     padding: 0;
@@ -20,6 +22,14 @@
     li {
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+}
+
+.btn-contact {
+    a {
+        @extend .btn;
+        @extend .btn-outline;
+        @extend .btn-outline--secondary;
     }
 }
 
@@ -49,5 +59,20 @@
 .c-nav-legal {
     a {
         color: $white;
+    }
+}
+
+.c-nav-sub {
+    li {
+        border-right: 1px solid $dark;
+        line-height: 0;
+
+        &:last-child {
+            border: none;
+        }
+    }
+    
+    a {
+        font-size: 0.875rem;
     }
 }
