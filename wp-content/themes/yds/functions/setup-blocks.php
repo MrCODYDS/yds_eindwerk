@@ -79,6 +79,13 @@ $yds_blocks = array(
         'category' => 'yds-default',
         'icon' => 'feedback',
     ),
+    array(
+        'name' => 'block-reservation',
+        'title' => __('Block Reservation'),
+        'description' => __('A default reservation block.'),
+        'category' => 'yds-default',
+        'icon' => 'tickets-alt',
+    ),
 );
 
 /**
