@@ -13,7 +13,7 @@ $cta_settings = get_field('cta_settings_reservation');
 
 <section class="block b-reservation">
     <div class="container position-relative">
-        <div class="d-none d-lg-block b-reservation-image <?php if($image_align == 'right'): ?> b-reservation-image--right<?php endif; ?>" style="background-image: url(<?= $image_url; ?>)"></div>
+        <div class="d-none d-lg-block b-reservation-image" style="background-image: url(<?= $image_url; ?>)"></div>
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
                 <?php if($title): ?>
