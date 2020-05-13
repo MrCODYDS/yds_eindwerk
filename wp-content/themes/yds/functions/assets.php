@@ -20,6 +20,9 @@ function load_assets() {
     
     // Include calendar.js
     wp_enqueue_script('calendar-js', get_template_directory_uri() . '/src/js/calendar.js', array(), false, true );
+
+    // Include hamburger.js
+    wp_enqueue_script('hamburger-js', get_template_directory_uri() . '/src/js/hamburger.js', array(), false, true );
 }
 
 add_action('wp_enqueue_scripts', 'load_assets');
