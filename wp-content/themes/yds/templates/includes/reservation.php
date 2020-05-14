@@ -1,21 +1,28 @@
 <?php
-    if (isset($_POST['insert'])) {
-        global $wpdb;
-        
+
+    global $current_user;
+    global $wpdb;
+
+    if (isset($_POST['insert'])) {    
         $choice = $_POST['radioChoices'];
         $timeslot = $_POST['radioTimeslots'];
         $people = $_POST['radioPeople'];
+        $userId = $current_user->ID;
 
         $table = $wpdb->prefix . "user_reservations";
        
         $success=$wpdb->insert($table, array(
-            "user_id" => 1,
+            "user_id" => $userId,
             "reservation_choice" => $choice,
             "reservation_time" => $timeslot,
             "reservation_people" => $people
         ));
     }
+
+    $con = mysqli_connect('localhost', 'root', '', 'yds_eindwerk');
 ?>
+
+
 
 <div class="modal modal--hidden">
     <div class="row justify-content-center w-100">
@@ -184,3 +191,35 @@
     </div>
 </div>
 
+
+
+<form>
+    <select name="users" onchange="showUser(this.value)">
+        <option value="">Select a person:</option>
+        <option value="1">Peter Griffin</option>
+        <option value="2">Lois Griffin</option>
+        <option value="3">Joseph Swanson</option>
+        <option value="4">Glenn Quagmire</option>
+    </select>
+</form>
+<br>
+<div id="txtHint"><b>Person info will be listed here...</b></div>
+
+<script>
+function showUser(str) {
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+
+    xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getuser.php?q="+str,true);
+    xmlhttp.send();
+  }
+}
+</script>
