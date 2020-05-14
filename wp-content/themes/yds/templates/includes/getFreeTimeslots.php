@@ -1,35 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table, td, th {
-  border: 1px solid black;
-  padding: 5px;
-}
-
-th {text-align: left;}
-</style>
-</head>
-<body>
-
 <?php
 
+// Get connection with database & select all records in wp_user_reservations
 $con = mysqli_connect('localhost','root','','yds_eindwerk');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
-
 mysqli_select_db($con,"yds_eindwerk");
 $sql = "SELECT * FROM wp_user_reservations";
 $result = mysqli_query($con,$sql);
 
-
-$numbers = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23);
+// Fill numbers with hours
+$numbers = array();
+for ($i = 0; $i < 24; $i++) {
+    $numbers[] = $i;
+}
 
 // Get all rows and combine them with a "," between
 $combined = "";
@@ -47,16 +31,12 @@ foreach ($exploded as $single) {
     }
 }
 
-
-echo "<table><tr><th>Free hour</th></tr>";
-
 foreach ($numbers as $number) {
-    echo "<tr>";
-    echo "<td>" . $number . "</td>";
-    echo "</tr>";
+    echo '<div class="col-auto mb-3">';
+    echo '<input type="radio" id="radiotimeslot' . $number . '" name="radioTimeslots" value="' . $number .'">';
+    echo '<label for="radiotimeslot' . $number . '">'. $number . '</label>';
+    echo '</div>';
 }
-
-echo "</table>";
 
 mysqli_close($con);
 ?>

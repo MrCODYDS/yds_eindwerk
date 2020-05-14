@@ -24,8 +24,6 @@ function load_assets() {
     // Include hamburger.js
     wp_enqueue_script('hamburger-js', get_template_directory_uri() . '/src/js/hamburger.js', array(), false, true );
 
-    // Include reservation.js
-    wp_enqueue_script('reservation-js', get_template_directory_uri() . '/src/js/reservation/reservation.js', array(), false, true );
 }
 
 add_action('wp_enqueue_scripts', 'load_assets');

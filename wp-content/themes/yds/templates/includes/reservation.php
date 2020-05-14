@@ -95,24 +95,7 @@
                         <div class="form-times__timeslots row">
                             <div class="col">
                                 <hr class="hr-text mt-0 mb-3" data-content="Kies het tijdslot">
-                                <div class="form-timeslots row justify-content-center">
-                                    <div class="col-auto mb-3">
-                                        <input type="radio" id="radiotimeslot1" name="radioTimeslots" value="08:00 - 10:00">
-                                        <label for="radiotimeslot1">08:00 - 10:00</label>
-                                    </div>
-                                    <div class="col-auto mb-3">
-                                        <input type="radio" id="radiotimeslot2" name="radioTimeslots" value="10:00 - 12:00">
-                                        <label for="radiotimeslot2">10:00 - 12:00</label>
-                                    </div>
-                                    <div class="col-auto mb-3">
-                                        <input type="radio" id="radiotimeslot3" name="radioTimeslots" value="12:00 - 14:00">
-                                        <label for="radiotimeslot3">12:00 - 14:00</label>
-                                    </div>
-                                    <div class="col-auto mb-3">
-                                        <input type="radio" id="radiotimeslot4" name="radioTimeslots" value="14:00 - 16:00">
-                                        <label for="radiotimeslot4">14:00 - 16:00</label>
-                                    </div>
-                                </div>
+                                <div class="form-timeslots row justify-content-center" id="entreeTimeslots"></div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">
@@ -188,3 +171,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    showUser();
+    function showUser() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("entreeTimeslots").innerHTML = this.responseText;
+            }
+        };
+
+        xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php",true);
+        xmlhttp.send();
+    }
+</script>
