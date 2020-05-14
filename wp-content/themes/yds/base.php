@@ -19,6 +19,7 @@
 </main>
 
 <?php include 'templates/includes/reservation.php'; ?>
+<?php include 'templates/includes/testdatabase.php'; ?>
 
 <?php get_template_part('footer'); ?>
 <?php wp_footer(); ?>
