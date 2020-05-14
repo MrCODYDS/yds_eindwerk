@@ -3,11 +3,31 @@
     global $current_user;
     global $wpdb;
 
-    if (isset($_POST['insert'])) {    
+    
+    if (isset($_POST['insert'])) {
         $choice = $_POST['radioChoices'];
-        $timeslot = $_POST['radioTimeslots'];
         $people = $_POST['radioPeople'];
+        $session = $_POST['sessions'];
         $userId = $current_user->ID;
+
+        // Check which session is chosen and add length to database
+        switch($session) {
+            case 1:
+                $timeslot = $_POST['radioTimeslots'];
+            break;
+            case 2:
+                $value = $_POST['radioTimeslots'];
+                $timeslot = $value . "," . ($value+1);
+            break;
+            case 3:
+                $value = $_POST['radioTimeslots'];
+                $timeslot = $value . "," . ($value+1) . "," . ($value+2);
+            break;
+            case 4:
+                $value = $_POST['radioTimeslots'];
+                $timeslot = $value . "," . ($value+1) . "," . ($value+2) . "," . ($value+3);
+            break;
+        }
 
         $table = $wpdb->prefix . "user_reservations";
        
@@ -83,7 +103,7 @@
                         <div class="form-times__sessions row flex-column mb-5">
                             <div class="col text-center">
                                 <hr class="hr-text mt-0 mb-3" data-content="Kies de lengte van de sessie">
-                                <select name="sessions" id="selectTimes">
+                                <select name="sessions" id="selectTimes" onchange="showUser()">
                                     <option value="" selected="selected" disabled hidden>Geen tijd gekozen</option>
                                     <option value="1">1 uur</option>
                                     <option value="2">2 uur</option>
@@ -173,8 +193,8 @@
 </div>
 
 <script>
-    showUser();
     function showUser() {
+
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
