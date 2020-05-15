@@ -1,44 +1,45 @@
 <?php
 
-// Get connection with database & select all records in wp_user_reservations
-$con = mysqli_connect('localhost','root','','yds_eindwerk');
-if (!$con) {
-  die('Could not connect: ' . mysqli_error($con));
-}
-mysqli_select_db($con,"yds_eindwerk");
-$sql = "SELECT * FROM wp_user_reservations";
-$result = mysqli_query($con,$sql);
+include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
 
-// Fill numbers with hours
-$numbers = array();
+global $wpdb;
+
+
+$sql = "SELECT * FROM wp_user_reservations";
+$result = $wpdb->get_results($sql);
+
+
+
+
+// Fill  hours
+$hours = array();
 for ($i = 0; $i < 24; $i++) {
-    $numbers[] = $i;
+    $hours[] = $i;
 }
 
 // Get all rows and combine them with a "," between
 $combined = "";
-while($row = mysqli_fetch_array($result)) {
-    $combined = $combined . "," . $row['reservation_time'];    
+foreach ($result as $row) {
+    $combined = $combined . "," . $row->reservation_time;    
 }
 
 // Explode string at every ","
 $exploded = explode(",",$combined);
 
-// Check which hours are already taken and delete them out of $numbers array
+// Check which hours are already taken and delete them out of $hours array
 foreach ($exploded as $single) {
-    if (in_array($single, $numbers)) {
-        unset($numbers[$single]);
+    if (in_array($single, $hours)) {
+        unset($hours[$single]);
     }
 }
 
-foreach ($numbers as $number) {
+foreach ($hours as $hour) {
     echo '<div class="col-auto mb-3">';
-    echo '<input type="radio" id="radiotimeslot' . $number . '" name="radioTimeslots" value="' . $number .'">';
-    echo '<label for="radiotimeslot' . $number . '">'. $number . '</label>';
+    echo '<input type="radio" id="radiotimeslot' . $hour . '" name="radioTimeslots" value="' . $hour .'">';
+    echo '<label for="radiotimeslot' . $hour . '">'. $hour . '</label>';
     echo '</div>';
 }
 
-mysqli_close($con);
 ?>
 </body>
 </html>

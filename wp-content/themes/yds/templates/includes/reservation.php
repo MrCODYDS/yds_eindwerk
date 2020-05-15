@@ -3,7 +3,6 @@
     global $current_user;
     global $wpdb;
 
-    
     if (isset($_POST['insert'])) {
         $choice = $_POST['radioChoices'];
         $people = $_POST['radioPeople'];

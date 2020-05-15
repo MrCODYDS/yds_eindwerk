@@ -101,3 +101,12 @@ function fillInEndScreen() {
      $('#final-date').text(dateValue);
   });
 }
+
+jQuery(document).ready(function ($) {
+  $("#datepicker").datepicker({
+    dateFormat: "dd-mm-yy",
+    onSelect: function(dateText, inst) { 
+      console.log(dateText);
+    }
+  });
+});
