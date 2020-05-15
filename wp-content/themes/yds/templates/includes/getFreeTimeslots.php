@@ -3,8 +3,10 @@
 include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
 
 global $wpdb;
+$q = $_GET['q'];
 
-$sql = "SELECT * FROM wp_user_reservations";
+// Get all rows from wp_users_reservations where reservation_date is equal to selected date
+$sql = "SELECT * FROM wp_user_reservations WHERE reservation_date = '" . $q . "'";
 $result = $wpdb->get_results($sql);
 
 // Fill  hours
@@ -15,9 +17,12 @@ for ($i = 0; $i < 24; $i++) {
 
 // Get all rows and combine them with a "," between
 $combined = "";
+$dates_in_use = array();
+
 foreach ($result as $row) {
     $combined = $combined . "," . $row->reservation_time;    
 }
+
 
 // Explode string at every ","
 $exploded = explode(",",$combined);
@@ -36,6 +41,5 @@ foreach ($hours as $hour) {
     echo '</div>';
 }
 
+
 ?>
-</body>
-</html>

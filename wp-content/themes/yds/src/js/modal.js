@@ -97,18 +97,45 @@ function fillInEndScreen() {
     $('#final-people').val(peopleValue);
 
     // Fill in selected date
-     var dt = $("#datepicker").val().split('-');
+    var dt = $("#datepicker").val().split('-');
   
-     var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
-     $('#final-date').val(dateValue);
+    var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
+   
+    $('#final-date').val(dateValue);
   });
 }
-
+var test;
 jQuery(document).ready(function ($) {
   $("#datepicker").datepicker({
     dateFormat: "dd-mm-yy",
     onSelect: function(dateText, inst) { 
-      console.log(dateText);
+      test = dateText;
+      console.log(test);
     }
   });
 });
+
+
+
+
+jQuery(document).ready(function ($) {
+  $('#selectTimes').change(function() {
+    // Fill in selected date
+    var dt = test.split('-');
+  
+    var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
+    showUser(dateValue);
+  });
+});
+
+function showUser(date) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("entreeTimeslots").innerHTML = this.responseText;
+      }
+  };
+
+  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?q="+date,true);
+  xmlhttp.send();
+}

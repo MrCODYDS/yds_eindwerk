@@ -6,8 +6,7 @@
     if (isset($_POST['insert'])) {
         $choice = $_POST['final-choice'];
         $people = $_POST['final-people'];
-        $date = explode('-', $_POST['final-date']);
-        $date = $date[0]."-".$date[1]."-".$date[2];
+        $date = $_POST['final-date'];
         $session = $_POST['sessions'];
         $userId = $current_user->ID;
 
@@ -105,7 +104,7 @@
                         <div class="form-times__sessions row flex-column mb-5">
                             <div class="col text-center">
                                 <hr class="hr-text mt-0 mb-3" data-content="Kies de lengte van de sessie">
-                                <select name="sessions" id="selectTimes" onchange="showUser()">
+                                <select name="sessions" id="selectTimes" >
                                     <option value="" selected="selected" disabled hidden>Geen tijd gekozen</option>
                                     <option value="1">1 uur</option>
                                     <option value="2">2 uur</option>
@@ -193,18 +192,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    function showUser() {
-
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("entreeTimeslots").innerHTML = this.responseText;
-            }
-        };
-
-        xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php",true);
-        xmlhttp.send();
-    }
-</script>
