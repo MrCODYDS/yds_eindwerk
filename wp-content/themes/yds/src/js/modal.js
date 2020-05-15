@@ -84,9 +84,9 @@ function fillInEndScreen() {
     var choiceValue = $("input[name='radioChoices']:checked").val();
     $('#final-choice').val(choiceValue);
 
-    // Fill in selected time
-    /*var selectedSession = $('select#selectTimes').children("option:selected").text();
-    $('#tijd').text(selectedSession);*/
+    // Fill in selected ground
+    var selectedSession = $('select#selectGround').children("option:selected").val();
+    $('#final-ground').val(selectedSession);
 
     // Fill in selected time
     var timeValue = $("input[name='radioTimeslots']:checked").val();
@@ -98,9 +98,7 @@ function fillInEndScreen() {
 
     // Fill in selected date
     var dt = $("#datepicker").val().split('-');
-  
     var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
-   
     $('#final-date').val(dateValue);
   });
 }
@@ -110,7 +108,6 @@ jQuery(document).ready(function ($) {
     dateFormat: "dd-mm-yy",
     onSelect: function(dateText, inst) { 
       test = dateText;
-      console.log(test);
     }
   });
 });

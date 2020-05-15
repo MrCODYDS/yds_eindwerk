@@ -6,6 +6,7 @@
     if (isset($_POST['insert'])) {
         $choice = $_POST['final-choice'];
         $people = $_POST['final-people'];
+        $ground = $_POST['final-ground'];
         $date = $_POST['final-date'];
         $session = $_POST['sessions'];
         $userId = $current_user->ID;
@@ -35,6 +36,7 @@
             "user_id" => $userId,
             "reservation_choice" => $choice,
             "reservation_date" => $date,
+            "reservation_ground" => $ground,
             "reservation_time" => $timeslot,
             "reservation_people" => $people
         ));
@@ -95,6 +97,31 @@
                                 <button type="button" data-previous="form-choices" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
                             </div>
                             <div>
+                                <button type="button" data-next="form-grounds" class="btn btn-link btn-link--primary btn-next">Volgende</button>
+                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-grounds form-part form-part--hidden">
+                        <div class="form-grounds__numbers row flex-column mb-5">
+                            <div class="col text-center">
+                                <hr class="hr-text mt-0 mb-3" data-content="Kies het gewenste speelveld">
+                                <select name="grounds" id="selectGround" >
+                                    <option value="" selected="selected" disabled hidden>Geen speelveld gekozen</option>
+                                    <option value="1">Speelveld 1</option>
+                                    <option value="2">Speelveld 2</option>
+                                    <option value="3">Speelveld 3</option>
+                                    <option value="4">Speelveld 4</option>
+                                    <option value="5">Speelveld 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between w-100 mt-5">
+                            <div>
+                                <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
+                                <button type="button" data-previous="form-dates" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                            </div>
+                            <div>
                                 <button type="button" data-next="form-times" class="btn btn-link btn-link--primary btn-next">Volgende</button>
                                 <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
                             </div>
@@ -122,7 +149,7 @@
                         <div class="d-flex justify-content-between w-100 mt-5">
                             <div>
                                 <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
-                                <button type="button" data-previous="form-dates" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                                <button type="button" data-previous="form-grounds" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
                             </div>
                             <div>
                                 <button type="button" data-next="form-people" class="btn btn-link btn-link--primary btn-next">Volgende</button>
@@ -169,6 +196,9 @@
                             </div>
                             <div class="form-final-date">
                                 <p>Uw gekozen datum: <input type="date" name="final-date" id="final-date" readonly value=""></p>
+                            </div>
+                            <div class="form-final-ground">
+                                <p>Uw gekozen veld: <input type="text" name="final-ground" id="final-ground" readonly value=""></p>
                             </div>
                             <div class="form-final-time">
                                 <p>Uw gekozen tijd: <input type="text" name="final-time" id="final-time" readonly value=""></p>
