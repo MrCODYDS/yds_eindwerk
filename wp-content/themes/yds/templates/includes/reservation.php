@@ -4,15 +4,17 @@
     global $wpdb;
 
     if (isset($_POST['insert'])) {
-        $choice = $_POST['radioChoices'];
-        $people = $_POST['radioPeople'];
+        $choice = $_POST['final-choice'];
+        $people = $_POST['final-people'];
+        $date = explode('-', $_POST['final-date']);
+        $date = $date[0]."-".$date[1]."-".$date[2];
         $session = $_POST['sessions'];
         $userId = $current_user->ID;
 
         // Check which session is chosen and add length to database
         switch($session) {
             case 1:
-                $timeslot = $_POST['radioTimeslots'];
+                $timeslot = $_POST['final-time'];
             break;
             case 2:
                 $value = $_POST['radioTimeslots'];
@@ -33,6 +35,7 @@
         $success=$wpdb->insert($table, array(
             "user_id" => $userId,
             "reservation_choice" => $choice,
+            "reservation_date" => $date,
             "reservation_time" => $timeslot,
             "reservation_people" => $people
         ));
@@ -163,16 +166,16 @@
                         <hr class="hr-text mt-0 mb-3" data-content="Kloppen alle onderstaande gegevens?">
                         <div>
                             <div class="form-final-choices">
-                                <p>Uw keuze: <span id="final-choice"></span</p>
+                                <p>Uw keuze: <input type="text" name="final-choice" id="final-choice" readonly value=""></p>
                             </div>
                             <div class="form-final-date">
-                                <p>Uw gekozen datum: <span id="final-date"></span</p>
+                                <p>Uw gekozen datum: <input type="date" name="final-date" id="final-date" readonly value=""></p>
                             </div>
                             <div class="form-final-time">
-                                <p>Uw gekozen tijd: <span id="final-time"></span</p>
+                                <p>Uw gekozen tijd: <input type="text" name="final-time" id="final-time" readonly value=""></p>
                             </div>
                             <div class="form-final-people">
-                                <p>Uw gekozen aantal spelers: <span id="final-people"></span</p>
+                                <p>Uw gekozen aantal spelers: <input type="text" name="final-people" id="final-people" readonly value=""></p>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">

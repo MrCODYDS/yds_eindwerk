@@ -4,12 +4,8 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
 
 global $wpdb;
 
-
 $sql = "SELECT * FROM wp_user_reservations";
 $result = $wpdb->get_results($sql);
-
-
-
 
 // Fill  hours
 $hours = array();

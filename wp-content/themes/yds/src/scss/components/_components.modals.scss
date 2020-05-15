@@ -111,6 +111,15 @@
     }
 }
 
+.form-final {
+    input[type=text],
+    input[type=date] {
+        border: none;
+        padding: 0;
+        width: fit-content;
+    }
+}
+
 .hr-text {
     line-height: 1rem;
     position: relative;

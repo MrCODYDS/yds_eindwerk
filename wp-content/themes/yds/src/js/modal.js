@@ -82,7 +82,7 @@ function fillInEndScreen() {
   jQuery(document).ready(function ($) {
     // Fill in selected choice
     var choiceValue = $("input[name='radioChoices']:checked").val();
-    $('#final-choice').text(choiceValue);
+    $('#final-choice').val(choiceValue);
 
     // Fill in selected time
     /*var selectedSession = $('select#selectTimes').children("option:selected").text();
@@ -90,15 +90,17 @@ function fillInEndScreen() {
 
     // Fill in selected time
     var timeValue = $("input[name='radioTimeslots']:checked").val();
-    $('#final-time').text(timeValue);
+    $('#final-time').val(timeValue);
 
     // Fill in selected persons
     var peopleValue = $("input[name='radioPeople']:checked").val();
-    $('#final-people').text(peopleValue);
+    $('#final-people').val(peopleValue);
 
     // Fill in selected date
-     var dateValue = $('#datepicker').val();
-     $('#final-date').text(dateValue);
+     var dt = $("#datepicker").val().split('-');
+  
+     var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
+     $('#final-date').val(dateValue);
   });
 }
 
