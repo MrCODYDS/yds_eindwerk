@@ -3,10 +3,11 @@
 include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
 
 global $wpdb;
-$q = $_GET['q'];
+$dateValue = $_GET['date'];
+$groundValue = $_GET['ground'];
 
 // Get all rows from wp_users_reservations where reservation_date is equal to selected date
-$sql = "SELECT * FROM wp_user_reservations WHERE reservation_date = '" . $q . "'";
+$sql = "SELECT * FROM wp_user_reservations WHERE reservation_date = '" . $dateValue . "' AND reservation_ground = '" . $groundValue . "'";
 $result = $wpdb->get_results($sql);
 
 // Fill  hours

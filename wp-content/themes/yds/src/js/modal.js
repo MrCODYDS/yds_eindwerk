@@ -78,6 +78,7 @@ function hideAllFormParts() {
   });
 }
 
+var groundValue;
 function fillInEndScreen() {
   jQuery(document).ready(function ($) {
     // Fill in selected choice
@@ -85,8 +86,9 @@ function fillInEndScreen() {
     $('#final-choice').val(choiceValue);
 
     // Fill in selected ground
-    var selectedSession = $('select#selectGround').children("option:selected").val();
-    $('#final-ground').val(selectedSession);
+    var selectedGround = $('select#selectGround').children("option:selected").val();
+    $('#final-ground').val(selectedGround);
+    groundValue = selectedGround;
 
     // Fill in selected time
     var timeValue = $("input[name='radioTimeslots']:checked").val();
@@ -102,12 +104,14 @@ function fillInEndScreen() {
     $('#final-date').val(dateValue);
   });
 }
-var test;
+
+var datepickerDate;
+
 jQuery(document).ready(function ($) {
   $("#datepicker").datepicker({
     dateFormat: "dd-mm-yy",
     onSelect: function(dateText, inst) { 
-      test = dateText;
+      datepickerDate = dateText;
     }
   });
 });
@@ -116,16 +120,17 @@ jQuery(document).ready(function ($) {
 
 
 jQuery(document).ready(function ($) {
+
   $('#selectTimes').change(function() {
     // Fill in selected date
-    var dt = test.split('-');
+    var dt = datepickerDate.split('-');
   
     var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
-    showUser(dateValue);
+    showUser(dateValue, groundValue);
   });
 });
 
-function showUser(date) {
+function showUser(date, ground) {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -133,6 +138,6 @@ function showUser(date) {
       }
   };
 
-  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?q="+date,true);
+  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?date="+date+"&ground="+ground,true);
   xmlhttp.send();
 }
