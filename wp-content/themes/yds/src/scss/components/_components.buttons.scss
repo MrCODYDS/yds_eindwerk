@@ -5,6 +5,12 @@
 
 .btn {
     padding: .375rem 1.5rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-dark,
+.btn-white {
     &:hover {
         box-shadow: 2px 4px 10px #4d5061;
     }

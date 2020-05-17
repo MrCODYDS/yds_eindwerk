@@ -25,11 +25,37 @@
     }
 }
 
+.c-nav-main {
+    .current-menu-item {
+        a {
+            color: $secondary;
+            padding-bottom: .2rem;
+            border-bottom: 2px solid $secondary;
+        }
+    }
+
+    a:hover {
+        color: $secondary;
+    }
+}
+
 .btn-contact {
     a {
         @extend .btn;
         @extend .btn-outline;
         @extend .btn-outline--secondary;
+
+        &:hover {
+            background-color: $secondary;
+            color: $white;
+        }
+    }
+}
+
+.btn-contact.current-menu-item {
+    a {
+        color: $white;
+        background-color: $secondary;
     }
 }
 
