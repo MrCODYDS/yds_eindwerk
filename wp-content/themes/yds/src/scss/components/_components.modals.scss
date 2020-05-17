@@ -70,18 +70,18 @@
     }
 
     label:hover {
-        background-color: $secondary;
+        background-color: $dark-secondary;
     }
 
     input[type="radio"]:checked + label {
-        background-color: $secondary;
+        background-color: $dark-secondary;
     }
 }
 
 .form-times__sessions,
 .form-grounds__numbers {
     select {
-        border: 1px solid #4d5061;
+        border: 1px solid $dark;
         border-radius: 8px;
         padding: 5px;
     }

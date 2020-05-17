@@ -58,26 +58,26 @@
                         <hr class="hr-text mt-0 mb-md-3" data-content="Maak je keuze">
                         <div class="row form-choices__radio">
                             <input type="radio" id="radioSpelers" name="radioChoices" value="Individuele spelers">
-                            <label for="radioSpelers" class="col text-center mr-3 mr-md-5 mb-3 mb-md-5">
+                            <label for="radioSpelers" class="col text-center btn btn-primary mr-3 mr-md-5 mb-3 mb-md-5">
                                 <svg class="icon"><use xlink:href="#badminton" /></svg>
                                 <p class="mb-0 mt-4">Individuele spelers</p>
                             </label>
 
                             <input type="radio" id="radioClubs" name="radioChoices" value="Clubs">
-                            <label for="radioClubs" class="col text-center mb-3 mb-md-5">
+                            <label for="radioClubs" class="col text-center btn btn-primary mb-3 mb-md-5">
                                 <svg class="icon"><use xlink:href="#medal" /></svg>
                                 <p class="mb-0 mt-4">Clubs</p>
                             </label>
 
                             <div class="w-100"></div>
                             <input type="radio" id="radioBedrijf" name="radioChoices" value="Bedrijfsuitje">
-                            <label for="radioBedrijf" class="col text-center mr-3 mr-md-5">
+                            <label for="radioBedrijf" class="col text-center btn btn-primary mr-3 mr-md-5">
                                 <svg class="icon"><use xlink:href="#business" /></svg>
                                 <p class="mb-0 mt-4">Bedrijfsuitje</p>
                             </label> 
 
                             <input type="radio" id="radioLorem" name="radioChoices" value="Lorem ipsum">
-                            <label for="radioLorem" class="col text-center">
+                            <label for="radioLorem" class="col text-center btn btn-primary">
                                 <svg class="icon"><use xlink:href="#badminton" /></svg>
                                 <p class="mb-0 mt-4">Lorem ipsum</p>
                             </label>

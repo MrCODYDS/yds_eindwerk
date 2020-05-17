@@ -5,10 +5,25 @@
 
 .btn {
     padding: .375rem 1.5rem;
+    &:hover {
+        box-shadow: 2px 4px 10px #4d5061;
+    }
+}
+
+.btn-primary {
+    &:hover,&:focus {
+        background-color: $dark-secondary !important;
+        border-color: $dark-secondary !important;
+    }
 }
 
 .btn-secondary {
     color: $white;
+
+    &:hover {
+        background-color: $dark-secondary;
+        border-color: $dark-secondary;
+    }
 }
 
 .btn-link {
