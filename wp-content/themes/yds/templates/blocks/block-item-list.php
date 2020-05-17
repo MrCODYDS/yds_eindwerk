@@ -27,9 +27,12 @@ $repeater = get_field('item_list_itemlist');
                                     <h3><?= $column['list_text_itemlist']; ?></h3>
                                 <?php endif; ?>
 
-                                <?php if($column['list_button_itemlist']): ?>
-                                    <p><?= $column['list_button_itemlist']; ?></p>
+                                <?php if($column['list_link_itemlist']): ?>
+                                    <a href="<?= $column['list_link_itemlist']['url']; ?>" class="btn btn-link">
+                                        <?= $column['list_link_itemlist']['title']; ?>
+                                    </a>
                                 <?php endif; ?>
+                                
                             </div>
                             <div>
                             <svg class="icon"><use xlink:href="#<?= $column['list_icon_itemlist'] ?>" /></svg>

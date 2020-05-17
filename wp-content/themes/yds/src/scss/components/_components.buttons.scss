@@ -32,10 +32,20 @@
     padding: 0;
     border-bottom: 1px solid $white;
     border-radius: 0;
+    &:hover {
+        box-shadow: none;
+        border-bottom: 1px solid $dark;
+        color: $dark;
+    }
 
     &--primary {
         color: $primary;
-        border-bottom: 1px solid $primary;
+        border-bottom: 1px solid $dark;
+
+        &:hover {
+            color: $dark-secondary;
+            border-bottom: 1px solid $dark-secondary;
+        }
     }
 
     &--dark {
