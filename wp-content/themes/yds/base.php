@@ -21,6 +21,8 @@
 <?php include 'templates/includes/reservation.php'; ?>
 
 <?php get_template_part('footer'); ?>
+<?php get_template_part('templates/includes/sidebar'); ?>
+
 <?php wp_footer(); ?>
 
 <div class="hidden" hidden>

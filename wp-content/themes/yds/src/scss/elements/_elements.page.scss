@@ -3,3 +3,8 @@
  * Global page settings
  */
 
+main {
+    .is-open-sidebar & {
+        transform: translateX(-250px);
+    }
+}

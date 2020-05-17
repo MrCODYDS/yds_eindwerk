@@ -11,4 +11,8 @@
     &__top {
         background-color: $light-blue;
     }
+
+    .is-open-sidebar & {
+        transform: translateX(-250px);
+    }
 }

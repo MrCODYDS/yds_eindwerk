@@ -3,6 +3,12 @@
  * Styling footer
  */
 
+.c-footer {
+    .is-open-sidebar & {
+        transform: translateX(-250px);
+    }
+}
+
 .c-footer-top {
     background-color: $dark-blue;
 }

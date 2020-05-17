@@ -5,11 +5,11 @@
 ?>
 
 <header class="c-header">
-    <div class="c-header__top py-1">
+    <div class="c-header__top py-1 d-none d-lg-block">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-auto">
-                    <nav class="c-nav-sub d-none d-lg-flex">
+                    <nav class="c-nav-sub d-flex">
                         <ul>
                             <?php if(is_user_logged_in()): ?>
                                 <li>
@@ -45,7 +45,7 @@
                     <nav role="navigation" class="c-nav-main d-none d-lg-flex">
                         <?php wp_nav_menu(array('container' => 'ul', 'menu_class' => false, 'theme_location' => 'primary_navigation')); ?>
                     </nav>
-                    <div class="c-hamburger" onclick="changeHamburger(this)">
+                    <div class="c-hamburger">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
