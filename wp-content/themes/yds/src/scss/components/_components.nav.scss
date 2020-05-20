@@ -37,27 +37,29 @@
     a:hover {
         color: $secondary;
     }
-}
 
-.btn-contact {
-    a {
-        @extend .btn;
-        @extend .btn-outline;
-        @extend .btn-outline--secondary;
-
-        &:hover {
-            background-color: $secondary;
+    .btn-contact {
+        a {
+            @extend .btn;
+            @extend .btn-outline;
+            @extend .btn-outline--secondary;
+    
+            &:hover {
+                background-color: $secondary;
+                color: $white;
+            }
+        }
+    }
+    
+    .btn-contact.current-menu-item {
+        a {
             color: $white;
+            background-color: $secondary;
         }
     }
 }
 
-.btn-contact.current-menu-item {
-    a {
-        color: $white;
-        background-color: $secondary;
-    }
-}
+
 
 .c-nav-footer {
     ul {

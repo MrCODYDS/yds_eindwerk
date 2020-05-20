@@ -16,6 +16,15 @@
 }
 
 .is-open {
+    display: none;
+}
+  
+.c-hamburger-open {
+    .bar1,
+    .bar2,
+    .bar3 {
+        background-color: $white;
+    }
     .bar1 {
         -webkit-transform: rotate(-45deg) translate(-9px, 6px);
         transform: rotate(-45deg) translate(-9px, 6px);
@@ -28,4 +37,3 @@
         transform: rotate(45deg) translate(-8px, -8px);
     }
 }
-  

@@ -81,6 +81,13 @@
         border-color: $secondary;
         color: $secondary;
     }
+
+    &--mobile {
+        padding: .25rem .5rem;
+        min-width: 110px;
+        color: $white;
+        border-color: $white;
+    }
 }
 
 .btn-dark {

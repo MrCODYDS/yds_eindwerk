@@ -7,12 +7,24 @@
     width: 100%;
     background-color: $white;
     font-weight: 600;
+    transition: all .3s ease-in-out;
 
     &__top {
         background-color: $light-blue;
     }
 
     .is-open-sidebar & {
-        transform: translateX(-250px);
+        transform: translateX(-300px);
+    }
+
+    @include media-breakpoint-down(md) {
+        &__bottom {
+            height: 55px;;
+        }
+
+        .container,
+        .row {
+            height: 100%;
+        }
     }
 }

@@ -4,8 +4,9 @@
  */
 
 .c-footer {
+    transition: all .3s ease-in-out;
     .is-open-sidebar & {
-        transform: translateX(-250px);
+        transform: translateX(-300px);
     }
 }
 
