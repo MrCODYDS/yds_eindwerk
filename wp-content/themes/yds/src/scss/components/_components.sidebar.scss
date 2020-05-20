@@ -14,7 +14,7 @@
     }
 
     &__spacing {
-      border-color: $light-blue;
+      border-color: $secondary;
     }
 
     &__close {
@@ -37,6 +37,7 @@
     li {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+      border-left: 4px solid transparent;
     }
 
     a {
@@ -53,6 +54,10 @@
     
     a {
       color: $secondary;
+    }
+
+    svg {
+      fill: $secondary;
     }
   }
 }

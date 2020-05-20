@@ -16,9 +16,12 @@
                 <a href="" class="btn btn-outline btn-outline--mobile">Log out</a>
             </div>
         </div>
-        <hr class="c-sidebar__spacing mx-4">
+        <hr class="c-sidebar__spacing mx-4 mb-0">
         <nav role="navigation" class="c-nav-sidebar">
-            <?php wp_nav_menu( array( 'container'=> 'ul', 'menu_class'=> "text-left", 'theme_location' => 'primary_navigation' ) ); ?>
+            
+            <?php
+                wp_nav_menu( array('theme_location'  => 'primary_navigation','container'  => false,'container_id'  => '','conatiner_class' => '','menu_class'  => 'top-nav nav-right','echo'  => true,'items_wrap'  => '<ul id="%1$s" class="%2$s">%3$s</ul>','depth'  => 10, 'walker' => new fluent_themes_custom_walker_nav_menu) );
+            ?>
         </nav>
 	</div>
 </aside>
