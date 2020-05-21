@@ -124,3 +124,9 @@
 	overflow: hidden;
 	background-repeat: no-repeat;
 }
+
+.ui-state-disabled.ui-datepicker-unselectable {
+    span {
+        opacity: 0.3 !important;
+    }
+}

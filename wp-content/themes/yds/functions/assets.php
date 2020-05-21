@@ -18,9 +18,6 @@ function load_assets() {
     // Include modal.js
     wp_enqueue_script('modal-js', get_template_directory_uri() . '/src/js/modal.js', array(), false, true);
     
-    // Include calendar.js
-    wp_enqueue_script('calendar-js', get_template_directory_uri() . '/src/js/calendar.js', array(), false, true );
-
     // Include mobilemenu.js
     wp_enqueue_script('mobilemenu-js', get_template_directory_uri() . '/src/js/mobilemenu.js', array(), false, true );
 

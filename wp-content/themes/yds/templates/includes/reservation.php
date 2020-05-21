@@ -84,8 +84,10 @@
                         </div>
 
                         <div class="w-100 text-right mt-5">
-                            <button type="button" data-next="form-dates" class="btn btn-link btn-link--primary btn-next">Volgende</button>
-                            <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                            <button type="button" data-next="form-dates" class="btn btn-link btn-link--primary btn-next" disabled>Volgende
+                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                            </button>
+                            
                         </div>
                     </div>
                     <div class="form-dates form-part form-part--hidden">
@@ -93,12 +95,17 @@
                         <div id="datepicker"></div>
                         <div class="d-flex justify-content-between w-100 mt-5">
                             <div>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
-                                <button type="button" data-previous="form-choices" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                                <button type="button" data-previous="form-choices" class="btn btn-link btn-link--primary btn-previous">
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
+                                    Vorige
+                                </button>
                             </div>
                             <div>
-                                <button type="button" data-next="form-grounds" class="btn btn-link btn-link--primary btn-next">Volgende</button>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                <button type="button" data-next="form-grounds" class="btn btn-link btn-link--primary btn-next" disabled>
+                                    Volgende
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                </button>
+                                
                             </div>
                         </div>
                     </div>
@@ -118,12 +125,16 @@
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">
                             <div>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
-                                <button type="button" data-previous="form-dates" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                                <button type="button" data-previous="form-dates" class="btn btn-link btn-link--primary btn-previous">
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
+                                    Vorige
+                                </button>
                             </div>
                             <div>
-                                <button type="button" data-next="form-times" class="btn btn-link btn-link--primary btn-next">Volgende</button>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                <button type="button" data-next="form-times" class="btn btn-link btn-link--primary btn-next" disabled>
+                                    Volgende
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -142,18 +153,22 @@
                         </div>
                         <div class="form-times__timeslots row">
                             <div class="col">
-                                <hr class="hr-text mt-0 mb-3" data-content="Kies het tijdslot">
-                                <div class="form-timeslots row justify-content-center" id="entreeTimeslots"></div>
+                                <hr class="hr-text mt-0 mb-3" data-content="Kies een starttijd">
+                                <div class="form-timeslots row justify-content-start" id="entreeTimeslots"></div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">
                             <div>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
-                                <button type="button" data-previous="form-grounds" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                                <button type="button" data-previous="form-grounds" class="btn btn-link btn-link--primary btn-previous">
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
+                                    Vorige
+                                </button>
                             </div>
                             <div>
-                                <button type="button" data-next="form-people" class="btn btn-link btn-link--primary btn-next">Volgende</button>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                <button type="button" data-next="form-people" class="btn btn-link btn-link--primary btn-next" disabled>
+                                    Volgende
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -179,12 +194,16 @@
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">
                             <div>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
-                                <button type="button" data-previous="form-times" class="btn btn-link btn-link--primary btn-previous">Vorige</button>
+                                <button type="button" data-previous="form-times" class="btn btn-link btn-link--primary btn-previous">
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
+                                    Vorige
+                                </button>
                             </div>
                             <div>
-                                <button type="button" data-next="form-final" class="btn btn-link btn-link--primary btn-next">Volgende</button>
-                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                <button type="button" data-next="form-final" class="btn btn-link btn-link--primary btn-next" disabled>
+                                    Volgende
+                                    <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -192,19 +211,19 @@
                         <hr class="hr-text mt-0 mb-3" data-content="Kloppen alle onderstaande gegevens?">
                         <div>
                             <div class="form-final-choices">
-                                <p>Uw keuze: <input type="text" name="final-choice" id="final-choice" readonly value=""></p>
+                                <p>Uw keuze: <input type="text" name="final-choice" id="final-choice" readonly disabled value=""></p>
                             </div>
                             <div class="form-final-date">
-                                <p>Uw gekozen datum: <input type="date" name="final-date" id="final-date" readonly value=""></p>
+                                <p>Uw gekozen datum: <input type="date" name="final-date" id="final-date" readonly disabled value=""></p>
                             </div>
                             <div class="form-final-ground">
-                                <p>Uw gekozen veld: <input type="text" name="final-ground" id="final-ground" readonly value=""></p>
+                                <p>Uw gekozen veld: <input type="text" name="final-ground" id="final-ground" readonly disabled value=""></p>
                             </div>
                             <div class="form-final-time">
-                                <p>Uw gekozen tijd: <input type="text" name="final-time" id="final-time" readonly value=""></p>
+                                <p>Uw gekozen tijd: <input type="text" name="final-time" id="final-time" readonly disabled value=""></p>
                             </div>
                             <div class="form-final-people">
-                                <p>Uw gekozen aantal spelers: <input type="text" name="final-people" id="final-people" readonly value=""></p>
+                                <p>Uw gekozen aantal spelers: <input type="text" name="final-people" id="final-people" readonly disabled value=""></p>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">

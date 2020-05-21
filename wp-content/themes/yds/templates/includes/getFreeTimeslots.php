@@ -70,9 +70,15 @@ foreach ($exploded as $single) {
 }
 
 foreach ($hours as $hour) {
-    echo '<div class="col-auto mb-3">';
+    $hourlength = strlen((string)$hour);
+    
+    echo '<div class="col-3 mb-3 text-center">';
     echo '<input type="radio" id="radiotimeslot' . $hour . '" name="radioTimeslots" value="' . $hour .'">';
-    echo '<label for="radiotimeslot' . $hour . '">'. $hour . '</label>';
+    if ($hourlength == 1) {
+        echo '<label for="radiotimeslot' . $hour . '" class="w-100">0'. $hour . ':00</label>';
+    } else {
+        echo '<label for="radiotimeslot' . $hour . '" class="w-100">'. $hour . ':00</label>';
+    }
     echo '</div>';
 }
 

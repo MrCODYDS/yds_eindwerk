@@ -38,19 +38,17 @@
     padding: 0;
     border-bottom: 1px solid $white;
     border-radius: 0;
+    height: 30px;
     &:hover {
         box-shadow: none;
-        border-bottom: 1px solid $dark;
         color: $dark;
     }
 
     &--primary {
         color: $primary;
-        border-bottom: 1px solid $dark;
 
         &:hover {
             color: $dark-secondary;
-            border-bottom: 1px solid $dark-secondary;
         }
     }
 

@@ -119,6 +119,8 @@
         border: none;
         padding: 0;
         width: fit-content;
+        background: none;
+        color: $secondary;
     }
 }
 
@@ -154,8 +156,4 @@
       // this is really the only tricky part, you need to specify the background color of the container element...
       background-color: $white;
     }
-}
-
-.lalatest-hidden {
-    display: none;
 }

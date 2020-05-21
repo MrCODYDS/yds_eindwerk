@@ -85,13 +85,17 @@ function fillInEndScreen() {
     $('#final-choice').val(choiceValue);
 
     // Fill in selected ground
+    groundValue = selectedGround;
     var selectedGround = $('select#selectGround').children("option:selected").val();
     $('#final-ground').val(selectedGround);
-    groundValue = selectedGround;
 
     // Fill in selected time
+    // Add visible hour for user --> "14:00" instead of "14"
+    // Make sure user can see all claimed hours
     var timeValue = $("input[name='radioTimeslots']:checked").val();
-    $('#final-time').val(timeValue);
+    var selectedTimes = $('select#selectTimes').children("option:selected").val();
+    var sum = Number(timeValue) + Number(selectedTimes);
+    $('#final-time').val(timeValue + ":00-" + sum + ":00");
 
     // Fill in selected persons
     var peopleValue = $("input[name='radioPeople']:checked").val();
@@ -106,11 +110,14 @@ function fillInEndScreen() {
 
 // Change dateformat for datepicker
 // On select date --> get datevalue and put in var
+// On select date --> delete "disabled" from btn-next
 jQuery(document).ready(function ($) {
   $("#datepicker").datepicker({
+    minDate: 0,
     dateFormat: "dd-mm-yy",
     onSelect: function(dateText, inst) { 
       datepickerDate = dateText;
+      $('.btn-next[data-next="form-grounds"]').removeAttr("disabled");
     }
   });
 });
@@ -126,6 +133,8 @@ jQuery(document).ready(function ($) {
     var selectedSession = $('select#selectTimes').children("option:selected").val();
 
     showUser(dateValue, groundValue, selectedSession);
+
+    $('.btn-next[data-next="form-people"]').attr("disabled", true);
   });
 });
 
@@ -141,3 +150,33 @@ function showUser(date, ground, session) {
   xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?date="+date+"&ground="+ground+"&session="+session,true);
   xmlhttp.send();
 }
+
+// If choice is selected, enable next button
+jQuery(document).ready(function ($) {
+  $('.form-choices__radio input[type="radio"]').on('click', function() {
+    // If the current selected item is checked, enable next button
+    if($(this).prop('checked')){
+      $('.btn-next[data-next="form-dates"]').removeAttr("disabled");
+    }
+  });
+
+  $('#selectGround').change(function() {
+    //On select date --> delete "disabled" from btn-next
+    $('.btn-next[data-next="form-times"]').removeAttr("disabled");
+  });
+
+  // Check if radio input gets added
+  $('.form-timeslots').on('click', 'input[type="radio"]', function() {
+    // If the current selected item is checked, enable next button
+    if($(this).prop('checked')){
+      $('.btn-next[data-next="form-people"]').removeAttr("disabled");
+    }
+  });
+
+  $('.form-amountpeople input[type="radio"]').on('click', function() {
+    // If the current selected item is checked, enable next button
+    if($(this).prop('checked')){
+      $('.btn-next[data-next="form-final"]').removeAttr("disabled");
+    }
+  });
+});
