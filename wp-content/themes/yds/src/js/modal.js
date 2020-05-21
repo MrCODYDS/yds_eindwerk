@@ -2,6 +2,9 @@
  * Show modal & close modal functions
  */
 
+var datepickerDate;
+var groundValue;
+
 // Toggle hidden class for modal
 const toggleModal = () => {
   document.querySelector('.modal')
@@ -16,7 +19,7 @@ buttonsModal.forEach(function(button, index) {
     button.addEventListener('click', toggleModal);
 });
 
-// Make sure that submit button does nothing
+// Toggle modal when clicked on submit
 document.querySelector('#reservation-form')
   .addEventListener('submit', (event) => {
     toggleModal();
@@ -26,12 +29,7 @@ document.querySelector('#reservation-form')
 document.querySelector('.modal__header span')
   .addEventListener('click', toggleModal);
 
-
-
-/*
- * Show current modal & hide other modals functions
- */
-
+//Show current modal & hide other modals functions
 function showNext(button) {
   hideAllFormParts();
 
@@ -70,15 +68,16 @@ buttonsPrevious.forEach(function(button, index) {
   });
 });
 
+// Get all elements with class form-part & add hidden class
 function hideAllFormParts() {
-  // Get all elements with class form-part & add hidden class
   const formParts = document.querySelectorAll('.form-part');
   formParts.forEach(function(part, index) {
     part.classList.add('form-part--hidden');
   });
 }
 
-var groundValue;
+// Fill in the final screen with all chosen values
+// in the form before submitting
 function fillInEndScreen() {
   jQuery(document).ready(function ($) {
     // Fill in selected choice
@@ -105,8 +104,8 @@ function fillInEndScreen() {
   });
 }
 
-var datepickerDate;
-
+// Change dateformat for datepicker
+// On select date --> get datevalue and put in var
 jQuery(document).ready(function ($) {
   $("#datepicker").datepicker({
     dateFormat: "dd-mm-yy",
@@ -116,21 +115,22 @@ jQuery(document).ready(function ($) {
   });
 });
 
-
-
-
+// If session changes --> get value from datepicker
+// and do showUser with datepicker value and fieldvalue
 jQuery(document).ready(function ($) {
-
   $('#selectTimes').change(function() {
     // Fill in selected date
     var dt = datepickerDate.split('-');
-  
     var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
-    showUser(dateValue, groundValue);
+
+    var selectedSession = $('select#selectTimes').children("option:selected").val();
+
+    showUser(dateValue, groundValue, selectedSession);
   });
 });
 
-function showUser(date, ground) {
+// Post date & fieldnumber to getFreeTimeslots.php
+function showUser(date, ground, session) {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -138,6 +138,6 @@ function showUser(date, ground) {
       }
   };
 
-  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?date="+date+"&ground="+ground,true);
+  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?date="+date+"&ground="+ground+"&session="+session,true);
   xmlhttp.send();
 }
