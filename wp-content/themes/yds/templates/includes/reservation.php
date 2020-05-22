@@ -211,19 +211,19 @@
                         <hr class="hr-text mt-0 mb-3" data-content="Kloppen alle onderstaande gegevens?">
                         <div>
                             <div class="form-final-choices">
-                                <p>Uw keuze: <input type="text" name="final-choice" id="final-choice" readonly disabled value=""></p>
+                                <p>Uw keuze: <input type="text" name="final-choice" id="final-choice" readonly value=""></p>
                             </div>
                             <div class="form-final-date">
-                                <p>Uw gekozen datum: <input type="date" name="final-date" id="final-date" readonly disabled value=""></p>
+                                <p>Uw gekozen datum: <input type="date" name="final-date" id="final-date" readonly value=""></p>
                             </div>
                             <div class="form-final-ground">
-                                <p>Uw gekozen veld: <input type="text" name="final-ground" id="final-ground" readonly disabled value=""></p>
+                                <p>Uw gekozen veld: <input type="text" name="final-ground" id="final-ground" readonly value=""></p>
                             </div>
                             <div class="form-final-time">
-                                <p>Uw gekozen tijd: <input type="text" name="final-time" id="final-time" readonly disabled value=""></p>
+                                <p>Uw gekozen tijd: <input type="text" name="final-time" id="final-time" readonly value=""></p>
                             </div>
                             <div class="form-final-people">
-                                <p>Uw gekozen aantal spelers: <input type="text" name="final-people" id="final-people" readonly disabled value=""></p>
+                                <p>Uw gekozen aantal spelers: <input type="text" name="final-people" id="final-people" readonly value=""></p>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">

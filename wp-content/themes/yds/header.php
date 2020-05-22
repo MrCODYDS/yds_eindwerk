@@ -13,16 +13,16 @@
                         <ul>
                             <?php if(is_user_logged_in()): ?>
                                 <li>
-                                    <a href="/wp-login.php?action=logout" class="btn btn-link btn-link--dark">
+                                    <a href="/wp-login.php?action=logout" class="btn btn-link btn-link--dark h-100">
                                         <?php echo "Hi, " . $current_user->user_login ?>
                                     </a>
                                 </li>
                             <?php else: ?>
                                 <li>
-                                    <a href="/login" class="btn btn-link btn-link--dark">Sign In</a>
+                                    <a href="/login" class="btn btn-link btn-link--dark h-100">Sign In</a>
                                 </li>
                                 <li>
-                                    <a href="/register" class=" btn btn-link btn-link--dark">Sign Up</a>
+                                    <a href="/register" class="btn btn-link btn-link--dark h-100">Sign Up</a>
                                 </li>
                             <?php endif; ?>
                         </ul>
