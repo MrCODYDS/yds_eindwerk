@@ -4,13 +4,32 @@
 
 var datepickerDate;
 var groundValue;
+var $loggedIn;
 
-// Toggle hidden class for modal
+// Check is user is logged in
+function checkIfLoggedIn() {
+  jQuery(document).ready(function ($) {
+    if ($('body').hasClass('logged-in')) {
+      $loggedIn = true;
+    } else {
+      $loggedIn = false;
+    }
+  });
+  return $loggedIn;
+}
+
+// Toggle hidden class for modal if user has logged in
+// Redirect if user is not logged in
 const toggleModal = () => {
-  document.querySelector('.modal')
+  if (checkIfLoggedIn()) {
+    document.querySelector('.modal')
     .classList.toggle('modal--hidden');
     hideAllFormParts();
     document.querySelector('.form-choices').classList.remove('form-part--hidden');
+  } else {
+    window.location.href = "/login";
+  }
+  
 };
 
 // Get all buttons with class show-modal & add function on click
