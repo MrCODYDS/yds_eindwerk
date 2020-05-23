@@ -32,7 +32,7 @@ $redirect_to = '';
                 <div class="login-part-register d-flex flex-column justify-content-center align-items-center text-center">
                     <h5 class="text-white mb-4">Al een account?</h5>
                     <div class="register-button py-3">
-                        <a href="" class="btn btn-outline btn-outline--blue">Log in</a>
+                        <a href="/login" class="btn btn-outline btn-outline--blue">Log in</a>
                     </div>
                 </div>
             </div>
