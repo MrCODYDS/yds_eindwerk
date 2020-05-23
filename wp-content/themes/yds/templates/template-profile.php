@@ -49,7 +49,7 @@ if ($_POST['action'] && $_POST['id']) {
                                 <td class="column5"><?php echo $row->reservation_people ?></td>
                                 <form action="" method="post">
                                     <td class="column6">
-                                        <input type="submit" name="action" value="Delete">
+                                        <input type="submit" name="action" value="Delete" class="btn btn-dark">
                                         <input type="hidden" name="id" value="<?php echo $row->id; ?>">
                                     </td>
                                 </form>

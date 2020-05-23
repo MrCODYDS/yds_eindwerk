@@ -1,4 +1,12 @@
-  
+/*
+ * Components: Table
+ * Custom table styling
+ */
+ 
+.c-profile {
+    min-height: 500px;
+}
+
 .c-profile-table {
     border-spacing: 1;
     border-collapse: collapse;
@@ -87,79 +95,81 @@
 
 
 
-@media screen and (max-width: 992px) {
-table {
-    display: block;
-}
-table > *, table tr, table td, table th {
-    display: block;
-}
-table thead {
-    display: none;
-}
-table tbody tr {
-    height: auto;
-    padding: 37px 0;
-}
-table tbody tr td {
-    padding-left: 40% !important;
-    margin-bottom: 24px;
-}
-table tbody tr td:last-child {
-    margin-bottom: 0;
-}
-table tbody tr td:before {
-    font-size: 14px;
-    color: #999999;
-    line-height: 1.2;
-    font-weight: unset;
-    position: absolute;
-    width: 40%;
-    left: 30px;
-    top: 0;
-}
-table tbody tr td:nth-child(1):before {
-    content: "Date";
-}
-table tbody tr td:nth-child(2):before {
-    content: "Order ID";
-}
-table tbody tr td:nth-child(3):before {
-    content: "Name";
-}
-table tbody tr td:nth-child(4):before {
-    content: "Price";
-}
-table tbody tr td:nth-child(5):before {
-    content: "Quantity";
-}
-table tbody tr td:nth-child(6):before {
-    content: "Total";
-}
+    
 
-.column4,
-.column5,
-.column6 {
-    text-align: left;
-}
+@include media-breakpoint-down(md) {
+    .c-profile-table {
+        display: block;
 
-.column4,
-.column5,
-.column6,
-.column1,
-.column2,
-.column3 {
-    width: 100%;
-}
+        & *,
+        & table tr,
+        & table td,
+        & table th {
+            display: block;
+        }
 
-tbody tr {
-    font-size: 14px;
-}
-}
+        thead {
+            display: none;
+        }
 
-@media (max-width: 576px) {
-.container-table100 {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+        tbody {
+            tr {
+                height: 100% !important;
+                padding: 37px 0;
+            }
+
+            tr td:last-child {
+                margin-bottom: 0;
+            }
+
+            tr td {
+                padding-left: 50% !important;
+                margin-bottom: 24px;
+            }
+
+            tr td:before {
+                font-size: 14px;
+                color: #999999;
+                line-height: 1.2;
+                font-weight: unset;
+                position: absolute;
+                width: 40%;
+                left: 30px;
+                top: 0;
+            }
+        }
+    }
+ 
+    .c-profile-table tbody tr td:nth-child(1):before {
+        content: "Uw keuze";
+    }
+    .c-profile-table tbody tr td:nth-child(2):before {
+        content: "Datum";
+    }
+    .c-profile-table tbody tr td:nth-child(3):before {
+        content: "Speelveld";
+    }
+    .c-profile-table tbody tr td:nth-child(4):before {
+        content: "Sessie";
+    }
+    .c-profile-table tbody tr td:nth-child(5):before {
+        content: "Aantal personen";
+    }
+    .c-profile-table tbody tr td:nth-child(6):before {
+        content: "";
+    }
+
+    .column4,
+    .column5,
+    .column6,
+    .column1,
+    .column2,
+    .column3 {
+        width: 100%;
+        text-align: left;
+    }
+
+    tbody tr {
+        font-size: 14px;
+    }
 }

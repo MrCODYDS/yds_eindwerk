@@ -5,6 +5,7 @@
 
 main {
     transition: all .3s ease-in-out;
+    
     .is-open-sidebar & {
         transform: translateX(-300px);
     }
