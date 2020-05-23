@@ -18,7 +18,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/wp-login.php?action=logout" class="btn btn-link btn-link--dark h-100">
+                                    <a href="<?php echo wp_logout_url() ?>" class="btn btn-link btn-link--dark h-100">
                                         <?php echo "Logout" ?>
                                     </a>
                                 </li>
