@@ -13,8 +13,13 @@
                         <ul>
                             <?php if(is_user_logged_in()): ?>
                                 <li>
+                                    <a href="/user-reservations" class="btn btn-link btn-link--dark h-100">
+                                        <?php echo "Mijn reservaties" ?>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="/wp-login.php?action=logout" class="btn btn-link btn-link--dark h-100">
-                                        <?php echo "Hi, " . $current_user->user_login ?>
+                                        <?php echo "Logout" ?>
                                     </a>
                                 </li>
                             <?php else: ?>

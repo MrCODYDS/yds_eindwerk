@@ -2,7 +2,7 @@
  * Components: Table
  * Custom table styling
  */
- 
+
 .c-profile {
     min-height: 500px;
 }
@@ -52,6 +52,13 @@
             background-color: #ebebeb;
         }
     }
+}
+
+.c-profile-warning {
+    width: fit-content;
+    background-color: $secondary;
+    margin-left: auto;
+    margin-right: auto;
 }
  
 .column1,

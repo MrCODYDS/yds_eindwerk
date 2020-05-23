@@ -96,7 +96,8 @@
         line-height: 1;
 
         &:last-child {
-            border: none;
+            border-left: 1px solid transparent;
+            border-right: none;
         }
     }
     
