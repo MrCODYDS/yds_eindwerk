@@ -20,33 +20,42 @@ function checkIfLoggedIn() {
 
 // Toggle hidden class for modal if user has logged in
 // Redirect if user is not logged in
-const toggleModal = () => {
+const toggleReservationModal = () => {
   if (checkIfLoggedIn()) {
-    document.querySelector('.modal')
+    document.querySelector('.modal--reservation')
     .classList.toggle('modal--hidden');
     hideAllFormParts();
     document.querySelector('.form-choices').classList.remove('form-part--hidden');
   } else {
     window.location.href = "/login";
   }
-  
 };
+
+const toggleConfirmModal = () => {
+  document.querySelector('.modal--confirmation')
+    .classList.toggle('modal--hidden');
+}
 
 // Get all buttons with class show-modal & add function on click
 const buttonsModal = document.querySelectorAll('.show-modal');
 buttonsModal.forEach(function(button, index) {
-    button.addEventListener('click', toggleModal);
+    button.addEventListener('click', toggleReservationModal);
 });
 
 // Toggle modal when clicked on submit
 document.querySelector('#reservation-form')
   .addEventListener('submit', (event) => {
-    toggleModal();
+    toggleReservationModal();
+    toggleConfirmModal();
   })
 
-// Close modal when clicked on cross
-document.querySelector('.modal__header span')
-  .addEventListener('click', toggleModal);
+// Close reservation modal when clicked on cross
+document.querySelector('.modal--reservation .modal__header span')
+  .addEventListener('click', toggleReservationModal);
+
+// Close confirmation modal when clicked on cross
+document.querySelector('.modal--confirmation .modal__header span')
+.addEventListener('click', toggleConfirmModal);
 
 //Show current modal & hide other modals functions
 function showNext(button) {

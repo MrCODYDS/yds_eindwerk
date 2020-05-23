@@ -45,7 +45,7 @@
 
 
 
-<div class="modal modal--hidden">
+<div class="modal modal--reservation modal--hidden">
     <div class="row justify-content-center w-100">
         <div class="col-11 col-sm-9 col-lg-7 col-xl-5 col-xxl-4 modal__dialog py-3 px-4">
             <div class="modal__header">
@@ -241,3 +241,24 @@
         </div>
     </div>
 </div>
+
+<div class="modal modal--confirmation modal--hidden">
+    <div class="row justify-content-center w-100">
+        <div class="col-11 col-sm-9 col-lg-7 col-xl-5 col-xxl-4 modal__dialog py-3 px-4">
+            <div class="modal__header">
+                <span>X</span>
+            </div>
+            <div class="modal__content d-flex flex-column justify content-center align-items-center text-center">
+                <svg class="icon icon--confirm mb-4"><use xlink:href="#confirm" /></svg>
+                <h2 class="text-secondary mb-4">Gelukt!</h2>
+                <p class="px-sm-5 mb-4">Uw reservatie is bevestigd! We hebben een overzicht van uw reservatie naar uw email gestuurd.</p>
+                <a href="/user-reservations" class="btn btn-secondary mb-4">Bekijk reservaties</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
