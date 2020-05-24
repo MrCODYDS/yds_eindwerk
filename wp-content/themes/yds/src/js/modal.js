@@ -125,10 +125,18 @@ function fillInEndScreen() {
     var sum = Number(timeValue) + Number(selectedTimes);
     $('#final-time').val(timeValue + ":00-" + sum + ":00");
 
-    // Fill in selected persons
+    // Fill in selected persons if radio button
     var peopleValue = $("input[name='radioPeople']:checked").val();
-    $('#final-people').val(peopleValue);
+    if (peopleValue) {
+      $('#final-people').val(peopleValue);
+    }
 
+    // Fill in selected persons if select
+    var selectedPeople = $('select#amountPeopleSelect').children("option:selected").val();
+    if (selectedPeople) {
+      $('#final-people').val(selectedPeople);
+    }
+    
     // Fill in selected date
     var dt = $("#datepicker").val().split('-');
     var dateValue = dt[2] +"-"+ dt[1] +"-"+ dt[0];
@@ -175,36 +183,56 @@ function showUser(date, ground, session) {
       }
   };
 
-  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?date="+date+"&ground="+ground+"&session="+session,true);
+  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?date="+date+"&ground="+ground+"&session="+session, true);
+  xmlhttp.send();
+}
+
+// Post choice to getAmountOfPeople.php
+function showAmountOfPeople(choice) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("formAmountPeople").innerHTML = this.responseText;
+      }
+  };
+
+  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getAmountOfPeople.php?choice="+choice, true);
   xmlhttp.send();
 }
 
 // If choice is selected, enable next button
 jQuery(document).ready(function ($) {
+  // If the current selected item is checked, enable next button
   $('.form-choices__radio input[type="radio"]').on('click', function() {
-    // If the current selected item is checked, enable next button
     if($(this).prop('checked')){
       $('.btn-next[data-next="form-dates"]').removeAttr("disabled");
     }
+    console.log($(this).val());
+    showAmountOfPeople($(this).val());
   });
 
+  //On select date --> delete "disabled" from btn-next
   $('#selectGround').change(function() {
-    //On select date --> delete "disabled" from btn-next
     $('.btn-next[data-next="form-times"]').removeAttr("disabled");
   });
 
   // Check if radio input gets added
+  // If the current selected item is checked, enable next button
   $('.form-timeslots').on('click', 'input[type="radio"]', function() {
-    // If the current selected item is checked, enable next button
     if($(this).prop('checked')){
       $('.btn-next[data-next="form-people"]').removeAttr("disabled");
     }
   });
 
-  $('.form-amountpeople input[type="radio"]').on('click', function() {
-    // If the current selected item is checked, enable next button
+  // If the current selected item is checked, enable next button
+  $('.form-amountpeople').on('click', 'input[type="radio"]', function() {
     if($(this).prop('checked')){
       $('.btn-next[data-next="form-final"]').removeAttr("disabled");
     }
+  });
+
+  // If select #amountPeopleSelect changes, enable next button
+  $('.form-amountpeople').on('change', '#amountPeopleSelect', function() {
+    $('.btn-next[data-next="form-final"]').removeAttr("disabled");
   });
 });

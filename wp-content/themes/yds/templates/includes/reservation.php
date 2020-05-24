@@ -70,16 +70,16 @@
                             </label>
 
                             <div class="w-100"></div>
-                            <input type="radio" id="radioBedrijf" name="radioChoices" value="Bedrijfsuitje">
+                            <input type="radio" id="radioBedrijf" name="radioChoices" value="Bedrijven">
                             <label for="radioBedrijf" class="col text-center btn btn-primary mr-3 mr-md-5">
                                 <svg class="icon"><use xlink:href="#business" /></svg>
-                                <p class="mb-0 mt-4">Bedrijfsuitje</p>
+                                <p class="mb-0 mt-4">Bedrijven</p>
                             </label> 
 
-                            <input type="radio" id="radioLorem" name="radioChoices" value="Lorem ipsum">
+                            <input type="radio" id="radioLorem" name="radioChoices" value="Privé training">
                             <label for="radioLorem" class="col text-center btn btn-primary">
                                 <svg class="icon"><use xlink:href="#badminton" /></svg>
-                                <p class="mb-0 mt-4">Lorem ipsum</p>
+                                <p class="mb-0 mt-4">Privé training</p>
                             </label>
                         </div>
 
@@ -174,23 +174,8 @@
                     </div>
                     <div class="form-people form-part form-part--hidden">
                         <hr class="hr-text mt-0 mb-3" data-content="Kies het aantal personen">
-                        <div class="form-amountpeople row justify-content-center">
-                            <div class="col-auto mb-3">
-                                <input type="radio" id="radioPeople1" name="radioPeople" value="1">
-                                <label for="radioPeople1">1</label>
-                            </div>
-                            <div class="col-auto mb-3">
-                                <input type="radio" id="radioPeople2" name="radioPeople" value="2">
-                                <label for="radioPeople2">2</label>
-                            </div>
-                            <div class="col-auto mb-3">
-                                <input type="radio" id="radioPeople3" name="radioPeople" value="3">
-                                <label for="radioPeople3">3</label>
-                            </div>
-                            <div class="col-auto mb-3">
-                                <input type="radio" id="radioPeople4" name="radioPeople" value="4">
-                                <label for="radioPeople4">4</label>
-                            </div>
+                        <div id="formAmountPeople" class="form-amountpeople row justify-content-center">
+                            
                         </div>
                         <div class="d-flex justify-content-between w-100 mt-5">
                             <div>
