@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="2042" viewBox="0 0 1920 2042">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_63" data-name="Rectangle 63" width="1920" height="2042" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.998" y1="0.457" x2="0.468" y2="0.514" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2288c9"/>
+      <stop offset="1" stop-color="#3720b8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.842" y1="0.5" x2="0.355" y2="0.466" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.771" y1="0.57" x2="0.306" y2="0.534" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2288c9"/>
+      <stop offset="1" stop-color="#2a36bc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.678" y1="0.537" x2="0.258" y2="0.545" xlink:href="#linear-gradient-3"/>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" clip-path="url(#clip-path)">
+    <g id="Group_71" data-name="Group 71" transform="translate(-310.793 -375.47)">
+      <rect id="Rectangle_57" data-name="Rectangle 57" width="3068.819" height="546.937" transform="translate(-740.207 767.205) rotate(-23)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_58" data-name="Rectangle 58" width="3068.819" height="465.736" transform="translate(-528.338 1268.41) rotate(-23)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_59" data-name="Rectangle 59" width="3068.819" height="467.603" transform="translate(-351.936 1696.815) rotate(-23)" fill="url(#linear-gradient-3)"/>
+      <rect id="Rectangle_60" data-name="Rectangle 60" width="3068.819" height="462.003" transform="translate(-172.734 2124.287) rotate(-23)" fill="url(#linear-gradient-4)"/>
+    </g>
+  </g>
+</svg>

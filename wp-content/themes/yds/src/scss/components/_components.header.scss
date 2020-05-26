@@ -5,13 +5,8 @@
 
 .c-header {
     width: 100%;
-    background-color: $white;
     font-weight: 600;
     transition: all .3s ease-in-out;
-
-    &__top {
-        background-color: $light-blue;
-    }
 
     .is-open-sidebar & {
         transform: translateX(-300px);
