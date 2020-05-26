@@ -3,18 +3,11 @@
  * Styling reservation
  */
 
- .b-reservation {
-    background-color: $light-blue;
-    overflow: hidden;
-}
-
 .b-reservation-image {
-    height: 1000px;
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    background: no-repeat center center;
-    transform: rotate(15deg) translateY(-50%);
-    background-size: auto 70%;
+    img {
+        width: 50%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        transform: rotate(15deg);
+    }
 }
