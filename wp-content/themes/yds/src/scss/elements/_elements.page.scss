@@ -29,3 +29,14 @@ body {
         z-index: -1;
     }
 }
+
+.block-background {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 5px 5px 70px rgba($body-color, .35);
+
+    @include media-breakpoint-down(sm) {
+        background: none;
+        box-shadow: none;
+    }
+}

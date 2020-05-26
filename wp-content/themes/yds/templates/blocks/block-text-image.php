@@ -12,7 +12,7 @@ $cta_settings = get_field('cta_settings_textimage');
 
 <section class="block b-text-image <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
-        <div class="row">
+        <div class="block-background row py-6 px-0 px-md-5">
             <div class="b-text-image__image col-lg-5 <?php if($image_align == 'right'): ?>order-lg-last offset-lg-1<?php endif; ?> d-flex align-items-center mb-3 mb-lg-0">
                 <?= wp_get_attachment_image($image, 'full', false, array("title" => get_the_title($image), 'class' => 'img-fluid')) ?>
             </div>
