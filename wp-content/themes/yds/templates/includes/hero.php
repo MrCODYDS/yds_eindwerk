@@ -1,6 +1,5 @@
 <?php
 $text_align = strtolower('text-'.get_field('text_align_front_hero'));
-$image = get_field('image_front_hero');
 $title = get_field('title_front_hero');
 $text = get_field('text_front_hero');
 $cta = get_field('cta_button_front_hero');
@@ -20,7 +19,7 @@ if ($text_align == "text-center") {
 ?>
 
 <section class="c-hero <?= $text_align; ?>">
-    <div class="c-hero__img" style="background-image: url(<?= wp_get_attachment_image_url($image,  'full'); ?>)"></div>
+    <div class="c-hero__img"></div>
     <div class="c-hero__content py-4 py-md-0">
         <div class="container">
             <div class="row <?= $row_display; ?>">

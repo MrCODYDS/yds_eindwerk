@@ -2,7 +2,6 @@
 $spacer_top = (get_field('spacing_top_hero')) ? 'pt-5 pt-md-4 pt-lg-5' : '';
 $spacer_bottom = (get_field('spacing_bottom_hero')) ? 'pb-5 pb-md-4 pb-lg-5' : '';
 $text_align = strtolower('text-'.get_field('text_align_hero'));
-$image = get_field('image_hero');
 $title = get_field('title_hero');
 $text = get_field('text_hero');
 $cta = get_field('cta_button_hero');
