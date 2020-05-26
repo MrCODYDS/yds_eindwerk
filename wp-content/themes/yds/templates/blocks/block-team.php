@@ -9,7 +9,7 @@ $repeater = get_field('repeater_team');
 $amount = get_field('number_of_columns_team');
 
 ?>
-<div class="block b-team <?php if($background): ?>b-team--lightblue<?php endif; ?> <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
+<div class="block b-team <?php if($background): ?><?php endif; ?> <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
         <div class="row flex-column <?= $text_align; ?> mb-4">
             <div class="col">
@@ -27,16 +27,17 @@ $amount = get_field('number_of_columns_team');
                 <?php if($amount == '2'): ?><div class="col-sm-12 col-md-6"><?php endif; ?>
                 <?php if($amount == '3'): ?><div class="col-sm-12 col-md-4"><?php endif; ?>
                 <?php if($amount == '4'): ?><div class="col-sm-12 col-md-6 col-lg-3"><?php endif; ?>
+                    <div class="block-background h-100 py-5 px-4">
+                        <?= wp_get_attachment_image($column['repeater_image_team'], 'full', false, array("title" => get_the_title($column['repeater_image_team']), 'class' => 'img-fluid mb-3')); ?>
 
-                    <?= wp_get_attachment_image($column['repeater_image_team'], 'full', false, array("title" => get_the_title($column['repeater_image_team']), 'class' => 'img-fluid mb-3')); ?>
+                        <?php if($column['repeater_title_team']): ?>
+                            <h3 class="mb-3"><?= $column['repeater_title_team']; ?></h3>
+                        <?php endif; ?>
 
-                    <?php if($column['repeater_title_team']): ?>
-                        <h3 class="mb-3"><?= $column['repeater_title_team']; ?></h3>
-                    <?php endif; ?>
-
-                    <?php if($column['repeater_text_team']): ?>
-                        <p class="m-lg-0"><?= $column['repeater_text_team']; ?></p>
-                    <?php endif; ?>
+                        <?php if($column['repeater_text_team']): ?>
+                            <p class="m-lg-0"><?= $column['repeater_text_team']; ?></p>
+                        <?php endif; ?>
+                        </div>
                 </div>
             <?php endforeach; ?>
             </div>
