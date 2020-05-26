@@ -13,27 +13,29 @@ $cta_settings = get_field('cta_settings');
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="b-cta__content">
-                    <?php if($title): ?>
-                        <h2 class="m-0"><?= $title; ?></h2>
-                    <?php endif; ?>
+                <div class="block-background py-6 px-0 px-md-5">
+                    <div class="b-cta__content">
+                        <?php if($title): ?>
+                            <h2 class="m-0"><?= $title; ?></h2>
+                        <?php endif; ?>
 
-                    <?php if($text): ?>
-                        <p class="mx-0 mx-md-8 my-3"><?= $text; ?></p>
+                        <?php if($text): ?>
+                            <p class="mx-0 mx-md-8 my-3"><?= $text; ?></p>
+                        <?php endif; ?>
+                    </div>
+
+                    <?php if($cta): ?>
+                        <?php if($cta_settings['cta_reservation_cta']): ?>
+                            <button class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4 show-modal">
+                                <?= $cta_settings['cta_link_cta']['title']; ?>
+                            </button>
+                        <?php else: ?>
+                            <a href="<?= $cta_settings['cta_link_cta']['url']; ?>" class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4">
+                                <?= $cta_settings['cta_link_cta']['title']; ?>
+                            </a>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
-
-                <?php if($cta): ?>
-                    <?php if($cta_settings['cta_reservation_cta']): ?>
-                        <button class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4 show-modal">
-                            <?= $cta_settings['cta_link_cta']['title']; ?>
-                        </button>
-                    <?php else: ?>
-                        <a href="<?= $cta_settings['cta_link_cta']['url']; ?>" class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4">
-                            <?= $cta_settings['cta_link_cta']['title']; ?>
-                        </a>
-                    <?php endif; ?>
-                <?php endif; ?>
             </div>
         </div>
 
