@@ -22,7 +22,7 @@ if ($text_align == "text-center") {
 ?>
 
 <section class="block b-hero <?= $text_align; ?>">
-    <div class="b-hero__img" style="background-image: url(<?= wp_get_attachment_image_url($image,  'full'); ?>)"></div>
+    <div class="b-hero__img"></div>
     <div class="b-hero__content py-4 py-md-0">
         <div class="container">
             <div class="row <?= $row_display; ?>">

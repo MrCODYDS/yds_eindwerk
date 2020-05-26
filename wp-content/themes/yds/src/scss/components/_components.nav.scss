@@ -26,35 +26,39 @@
 }
 
 .c-nav-main {
+    a {
+        color: $white;
+    }
+
     .current-menu-item {
         a {
-            color: $secondary;
+            color: $white;
             padding-bottom: .2rem;
-            border-bottom: 2px solid $secondary;
+            border-bottom: 2px solid $white;
         }
     }
 
     a:hover {
-        color: $secondary;
+        border-bottom: 2px solid $white;
     }
 
     .btn-contact {
         a {
             @extend .btn;
             @extend .btn-outline;
-            @extend .btn-outline--secondary;
+            @extend .btn-outline--white;
     
             &:hover {
-                background-color: $secondary;
-                color: $white;
+                background-color: $white;
+                color: $secondary;
             }
         }
     }
     
     .btn-contact.current-menu-item {
         a {
-            color: $white;
-            background-color: $secondary;
+            background-color: $white;
+            color: $secondary;
         }
     }
 }
@@ -92,7 +96,7 @@
 
 .c-nav-sub {
     li {
-        border-right: 1px solid $dark;
+        border-right: 1px solid $white;
         line-height: 1;
 
         &:last-child {

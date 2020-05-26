@@ -13,21 +13,21 @@
                         <ul>
                             <?php if(is_user_logged_in()): ?>
                                 <li>
-                                    <a href="/user-reservations" class="btn btn-link btn-link--dark h-100">
+                                    <a href="/user-reservations" class="btn h-100">
                                         <?php echo "Mijn reservaties" ?>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo wp_logout_url() ?>" class="btn btn-link btn-link--dark h-100">
+                                    <a href="<?php echo wp_logout_url() ?>" class="btn h-100">
                                         <?php echo "Logout" ?>
                                     </a>
                                 </li>
                             <?php else: ?>
                                 <li>
-                                    <a href="/login" class="btn btn-link btn-link--dark h-100">Sign In</a>
+                                    <a href="/login" class="btn btn-link h-100">Log In</a>
                                 </li>
                                 <li>
-                                    <a href="/register" class="btn btn-link btn-link--dark h-100">Sign Up</a>
+                                    <a href="/register" class="btn btn-link h-100">Sign Up</a>
                                 </li>
                             <?php endif; ?>
                         </ul>
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-auto d-flex align-items-center">
                     <a href="<?php echo get_home_url(); ?>" class="c-logo" title="Home">
-                        <div>
+                        <div class="text-white">
                             Dit is het logo
                         </div>
                     </a>

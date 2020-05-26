@@ -34,9 +34,9 @@
 
 .btn-link {
     color: $white;
-    font-weight: 700;
+    font-weight: 600;
     padding: 0;
-    border-bottom: 1px solid $white;
+    border: none;
     border-radius: 0;
     height: 30px;
     &:hover {
@@ -83,6 +83,11 @@
     &--mobile {
         padding: .25rem .5rem;
         min-width: 110px;
+        color: $white;
+        border-color: $white;
+    }
+
+    &--white {
         color: $white;
         border-color: $white;
     }
