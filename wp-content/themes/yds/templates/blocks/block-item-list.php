@@ -10,12 +10,7 @@ $repeater = get_field('item_list_itemlist');
 
 ?>
 
-<section class="block b-item-list
-    <?php if($image_align == 'left'): ?>
-        b-item-list--left
-    <?php else: ?>
-        b-item-list--right
-    <?php endif; ?>
+<section class="block b-item-list <?php if($image_align == 'left'): ?>b-item-list--left<?php endif; ?>
     <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
         <div class="row">
