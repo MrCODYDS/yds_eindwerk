@@ -3,80 +3,36 @@
  * Custom login styling
  */
 
-.c-login {
-    background-color: $primary;
-}
-
 .c-login-content {
-    position: relative;
-    z-index: 1;
+    height: 450px;
+    box-shadow: 5px 5px 70px rgba($body-color, .35);
 
-    &::after {
-        content: "";
-        background-color: $light-blue;
-        width: 70%;
-        height: 400px;
-        border-radius: 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-
-        @include media-breakpoint-down(lg) {
+    .c-login--login {
+        background-color: $white;
+        border-radius: 8px 0 0 8px;
+    
+        form {
             width: 100%;
         }
-
-        @include media-breakpoint-down(sm) {
-            display: none;
-        }
-    }
-}
-
-.login-part-login {
-    height: 500px;
-    border-radius: 10px;
-
-    @include media-breakpoint-down(sm) {
-        height: 400px;
-    }
-
-    form {
-        width: 100%;
-    }
-
-    input[type=text],
-    input[type=password],
-    input[type=email] {
-        padding: .8rem;
-        border: 1px solid $light-blue;
-        border-radius: 10px;
-        width: 80%;
-    }
-}
-
-.login-part-register {
-    height: 500px;
-
-    @include media-breakpoint-down(sm) {
-        height: 200px;
-    }
-
-    .register-button {
-        @include media-breakpoint-down(sm) {
-            background-color: $white;
-            width: 100%;
+    
+        input[type=text],
+        input[type=password],
+        input[type=email] {
+            padding: .8rem;
+            border: 1px solid $light-blue;
             border-radius: 10px;
+            width: 60%;
         }
     }
 
-    a {
-        @include media-breakpoint-up(md) {
-            color: $white;
-            border-color: $white;
-        }
+    .c-login--register {
+        background-color: $secondary;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .c-login--loginn,
+    .c-login--register {
+        height: 100%;
     }
 }
-
-
 
