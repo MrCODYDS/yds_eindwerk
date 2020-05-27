@@ -6,42 +6,27 @@
 .b-item-list {
     position: relative;
 
-    &--left {
-        &::before {
-            content: '';
-            position: absolute;
-            background-image: url(sprites/racket.svg);
-            background-position: left top;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-            transform: scaleX(-1);
-            left: -120px;
-    
-            @include media-breakpoint-down(lg) {
-                background: none;
-                left: 0;
-            }
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(sprites/racket.svg);
+        background-position: right top;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+
+        @include media-breakpoint-down(lg) {
+            background: none;
         }
     }
 
-    &--right {
+    &--left {
         &::before {
-            content: '';
-            position: absolute;
-            background-image: url(sprites/racket.svg);
-            background-position: right top;
-            background-size: auto 100%;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
-    
-            @include media-breakpoint-down(lg) {
-                background: none;
-            }
+            transform: scaleX(-1);
         }
     }
+
 }
 
 .b-item-list__repeater {
