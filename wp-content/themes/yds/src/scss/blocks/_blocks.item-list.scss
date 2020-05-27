@@ -5,15 +5,14 @@
 
 .b-item-list {
     position: relative;
-    overflow: hidden;
 
     &--left {
         &::before {
             content: '';
             position: absolute;
             background-image: url(sprites/racket.svg);
-            background-position: 120% top;
-            background-size: 60% 100%;
+            background-position: left top;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             height: 100%;
             width: 100%;
@@ -22,6 +21,7 @@
     
             @include media-breakpoint-down(lg) {
                 background: none;
+                left: 0;
             }
         }
     }
@@ -31,13 +31,11 @@
             content: '';
             position: absolute;
             background-image: url(sprites/racket.svg);
-            background-position: 120% top;
-            background-size: 60% 100%;
+            background-position: right top;
+            background-size: auto 100%;
             background-repeat: no-repeat;
             height: 100%;
             width: 100%;
-            transform: scaleX(1);
-            right: -120px;
     
             @include media-breakpoint-down(lg) {
                 background: none;
