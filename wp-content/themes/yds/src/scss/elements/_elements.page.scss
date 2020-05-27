@@ -43,6 +43,28 @@ body {
             background-position: left -800px;
         }
     }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: url(sprites/bottomBG.svg);
+        height: 100%;
+        width: 100%;
+        background-position: left bottom;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        z-index: -1;
+
+        @include media-breakpoint-down(md) {
+            background-size: 180% auto;
+        }
+
+        @include media-breakpoint-down(lg) {
+            background-size: 150% auto;
+        }
+    }
 }
 
 .block-background {

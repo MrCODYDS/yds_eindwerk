@@ -11,10 +11,6 @@
     }
 }
 
-.c-footer-top {
-    background-color: $dark-blue;
-}
-
 .c-footer-top__content {
     display: flex;
     justify-content: center;
@@ -44,7 +40,6 @@
 }
 
 .c-footer-bottom {
-    background-color: $primary;
     color: $white;
 
     ul {
