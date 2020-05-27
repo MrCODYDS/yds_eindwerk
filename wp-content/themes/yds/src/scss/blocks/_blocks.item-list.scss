@@ -5,21 +5,57 @@
 
 .b-item-list {
     position: relative;
+    overflow: hidden;
 
-    &::before {
-        content: '';
-        position: absolute;
-        background-image: url(sprites/racket.svg);
-        background-position: 120% top;
-        background-size: 60% 100%;
-        background-repeat: no-repeat;
-        height: 100%;
-        width: 100%;
-        transform: scaleX(-1);
-        left: -120px;
+    &--left {
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(sprites/racket.svg);
+            background-position: 120% top;
+            background-size: 60% 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            transform: scaleX(-1);
+            left: -120px;
+    
+            @include media-breakpoint-down(lg) {
+                background: none;
+            }
+        }
+    }
 
-        @include media-breakpoint-down(lg) {
-            background: none;
+    &--right {
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(sprites/racket.svg);
+            background-position: 120% top;
+            background-size: 60% 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            transform: scaleX(1);
+            right: -120px;
+    
+            @include media-breakpoint-down(lg) {
+                background: none;
+            }
+        }
+    }
+}
+
+.b-item-list__repeater {
+    @include media-breakpoint-up(lg) {
+        &:last-child {
+            margin: 0 !important;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &:last-child {
+            margin: 0 !important;
         }
     }
 }
@@ -45,11 +81,6 @@
         flex-direction: row;
         justify-content: flex-start;
         text-align: left;
-    }
-    
-    &:nth-child(2) {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
     }
 
     h5 {

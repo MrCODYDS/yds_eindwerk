@@ -3,16 +3,23 @@ $spacer_top = (get_field('spacing_top_itemlist')) ? 'pt-5 pt-md-4 pt-lg-5' : '';
 $spacer_bottom = (get_field('spacing_bottom_itemlist')) ? 'pb-5 pb-md-4 pb-lg-5' : '';
 $title = get_field('title_itemlist');
 $image = get_field('image_itemlist');
+$image_align = get_field('image_align_itemlist');
 $text = get_field('text_itemlist');
 $icon_align = get_field('icon_align_itemlist');
 $repeater = get_field('item_list_itemlist');
 
 ?>
 
-<section class="block b-item-list <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
+<section class="block b-item-list
+    <?php if($image_align == 'left'): ?>
+        b-item-list--left
+    <?php else: ?>
+        b-item-list--right
+    <?php endif; ?>
+    <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
         <div class="row">
-            <div class="col-xl-9 offset-xl-3">
+            <div class="col-xl-9 <?php if($image_align == 'left'): ?>offset-xl-3<?php endif; ?>">
                 <div class="block-background d-flex flex-wrap justify-content-center align-items-center py-6 px-0 px-md-5">
                     <div class="col-lg-6 mb-3 mb-lg-0">
                         <?php if($title): ?>
@@ -23,10 +30,10 @@ $repeater = get_field('item_list_itemlist');
                             <p class="m-0"><?= $text; ?></p>
                         <?php endif; ?>
                     </div>
-                    <div class="col col-lg-6">
+                    <div class="col col-lg-6 col-xxl-5 offset-xxl-1">
                         <div class="row">
                         <?php foreach($repeater as $column): ?>
-                            <div class="col-12 col-sm-4 col-lg-12 mb-4">
+                            <div class="b-item-list__repeater col-12 col-sm-4 col-lg-12 mb-4">
                                 <div class="b-item-list__item py-3 px-4">
                                     <div class="b-item-list__icon mr-4 mr-sm-0 mr-lg-4 mb-0 mb-sm-3 mb-lg-0">
                                         <svg class="icon"><use xlink:href="#<?= $column['list_icon_itemlist'] ?>" /></svg>
