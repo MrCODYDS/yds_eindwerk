@@ -4,79 +4,59 @@
  */
 
 .b-item-list {
-    overflow-x: hidden;
-}
+    position: relative;
 
-.b-item-list__circle {
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    right: -250px;
-    background-color: $light-blue;
-    border-radius: 50%;
-    display: inline-block;
-}
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(sprites/racket.svg);
+        background-position: 120% top;
+        background-size: 60% 100%;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        transform: scaleX(-1);
+        left: -120px;
 
-.b-item-list__circle--left {
-    left: -250px;
-}
-
-
-.b-item-list__image {
-    height: 500px;
+        @include media-breakpoint-down(lg) {
+            background: none;
+        }
+    }
 }
 
 .b-item-list__item {
     background-color: $secondary;
     color: $white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
 
-    &:first-child {
-        margin-left: 8rem;
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+    }
 
-        @include media-breakpoint-down(lg) {
-            margin-left: 4rem;
-        }
+    @include media-breakpoint-down(xs) {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
     }
     
     &:nth-child(2) {
-        margin-left: 4rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
-
-        @include media-breakpoint-down(lg) {
-            margin-left: 2rem;
-        }
     }
 
-    h3 {
+    h5 {
         color: $white;
     }
 
     p {
         margin: 0;
-    }
-}
-
-.b-item-list__item--right {
-    &:first-child {
-        margin-right: 8rem;
-        margin-left: auto;
-
-        @include media-breakpoint-down(lg) {
-            margin-right: 4rem;
-        }
-    }
-    
-    &:nth-child(2) {
-        margin-right: 4rem;
-        margin-left: auto;
-
-        @include media-breakpoint-down(lg) {
-            margin-right: 2rem;
-        }
-    }
-
-    &:last-child {
-        margin-left: auto;
     }
 }
