@@ -4,12 +4,12 @@
  */
 
 .c-login-content {
-    height: 450px;
+    height: 550px;
     box-shadow: 5px 5px 70px rgba($body-color, .35);
 
+    .c-login--register,
     .c-login--login {
         background-color: $white;
-        border-radius: 8px 0 0 8px;
     
         form {
             width: 100%;
@@ -18,21 +18,42 @@
         input[type=text],
         input[type=password],
         input[type=email] {
-            padding: .8rem;
+            padding: .6rem .8rem;
             border: 1px solid $light-blue;
             border-radius: 10px;
-            width: 60%;
+            width: 70%;
+            background-color: rgba($primary, .1);
         }
     }
 
+    .c-login--login {
+        border-radius: 8px 0 0 8px;
+    }
+
     .c-login--register {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .c-login--info {
         background-color: $secondary;
         border-radius: 0 8px 8px 0;
     }
 
-    .c-login--loginn,
-    .c-login--register {
+    .c-register--info {
+        background-color: $secondary;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .c-login--login,
+    .c-login--info {
         height: 100%;
     }
 }
 
+.c-login__image {
+    background-image: url(sprites/user.svg);
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
