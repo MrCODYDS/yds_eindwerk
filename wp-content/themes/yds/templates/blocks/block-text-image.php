@@ -14,7 +14,7 @@ $cta_settings = get_field('cta_settings_textimage');
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="block-background d-flex flex-wrap py-4 py-md-6 px-0 px-md-5">
+                <div class="block-background d-flex flex-wrap py-4 py-md-5 px-0 px-md-5">
                     <div class="b-text-image__image col-lg-5 <?php if($image_align == 'right'): ?>order-lg-last offset-lg-1<?php endif; ?> d-flex align-items-center mb-3 mb-lg-0">
                         <?= wp_get_attachment_image($image, 'full', false, array("title" => get_the_title($image), 'class' => 'img-fluid')) ?>
                     </div>

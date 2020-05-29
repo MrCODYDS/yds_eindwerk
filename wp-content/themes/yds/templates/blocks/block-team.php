@@ -24,14 +24,14 @@ $amount = get_field('number_of_columns_team');
         </div>
         <div class="row text-center">
             <?php foreach($repeater as $column): ?>
-                <?php if($amount == '2'): ?><div class="col-sm-12 col-md-6 mb-4""><?php endif; ?>
-                <?php if($amount == '3'): ?><div class="col-sm-12 col-md-4 mb-4""><?php endif; ?>
-                <?php if($amount == '4'): ?><div class="col-sm-12 col-md-6 col-lg-3 mb-4""><?php endif; ?>
-                    <div class="block-background h-100 py-5 px-4">
+                <?php if($amount == '2'): ?><div class="b-team-content col-6 col-md-6"><?php endif; ?>
+                <?php if($amount == '3'): ?><div class="b-team-content col-6 col-md-4"><?php endif; ?>
+                <?php if($amount == '4'): ?><div class="b-team-content col-6 col-md-6 col-lg-3"><?php endif; ?>
+                    <div class="block-background h-100 py-4 py-md-5 px-3 px-md-4">
                         <?= wp_get_attachment_image($column['repeater_image_team'], 'full', false, array("title" => get_the_title($column['repeater_image_team']), 'class' => 'img-fluid mb-3')); ?>
 
                         <?php if($column['repeater_title_team']): ?>
-                            <h3 class="mb-3"><?= $column['repeater_title_team']; ?></h3>
+                            <h3 class="mb-2"><?= $column['repeater_title_team']; ?></h3>
                         <?php endif; ?>
 
                         <?php if($column['repeater_text_team']): ?>
