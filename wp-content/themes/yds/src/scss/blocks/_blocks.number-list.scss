@@ -3,19 +3,27 @@
  * Styling number list
  */
 
-.b-numberlist__number{
-    position: relative;
-    width: 100%;
-    padding-bottom: 16.667%;
-    background-color: $light-blue;
-    border-radius: 50%;
-  
-  h2 {
-    position:absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin:0;
-    color: $white;
+.b-numberlist-wrapper {
+  &:first-child,
+  &:nth-child(2) {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
+  }
+  &:nth-child(3) {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.b-numberlist-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: row;
   }
 }

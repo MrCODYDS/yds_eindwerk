@@ -8,7 +8,6 @@ $repeater = get_field('repeater_numberlist');
 
 <div class="block b-numberlist <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
-        <div class="block-background py-6 px-0 px-md-5">
             <div class="row text-center">
                 <div class="col mb-3">
                     <?php if($title): ?>
@@ -16,25 +15,23 @@ $repeater = get_field('repeater_numberlist');
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="row justify-content-between mx-lg-4 mx-xl-6 mx-xxl-8">
-                <?php if($repeater): $i = 0; ?>
-                    <?php foreach($repeater as $column): $i++ ?>
-                        <div class="col-lg-6 d-flex align-items-start mb-4">
-                            <div class="b-numberlist__number col-2">
-                                <h2><?php echo "0" . $i ?></h2>
-                            </div>
-                            <div class="col-10">
+            <div class="row text-center">
+                <?php foreach($repeater as $column): ?>
+                    <div class="b-numberlist-wrapper col-12 col-md-6 col-lg-3">
+                        <div class="block-background b-numberlist-content h-100 py-4 py-md-5 px-3 px-md-4">
+                            <?= wp_get_attachment_image($column['repeater_image_numberlist'], 'full', false, array("title" => get_the_title($column['repeater_image_numberlist']), 'class' => 'img-fluid mb-0 mb-md-3 p-3 p-md-0')); ?>
+                            <div class="text-left text-md-center ml-3 pr-2">
                                 <?php if($column['repeater_title_numberlist']): ?>
-                                    <h3><?= $column['repeater_title_numberlist']; ?></h3>
+                                    <h3 class="mb-0 mb-md-2"><?= $column['repeater_title_numberlist']; ?></h3>
                                 <?php endif; ?>
+
                                 <?php if($column['repeater_text_numberlist']): ?>
                                     <p class="m-0"><?= $column['repeater_text_numberlist']; ?></p>
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <?php endforeach; ?>
-                <?php endif; ?>
-                </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
