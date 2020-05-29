@@ -5,6 +5,10 @@ function load_assets() {
     // Include main.css
     wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/dest/main.css', array(), false);
 
+    // Include slick.css
+    wp_enqueue_style('slick-css', get_stylesheet_directory_uri() . '/src/slick/slick.css', array(), false);
+    wp_enqueue_style('slick-theme-css', get_stylesheet_directory_uri() . '/src/slick/slick-theme.css', array(), false);
+
     // Remove default jQuery (to remove it from header)
     wp_deregister_script('jquery');
     
@@ -20,6 +24,9 @@ function load_assets() {
     
     // Include mobilemenu.js
     wp_enqueue_script('mobilemenu-js', get_template_directory_uri() . '/src/js/mobilemenu.js', array(), false, true );
+
+    // Include slick.min.js
+    wp_enqueue_script('slick-js', get_template_directory_uri() . '/src/slick/slick.min.js', array(), false, true);
 
 }
 
