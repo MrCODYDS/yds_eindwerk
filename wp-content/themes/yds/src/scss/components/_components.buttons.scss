@@ -98,3 +98,12 @@
     border-color: $dark;
     color: $white;
 }
+
+.btn-cta {
+    @include media-breakpoint-down(sm) {
+        color: $secondary !important;
+        background-color: $white !important;
+        border-color: $white !important;
+        width: 65%;
+    }
+}

@@ -13,14 +13,14 @@ $cta_settings = get_field('cta_settings');
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="block-background py-6 px-0 px-md-5">
-                    <div class="b-cta__content">
+                <div class="block-background b-cta__content py-4 py-md-5 px-3 px-md-4">
+                    <div class="py-2">
                         <?php if($title): ?>
-                            <h2 class="m-0"><?= $title; ?></h2>
+                            <h2 class="b-cta__content__title m-0"><?= $title; ?></h2>
                         <?php endif; ?>
 
                         <?php if($text): ?>
-                            <p class="mx-0 mx-md-8 my-3"><?= $text; ?></p>
+                            <p class="b-cta__content__text mx-0 mx-md-8 my-3"><?= $text; ?></p>
                         <?php endif; ?>
                     </div>
 
@@ -30,7 +30,7 @@ $cta_settings = get_field('cta_settings');
                                 <?= $cta_settings['cta_link_cta']['title']; ?>
                             </button>
                         <?php else: ?>
-                            <a href="<?= $cta_settings['cta_link_cta']['url']; ?>" class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4">
+                            <a href="<?= $cta_settings['cta_link_cta']['url']; ?>" class="btn btn-secondary btn-cta px-4">
                                 <?= $cta_settings['cta_link_cta']['title']; ?>
                             </a>
                         <?php endif; ?>

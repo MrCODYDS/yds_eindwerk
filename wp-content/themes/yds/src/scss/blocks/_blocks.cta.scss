@@ -2,3 +2,25 @@
  * Block: CTA
  * Styling cta
  */
+
+.b-cta__content {
+    @include media-breakpoint-down(sm) {
+        background-color: $secondary;
+    }
+
+    &__title {
+        color: $secondary;
+
+        @include media-breakpoint-down(sm) {
+            color: $white;
+        }
+    }
+
+    &__text {
+        color: $dark;
+
+        @include media-breakpoint-down(sm) {
+            color: $white;
+        }
+    }
+}
