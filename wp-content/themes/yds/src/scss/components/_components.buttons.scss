@@ -107,3 +107,9 @@
         width: 65%;
     }
 }
+
+.btn-reservation {
+    @include media-breakpoint-down(sm) {
+        width: 65%;
+    }
+}

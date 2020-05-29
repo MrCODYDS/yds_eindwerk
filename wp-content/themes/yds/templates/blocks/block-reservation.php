@@ -15,7 +15,7 @@ $cta_settings = get_field('cta_settings_reservation');
     <div class="container">
         <div class="row">
             <div class="col-lg-7 d-flex flex-column justify-content-center align-items-start">
-                <div class="block-background py-6 px-0 px-md-5">
+                <div class="block-background text-center text-md-left py-4 py-md-5 px-3 px-md-4">
                     <?php if($title): ?>
                         <h2 class="m-0"><?= $title; ?></h2>
                     <?php endif; ?>
@@ -23,13 +23,13 @@ $cta_settings = get_field('cta_settings_reservation');
                         <p class="my-3"><?= $text; ?></p>
                     <?php endif; ?>
                     <?php if($cta): ?>
-                        <button class="btn btn-<?= $cta_settings['cta_type_reservation']; ?> px-4 show-modal">
+                        <button class="btn btn-secondary btn-reservation px-4 show-modal">
                                 <?= $cta_settings['cta_text_reservation']; ?>
                         </button>
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="b-reservation-image d-none d-lg-flex col-lg-5 justify-content-end">
+            <div class="b-reservation__image d-none d-lg-flex col-lg-5 justify-content-end">
                 <?= wp_get_attachment_image($image, 'full', false, array("title" => get_the_title($image), 'class' => 'img-fluid mr-5')) ?>
             </div>
         </div>

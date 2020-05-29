@@ -3,6 +3,12 @@
  * Styling cta
  */
 
+.b-cta {
+    @include media-breakpoint-down(sm) {
+        background-color: rgba(#2288C9, .24);
+    }
+}
+
 .b-cta__content {
     @include media-breakpoint-down(sm) {
         background-color: $secondary;

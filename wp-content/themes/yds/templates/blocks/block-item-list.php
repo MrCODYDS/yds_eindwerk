@@ -15,7 +15,7 @@ $repeater = get_field('item_list_itemlist');
     <div class="container">
         <div class="row">
             <div class="col-xl-9 <?php if($image_align == 'left'): ?>offset-xl-3<?php endif; ?>">
-                <div class="block-background d-flex flex-wrap justify-content-center align-items-center py-6 px-0 px-md-5">
+                <div class="block-background d-flex flex-wrap justify-content-center align-items-center py-4 py-md-5 px-0 px-md-5">
                     <div class="col-lg-6 mb-3 mb-lg-0">
                         <?php if($title): ?>
                             <h2 class="mb-3"><?= $title; ?></h2>

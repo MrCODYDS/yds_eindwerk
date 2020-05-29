@@ -3,7 +3,13 @@
  * Styling reservation
  */
 
-.b-reservation-image {
+.b-reservation {
+    @include media-breakpoint-down(sm) {
+        background-color: rgba(#2288C9, .24);
+    }
+}
+
+.b-reservation__image {
     img {
         width: 50%;
         padding-top: 30px;

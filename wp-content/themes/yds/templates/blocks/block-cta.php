@@ -26,7 +26,7 @@ $cta_settings = get_field('cta_settings');
 
                     <?php if($cta): ?>
                         <?php if($cta_settings['cta_reservation_cta']): ?>
-                            <button class="btn btn-<?= $cta_settings['cta_type_cta']; ?> px-4 show-modal">
+                            <button class="btn btn-secondary btn-cta px-4 show-modal">
                                 <?= $cta_settings['cta_link_cta']['title']; ?>
                             </button>
                         <?php else: ?>
