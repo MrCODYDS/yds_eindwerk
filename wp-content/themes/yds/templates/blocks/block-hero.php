@@ -20,9 +20,8 @@ if ($text_align == "text-center") {
 
 ?>
 
-<section class="block b-hero <?= $text_align; ?>">
-    <div class="b-hero__img"></div>
-    <div class="b-hero__content py-4 py-md-0">
+<section class="block b-hero d-none d-lg-block <?= $text_align; ?> pt-5 pt-md-4 pt-lg-5 pb-5 pb-md-4 pb-lg-5">
+    <div class="b-hero__content">
         <div class="container">
             <div class="row <?= $row_display; ?>">
                 <div class="col-lg-8 <?= $col_display ?>">
@@ -39,6 +38,35 @@ if ($text_align == "text-center") {
                             <?= $cta_settings["cta_link_hero"]['title']; ?>
                         </a>
                     <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="block b-hero d-block d-lg-none <?= $text_align; ?> pt-5 pt-md-4 pt-lg-5 pb-5 pb-md-4 pb-lg-5">
+    <div class="b-hero__content">
+        <div class="container">
+            <div class="row <?= $row_display; ?>">
+                <div class="col">
+                    <div class="hero-background d-flex flex-column align-items-center py-4 py-md-5 px-3 px-md-4">
+                        <div class="text-center">
+                            <?php if($title): ?>
+                                <h1 class="b-hero__title mb-0"><?= $title; ?></h1>
+                            <?php endif; ?>
+
+                            <?php if($text): ?>
+                                <p class="mt-3 mb-0"><?= $text; ?></p>
+                            <?php endif; ?>
+
+                            <?php if($cta): ?>
+                                <a href="<?= $cta_settings["cta_link_hero"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_hero"]; ?> mt-2">
+                                    <?= $cta_settings["cta_link_hero"]['title']; ?>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -50,7 +50,7 @@ $cta_settings = get_field('cta_settings_front_hero');
                             <?php endif; ?>
 
                             <?php if($cta): ?>
-                                <a href="<?= $cta_settings["cta_link_front_hero"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_front_hero"]; ?> btn-hero mt-2">
+                                <a href="<?= $cta_settings["cta_link_front_hero"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_front_hero"]; ?> btn-stretched mt-2">
                                     <?= $cta_settings["cta_link_front_hero"]['title']; ?>
                                 </a>
                             <?php endif; ?>

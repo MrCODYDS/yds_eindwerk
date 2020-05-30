@@ -108,8 +108,7 @@
     }
 }
 
-.btn-reservation,
-.btn-hero {
+.btn-stretched {
     @include media-breakpoint-down(sm) {
         width: 65%;
     }

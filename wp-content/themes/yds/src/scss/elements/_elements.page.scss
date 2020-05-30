@@ -22,7 +22,7 @@ body {
             top: 0;
             left: 0;
             background-color: rgba($primary, .24);
-            height: 350px;
+            height: 250px;
             width: 100%;
             z-index: -1;
         }
@@ -73,7 +73,39 @@ body {
             z-index: -1;
         }
     }
-    
+}
+
+body.home {
+    @include media-breakpoint-down(md) {
+        &:before {
+            height: 350px;
+        }
+    }
+}
+
+body.page-template-template-login::before,
+body.page-template-template-register::before {
+    @include media-breakpoint-down(md) {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(sprites/footer.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.page-template-template-login,
+.page-template-template-register {
+    @include media-breakpoint-down(md) {
+        .c-footer {
+            display: none;
+        }
+    }
 }
 
 .block-background {

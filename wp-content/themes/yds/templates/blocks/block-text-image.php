@@ -28,7 +28,7 @@ $cta_settings = get_field('cta_settings_textimage');
                         <?php endif; ?>
 
                         <?php if($cta): ?>
-                            <a href="<?= $cta_settings["cta_link_textimage"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_textimage"]; ?>">
+                            <a href="<?= $cta_settings["cta_link_textimage"]["url"]; ?>" class="btn btn-<?= $cta_settings["cta_type_textimage"]; ?> mt-3">
                                 <?= $cta_settings["cta_link_textimage"]['title']; ?>
                             </a>
                         <?php endif; ?>
