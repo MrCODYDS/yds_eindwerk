@@ -1,3 +1,9 @@
+<?php
+
+    global $current_user;
+
+?>
+
 <aside class="c-sidebar">
 	<div class="c-sidebar-inner py-2">
         <div class="c-sidebar__close d-flex mx-4">
@@ -10,7 +16,7 @@
         <div class="mt-5 px-4 pb-2">
             <?php if(is_user_logged_in()): ?>
                 <div class="text-center mb-4">
-                    <h3 class="text-white"><?php echo $current_user->user_login ?></h3>
+                    <h3 class="text-white c-sidebar__user"><?php echo "Hi, " . $current_user->user_login ?></h3>
                 </div>
                 <div class="d-flex justify-content-between">
                 <a href="/user-reservations" class="btn btn-outline btn-outline--mobile">Reservations</a>

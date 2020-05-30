@@ -25,6 +25,10 @@
     &__close {
       min-height: 40px;
     }
+
+    &__user {
+      overflow-wrap: break-word;
+    }
 }
  
 .c-sidebar-inner {
