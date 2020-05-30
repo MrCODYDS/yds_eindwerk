@@ -45,9 +45,9 @@ if ($_POST['action'] && $_POST['id']) {
                             <tbody>
                                 <?php foreach ($result as $row): ?>
                                     <tr>
-                                        <td class="column1"><?php echo $row->reservation_choice ?></td>
-                                        <td class="column2"><?php echo $row->reservation_date ?></td>
-                                        <td class="column3"><?php echo $row->reservation_ground ?></td>
+                                        <td class="column1" data-content="Uw keuze"><?php echo $row->reservation_choice ?></td>
+                                        <td class="column2" data-content="Datum"><?php echo $row->reservation_date ?></td>
+                                        <td class="column3" data-content="Speelveld"><?php echo $row->reservation_ground ?></td>
                                         <?php
                                             
                                             $exploded = explode(",",$row->reservation_time);
@@ -55,10 +55,10 @@ if ($_POST['action'] && $_POST['id']) {
                                             $sum = $exploded[0] + $session_length;
                                             $reservation_time = $exploded[0] . ":00-" . $sum . ":00";
                                         ?>
-                                        <td class="column4"><?php echo $reservation_time?></td>
-                                        <td class="column5"><?php echo $row->reservation_people ?></td>
+                                        <td class="column4" data-content="Sessie"><?php echo $reservation_time?></td>
+                                        <td class="column5" data-content="Aantal personen"><?php echo $row->reservation_people ?></td>
                                         <form action="" method="post">
-                                            <td class="column6">
+                                            <td class="column6" data-content="">
                                                 <input type="submit" name="action" value="Delete" class="btn btn-dark">
                                                 <input type="hidden" name="id" value="<?php echo $row->id; ?>">
                                             </td>

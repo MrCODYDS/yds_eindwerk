@@ -148,22 +148,22 @@
     }
  
     .c-profile-table tbody tr td:nth-child(1):before {
-        content: "Uw keuze";
+        content: attr(data-content);
     }
     .c-profile-table tbody tr td:nth-child(2):before {
-        content: "Datum";
+        content: attr(data-content);
     }
     .c-profile-table tbody tr td:nth-child(3):before {
-        content: "Speelveld";
+        content: attr(data-content);
     }
     .c-profile-table tbody tr td:nth-child(4):before {
-        content: "Sessie";
+        content: attr(data-content);
     }
     .c-profile-table tbody tr td:nth-child(5):before {
-        content: "Aantal personen";
+        content: attr(data-content);
     }
     .c-profile-table tbody tr td:nth-child(6):before {
-        content: "";
+        content: attr(data-content);
     }
 
     .column4,
