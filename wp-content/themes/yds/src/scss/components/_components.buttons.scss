@@ -17,7 +17,7 @@
 }
 
 .btn-primary {
-    &:hover,&:focus {
+    &:hover {
         background-color: $dark-secondary !important;
         border-color: $dark-secondary !important;
     }
@@ -38,17 +38,25 @@
     padding: 0;
     border: none;
     border-radius: 0;
+
+    svg {
+        transition: fill 0.15s;
+    }
     
     &:hover {
         box-shadow: none;
-        color: $dark;
+        color: $secondary;
+
+        svg {
+            fill: $secondary;
+        }
     }
 
     &--primary {
         color: $primary;
 
         &:hover {
-            color: $dark-secondary;
+            color: $secondary;
         }
     }
 

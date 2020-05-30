@@ -14,7 +14,7 @@ $amount = get_field('number_of_columns_team');
         <div class="row flex-column <?= $text_align; ?> mb-4">
             <div class="col">
                 <?php if($title): ?>
-                    <h2><?= $title; ?></h2>
+                    <h3><?= $title; ?></h3>
                 <?php endif; ?>
 
                 <?php if($text): ?>
@@ -31,7 +31,7 @@ $amount = get_field('number_of_columns_team');
                         <?= wp_get_attachment_image($column['repeater_image_team'], 'full', false, array("title" => get_the_title($column['repeater_image_team']), 'class' => 'img-fluid mb-3')); ?>
 
                         <?php if($column['repeater_title_team']): ?>
-                            <h3 class="mb-2"><?= $column['repeater_title_team']; ?></h3>
+                            <h5 class="mb-2"><?= $column['repeater_title_team']; ?></h5>
                         <?php endif; ?>
 
                         <?php if($column['repeater_text_team']): ?>

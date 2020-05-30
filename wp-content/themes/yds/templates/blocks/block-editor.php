@@ -11,7 +11,7 @@ $text = get_field('text_editor');
     <div class="container">
         <div class="<?php if($boxed): ?>border border-primary p-4 p-lg-6 <?php endif; ?> <?= $text_align; ?>">
             <?php if($title): ?>
-                <h2><?= $title; ?></h2>
+                <h3><?= $title; ?></h3>
             <?php endif; ?>
 
             <?php if($text): ?>

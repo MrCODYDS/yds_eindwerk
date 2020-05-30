@@ -235,7 +235,7 @@
             </div>
             <div class="modal__content d-flex flex-column justify content-center align-items-center text-center">
                 <svg class="icon icon--confirm mb-4"><use xlink:href="#confirm" /></svg>
-                <h2 class="text-secondary mb-4">Gelukt!</h2>
+                <h3 class="text-secondary mb-4">Gelukt!</h3>
                 <p class="px-sm-5 mb-4">Uw reservatie is bevestigd! We hebben een overzicht van uw reservatie naar uw email gestuurd.</p>
                 <a href="/user-reservations" class="btn btn-secondary mb-4">Bekijk reservaties</a>
             </div>

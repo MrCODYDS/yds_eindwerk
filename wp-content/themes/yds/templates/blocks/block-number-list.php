@@ -11,7 +11,7 @@ $repeater = get_field('repeater_numberlist');
             <div class="row text-center">
                 <div class="col mb-3">
                     <?php if($title): ?>
-                        <h2><?= $title; ?></h2>
+                        <h3><?= $title; ?></h3>
                     <?php endif; ?>
                 </div>
             </div>
@@ -22,7 +22,7 @@ $repeater = get_field('repeater_numberlist');
                             <?= wp_get_attachment_image($column['repeater_image_numberlist'], 'full', false, array("title" => get_the_title($column['repeater_image_numberlist']), 'class' => 'img-fluid mb-0 mb-md-3 p-3 p-md-0')); ?>
                             <div class="text-left text-md-center ml-3 ml-md-0 pr-2 pr-md-0">
                                 <?php if($column['repeater_title_numberlist']): ?>
-                                    <h3 class="mb-0 mb-md-2"><?= $column['repeater_title_numberlist']; ?></h3>
+                                    <h5 class="mb-0 mb-md-2"><?= $column['repeater_title_numberlist']; ?></h5>
                                 <?php endif; ?>
 
                                 <?php if($column['repeater_text_numberlist']): ?>

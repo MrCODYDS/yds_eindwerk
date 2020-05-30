@@ -16,7 +16,7 @@ $cta_settings = get_field('cta_settings');
                 <div class="block-background b-cta__content py-4 py-md-5 px-3 px-md-4">
                     <div class="py-2">
                         <?php if($title): ?>
-                            <h2 class="b-cta__content__title m-0"><?= $title; ?></h2>
+                            <h3 class="b-cta__content__title m-0"><?= $title; ?></h3>
                         <?php endif; ?>
 
                         <?php if($text): ?>

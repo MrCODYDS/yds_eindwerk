@@ -17,7 +17,7 @@ $cta_settings = get_field('cta_settings_reservation');
             <div class="col-lg-7 d-flex flex-column justify-content-center align-items-start">
                 <div class="block-background text-center text-md-left py-4 py-md-5 px-3 px-md-4">
                     <?php if($title): ?>
-                        <h2 class="m-0"><?= $title; ?></h2>
+                        <h3 class="m-0"><?= $title; ?></h3>
                     <?php endif; ?>
                     <?php if($text): ?>
                         <p class="my-3"><?= $text; ?></p>

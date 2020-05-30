@@ -20,7 +20,7 @@ $cta_settings = get_field('cta_settings_textimage');
                     </div>
                     <div class="col-lg-6 <?php if($image_align == 'left'): ?>offset-lg-1<?php endif; ?> d-flex flex-column justify-content-center align-items-start">
                         <?php if($title): ?>
-                            <h2 class="m-0"><?= $title; ?></h2>
+                            <h3 class="m-0"><?= $title; ?></h3>
                         <?php endif; ?>
 
                         <?php if($text): ?>

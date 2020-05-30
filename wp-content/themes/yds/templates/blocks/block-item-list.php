@@ -18,7 +18,7 @@ $repeater = get_field('item_list_itemlist');
                 <div class="block-background d-flex flex-wrap justify-content-center align-items-center py-4 py-md-5 px-0 px-md-5">
                     <div class="col-lg-6 mb-3 mb-lg-0">
                         <?php if($title): ?>
-                            <h2 class="mb-3"><?= $title; ?></h2>
+                            <h3 class="mb-3"><?= $title; ?></h3>
                         <?php endif; ?>
 
                         <?php if($text): ?>
