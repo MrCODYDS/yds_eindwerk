@@ -14,62 +14,66 @@ main {
 
 body {
     position: relative;
-   
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(sprites/topBG.svg);
-        height: 100%;
-        width: 100%;
-        background-position: left top;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        z-index: -1;
-
-        @include media-breakpoint-up(lg) {
-            background-position: left -200px;
-        }
-        
-        @include media-breakpoint-up(xl) {
-            background-position: left -400px;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            background-position: left -600px;
-        }
-
-        @include media-breakpoint-up(xxxl) {
-            background-position: left -800px;
+    
+    @include media-breakpoint-down(md) {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($primary, .24);
+            height: 350px;
+            width: 100%;
+            z-index: -1;
         }
     }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-image: url(sprites/bottomBG.svg);
-        height: 100%;
-        width: 100%;
-        background-position: left bottom;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        z-index: -1;
-
-        @include media-breakpoint-down(md) {
-            background-size: 180% auto;
+    
+    @include media-breakpoint-up(lg) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(sprites/topBG.svg);
+            height: 100%;
+            width: 100%;
+            background-position: left top;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            z-index: -1;
+    
+            @include media-breakpoint-up(lg) {
+                background-position: left -200px;
+            }
+            
+            @include media-breakpoint-up(xl) {
+                background-position: left -400px;
+            }
+    
+            @include media-breakpoint-up(xxl) {
+                background-position: left -600px;
+            }
+    
+            @include media-breakpoint-up(xxxl) {
+                background-position: left -800px;
+            }
         }
-
-        @include media-breakpoint-down(lg) {
-            background-size: 150% auto;
-        }
-
-        @include media-breakpoint-up(xxl) {
-            bottom: -100px;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-image: url(sprites/bottomBG.svg);
+            height: 100%;
+            width: 100%;
+            background-position: left bottom;
+            background-size: 120% auto;
+            background-repeat: no-repeat;
+            z-index: -1;
         }
     }
+    
 }
 
 .block-background {

@@ -5,6 +5,12 @@
 
 .c-footer {
     transition: all .3s ease-in-out;
+
+    @include media-breakpoint-down(md){
+        background-image: url(sprites/footer.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     
     .is-open-sidebar & {
         transform: translateX(-300px);

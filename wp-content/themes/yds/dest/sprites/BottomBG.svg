@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1359" viewBox="0 0 1920 1359">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1358" viewBox="0 0 1920 1358">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Rectangle_63" data-name="Rectangle 63" width="1920" height="1359" transform="translate(0 2598)" fill="red"/>
+      <rect id="Rectangle_70" data-name="Rectangle 70" width="1920" height="1358" transform="translate(1066 2700.261)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
     <linearGradient id="linear-gradient" x1="0.842" y1="0.5" x2="0.355" y2="0.534" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#2288c9"/>
@@ -13,11 +13,11 @@
     </linearGradient>
     <linearGradient id="linear-gradient-3" x1="0.678" y1="0.463" x2="0.258" y2="0.455" xlink:href="#linear-gradient-2"/>
   </defs>
-  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(0 -2598)" clip-path="url(#clip-path)">
-    <g id="BG" transform="translate(3746.803 3467.465) rotate(134.028)">
-      <rect id="Rectangle_58" data-name="Rectangle 58" width="3286.626" height="498.792" transform="matrix(-0.92, -0.391, 0.391, -0.92, 3403.517, 2018.177)" fill="url(#linear-gradient)"/>
-      <rect id="Rectangle_59" data-name="Rectangle 59" width="3286.626" height="500.791" transform="matrix(-0.92, -0.391, 0.391, -0.92, 3213.922, 2478.568)" fill="url(#linear-gradient-2)"/>
-      <rect id="Rectangle_60" data-name="Rectangle 60" width="3286.626" height="494.793" transform="matrix(-0.92, -0.391, 0.391, -0.92, 3024.452, 2930.602)" fill="url(#linear-gradient-3)"/>
+  <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(-1066 -2700.261)" clip-path="url(#clip-path)">
+    <g id="BG" transform="translate(4094.102 3605.391) rotate(134.028)">
+      <rect id="Rectangle_58" data-name="Rectangle 58" width="3297.497" height="500.441" transform="matrix(-0.92, -0.391, 0.391, -0.92, 3415.612, 1749.247)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_59" data-name="Rectangle 59" width="3297.497" height="502.447" transform="matrix(-0.92, -0.391, 0.391, -0.92, 3225.389, 2211.161)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_60" data-name="Rectangle 60" width="3297.497" height="496.43" transform="matrix(-0.92, -0.391, 0.391, -0.92, 3035.292, 2664.69)" fill="url(#linear-gradient-3)"/>
     </g>
   </g>
 </svg>

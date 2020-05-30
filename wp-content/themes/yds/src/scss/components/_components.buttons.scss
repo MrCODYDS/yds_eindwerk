@@ -108,8 +108,10 @@
     }
 }
 
-.btn-reservation {
+.btn-reservation,
+.btn-hero {
     @include media-breakpoint-down(sm) {
         width: 65%;
     }
 }
+

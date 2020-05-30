@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="316" viewBox="0 0 375 316">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_68" data-name="Rectangle 68" width="375" height="316" rx="8" transform="translate(43 11974)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_63" data-name="Rectangle 63" width="375.12" height="316" transform="translate(-39)" fill="#fff" stroke="#707070" stroke-width="0.155"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.998" y1="0.457" x2="0.468" y2="0.514" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2288c9"/>
+      <stop offset="1" stop-color="#3720b8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.842" y1="0.5" x2="0.355" y2="0.466" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.771" y1="0.57" x2="0.306" y2="0.534" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2288c9"/>
+      <stop offset="1" stop-color="#2a36bc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.678" y1="0.537" x2="0.258" y2="0.545" xlink:href="#linear-gradient-3"/>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-43 -11974)" clip-path="url(#clip-path)">
+    <g id="Mask_Group_1-2" data-name="Mask Group 1" transform="translate(81.94 11974)" clip-path="url(#clip-path-2)">
+      <g id="Group_71" data-name="Group 71" transform="translate(-155.976 -114.096)">
+        <rect id="Rectangle_57" data-name="Rectangle 57" width="705.366" height="125.713" transform="translate(-114.547 208.776) rotate(-23)" fill="url(#linear-gradient)"/>
+        <rect id="Rectangle_58" data-name="Rectangle 58" width="705.366" height="107.049" transform="translate(-65.849 323.978) rotate(-23)" fill="url(#linear-gradient-2)"/>
+        <rect id="Rectangle_59" data-name="Rectangle 59" width="705.366" height="107.478" transform="translate(-25.303 422.447) rotate(-23)" fill="url(#linear-gradient-3)"/>
+        <rect id="Rectangle_60" data-name="Rectangle 60" width="705.366" height="106.191" transform="translate(15.887 520.702) rotate(-23)" fill="url(#linear-gradient-4)"/>
+      </g>
+    </g>
+  </g>
+</svg>
