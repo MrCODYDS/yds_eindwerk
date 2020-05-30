@@ -11,6 +11,7 @@ main {
     }
 }
 
+
 body {
     position: relative;
    
@@ -64,13 +65,15 @@ body {
         @include media-breakpoint-down(lg) {
             background-size: 150% auto;
         }
+
+        @include media-breakpoint-up(xxl) {
+            bottom: -100px;
+        }
     }
 }
 
 .block-background {
     background-color: $white;
     border-radius: 8px;
-    box-shadow: 5px 5px 70px rgba($body-color, .35);
-
-    
+    box-shadow: 5px 5px 70px rgba($body-color, .35); 
 }
