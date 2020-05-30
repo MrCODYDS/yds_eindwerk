@@ -8,14 +8,3 @@ jQuery(document).ready(function($){
         $('body').toggleClass('is-open-sidebar');        
     });
 });
-
-jQuery(document).ready(function($){
-    $('.multiple-items').slick({
-        dots:true,
-        centerMode: true,
-        centerPadding: '80px',
-        slidesToShow: 1,
-        arrows: false,
-        infinite: false
-    });
-});

@@ -3,7 +3,7 @@
  * Styling flex
  */
 
-.block-flex {
+.b-flex {
     @include media-breakpoint-down(sm) {
         background-color: rgba(#2288C9, .24);
     }
@@ -27,13 +27,34 @@
     }
 }
 
-.multiple-items {
+.b-flex-items {
     display: flex;
     flex-wrap: wrap;
 }
 
-.test {
+.b-flex-item {
     display: flex; 
     width: 100%;
     flex-direction: column;
+}
+
+.slick-dots{
+    bottom: 10px !important;
+
+    & li {
+        width: 12px !important;
+        height: 12px !important;
+        transition: all 0.5s;
+        border-radius: 50%;
+        border: 2px solid $primary;
+    }
+
+    & li.slick-active {
+        background:$primary;
+        box-shadow:inset 0 0 0 2px rgba($dark, .24);
+    }
+
+    button::before {
+        content: '' !important;
+    }
 }

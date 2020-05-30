@@ -8,7 +8,7 @@ $amount = get_field('number_of_columns_flex');
 
 ?>
 
-<!--<div class="block block-flex <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
+<section class="block b-flex <?= $spacer_top; ?> <?= $spacer_bottom; ?> d-none d-lg-block">
     <div class="container">
         <div class="row">
             <?php foreach($repeater as $column): ?>
@@ -29,13 +29,13 @@ $amount = get_field('number_of_columns_flex');
             <?php endforeach; ?>
         </div>
     </div>
-</div>-->
+</section>
 
-<div class="b-block block-flex">
-    <div class="multiple-items">
+<section class="block b-flex d-block d-lg-none">
+    <div class="b-flex-items">
         <?php foreach($repeater as $column): ?>
             <div class="items text-center mx-3">
-                <div class="block-background test my-5 pb-4">
+                <div class="block-background b-flex-item my-5 pb-4">
                     <?= wp_get_attachment_image($column['image_flex'], 'full', false, array("title" => get_the_title($column['image_flex']), 'class' => 'img-fluid mb-3')); ?>
                     <div class="px-4">
                         <?php if($column['title_flex']): ?>
@@ -50,4 +50,4 @@ $amount = get_field('number_of_columns_flex');
             </div>
         <?php endforeach; ?>
     </div>
-</div>
+</section>

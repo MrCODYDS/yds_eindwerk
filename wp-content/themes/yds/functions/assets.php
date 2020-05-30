@@ -25,6 +25,9 @@ function load_assets() {
     // Include mobilemenu.js
     wp_enqueue_script('mobilemenu-js', get_template_directory_uri() . '/src/js/mobilemenu.js', array(), false, true );
 
+    // Include slider.js
+    wp_enqueue_script('slider-js', get_template_directory_uri() . '/src/js/slider.js', array(), false, true );
+
     // Include slick.min.js
     wp_enqueue_script('slick-js', get_template_directory_uri() . '/src/slick/slick.min.js', array(), false, true);
 
