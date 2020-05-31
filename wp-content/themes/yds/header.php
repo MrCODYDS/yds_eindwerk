@@ -40,11 +40,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-auto d-flex align-items-center">
-                    <a href="<?php echo get_home_url(); ?>" class="c-logo" title="Home">
-                        <div class="text-white">
-                            Dit is het logo
-                        </div>
-                    </a>
+                    <a href="<?php echo get_home_url(); ?>" class="c-logo" title="Home">Barezo</a>
                 </div>
                 <div class="col-auto ml-auto text-right">
                     <nav role="navigation" class="c-nav-main d-none d-lg-flex">
