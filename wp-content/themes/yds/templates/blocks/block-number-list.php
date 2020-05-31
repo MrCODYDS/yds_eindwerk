@@ -8,7 +8,7 @@ $repeater = get_field('repeater_numberlist');
 
 <div class="block b-numberlist <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
     <div class="container">
-            <div class="row text-center">
+            <div class="row text-center d-block d-lg-none">
                 <div class="col mb-3">
                     <?php if($title): ?>
                         <h3><?= $title; ?></h3>
