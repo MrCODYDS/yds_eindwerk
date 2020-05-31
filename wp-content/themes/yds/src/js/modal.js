@@ -46,8 +46,28 @@ buttonsModal.forEach(function(button, index) {
 document.querySelector('#reservation-form')
   .addEventListener('submit', (event) => {
     toggleReservationModal();
-    toggleConfirmModal();
+    
   });
+
+jQuery(document).ready(function ($) {
+  $('reservation-form').submit(function(event) {
+    event.preventDefault();
+    var post_url = $(this).attr("action"); //get form action url
+    var request_method = $(this).attr("method"); //get form GET/POST method
+    var form_data = $(this).serialize(); //Encode form elements for submission
+    console.log(form_data);
+    
+    $.ajax({
+      url : post_url,
+      type: request_method,
+      data : form_data
+    }).done(function(response){ //
+      window.location.href = '/reservatie';
+      toggleConfirmModal();
+      alert(response);
+    });
+  })
+});
 
 // Close reservation modal when clicked on cross
 document.querySelector('.modal--reservation .modal__header span')
@@ -113,10 +133,11 @@ function fillInEndScreen() {
     $('#final-choice').val(choiceValue);
 
     // Fill in selected ground
-    groundValue = selectedGround;
+    
     var selectedGround = $('select#selectGround').children("option:selected").val();
     $('#final-ground').val(selectedGround);
-
+    groundValue = selectedGround;
+    
     // Fill in selected time
     // Add visible hour for user --> "14:00" instead of "14"
     // Make sure user can see all claimed hours
