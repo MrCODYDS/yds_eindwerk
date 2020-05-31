@@ -47,7 +47,7 @@ document.querySelector('#reservation-form')
   .addEventListener('submit', (event) => {
     toggleReservationModal();
     toggleConfirmModal();
-  })
+  });
 
 // Close reservation modal when clicked on cross
 document.querySelector('.modal--reservation .modal__header span')
@@ -176,28 +176,31 @@ jQuery(document).ready(function ($) {
 
 // Post date & fieldnumber to getFreeTimeslots.php
 function showUser(date, ground, session) {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("entreeTimeslots").innerHTML = this.responseText;
+  jQuery(document).ready(function ($) {
+    $.ajax({
+      type: 'GET',
+      url: "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php",
+      data: {"date": date, "ground": ground, "session": session},
+      success: function(response) {
+        $("#entreeTimeslots").html(response);
       }
-  };
+    });
+  });
 
-  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getFreeTimeslots.php?date="+date+"&ground="+ground+"&session="+session, true);
-  xmlhttp.send();
 }
 
 // Post choice to getAmountOfPeople.php
 function showAmountOfPeople(choice) {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("formAmountPeople").innerHTML = this.responseText;
+  jQuery(document).ready(function ($) {
+    $.ajax({
+      type: 'GET',
+      url: "/wp-content/themes/yds/templates/includes/getAmountOfPeople.php",
+      data: {"choice": choice},
+      success: function(response) {
+        $("#formAmountPeople").html(response);
       }
-  };
-
-  xmlhttp.open("GET", "/wp-content/themes/yds/templates/includes/getAmountOfPeople.php?choice="+choice, true);
-  xmlhttp.send();
+    });
+  });
 }
 
 // If choice is selected, enable next button
