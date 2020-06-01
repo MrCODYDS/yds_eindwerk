@@ -36,9 +36,9 @@
             </div>
         </div>
     </div>
-    <div class="c-header__bottom py-2 py-lg-4">
+    <div class="c-header__bottom py-2">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-auto d-flex align-items-center">
                     <a href="<?php echo get_home_url(); ?>" class="c-logo" title="Home">Barezo</a>
                 </div>
@@ -56,3 +56,5 @@
         </div>
     </div>
 </header>
+
+<div class="headerHeight"></div>

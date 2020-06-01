@@ -33,3 +33,12 @@
     background-size: contain;
     font-size: 0;
 }
+
+.is-fixed {
+    position: fixed;
+    z-index: 900;
+    box-shadow: 0 0 5px rgba($black, .1);
+    transform: translateX(0) !important;
+    animation: 1s headerDown;
+    background-color: $white;
+}
