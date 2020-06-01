@@ -3,6 +3,7 @@
     include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
 
     global $current_user;
+    get_currentuserinfo();
     global $wpdb;
 
     $choice = $_POST['final-choice'];
