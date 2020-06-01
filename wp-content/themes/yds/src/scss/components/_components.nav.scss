@@ -39,6 +39,7 @@
     }
 
     a:hover {
+        padding-bottom: .2rem;
         border-bottom: 2px solid $white;
     }
 
@@ -114,6 +115,11 @@
             color: $primary;
         }
 
+        li:not(.btn-contact) a:hover {
+            padding-bottom: .2rem;
+            border-bottom: 2px solid $secondary;
+        }
+
         .current-menu-item {
             a {
                 color: $secondary;
@@ -121,6 +127,8 @@
                 border-bottom: 2px solid $secondary;
             }
         }
+
+        
     
         .btn-contact {
             a {
@@ -147,6 +155,7 @@
     .c-nav-sub {
         li {
             border-right: 1px solid $primary;
+
             &:last-child {
                 border-left: 1px solid transparent;
                 border-right: none;

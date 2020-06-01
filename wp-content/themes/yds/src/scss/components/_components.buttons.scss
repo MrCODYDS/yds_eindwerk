@@ -123,3 +123,8 @@
     }
 }
 
+.is-fixed .btn-link {
+    &:hover {
+        color: $secondary;
+    }
+}
