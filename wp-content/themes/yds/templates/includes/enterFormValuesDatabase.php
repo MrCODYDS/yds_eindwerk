@@ -42,13 +42,45 @@
         "reservation_people" => $people
     ));
     
-    $msg = "First line of text\nSecond line of text";
 
-    // use wordwrap() if lines are longer than 70 characters
-    $msg = wordwrap($msg,70);
+    $to = $current_user->user_email;
+    $subject = "Barezo - Je registratie is voltooid!";
+    $message = '
+        <html>
+            <head>
+                <title>Jouw reservatie</title>
+                </head>
+            <body>
+                <p>Je reservatie is voltooid. Jouw reservatiegegevens:</p>
+                <table>
+                    <tr>
+                        <th>Keuze</th>
+                        <th>Datum</th>
+                        <th>Speelveld</th>
+                        <th>Tijd</th>
+                        <th>Aantal personen</th>
+                    </tr>
+                    <tr>
+                        <td>' . $choice . '</td>
+                        <td>' . $date . '</td>
+                        <td>' . $ground . '</td>
+                        <td>' . $timeslot . '</td>
+                        <td>' . $people . '</td>
+                    </tr>
+                </table>
+            </body>
+        </html>
+    ';
+
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // More headers
+    $headers .= 'From: <desmetyarne@gmail.com>' . "\r\n";
 
     // send email
-    mail("desmetyarne@gmail.com","My subject",$msg);
+    mail($to, $subject, $message, $headers);
 
     header('Location: /reservatie');
 ?>
