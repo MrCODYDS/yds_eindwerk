@@ -1,9 +1,6 @@
 
-
-
-
 <div class="modal modal--reservation modal--hidden">
-    <div class="row justify-content-center align-items-center w-100 h-100">
+    <div class="row justify-content-center align-items-centerw-100 h-100">
         <div class="col-11 col-sm-9 col-lg-7 col-xl-5 col-xxl-4 modal__dialog my-4 py-3 px-4">
             <div class="modal__header">
                 <span>X</span>

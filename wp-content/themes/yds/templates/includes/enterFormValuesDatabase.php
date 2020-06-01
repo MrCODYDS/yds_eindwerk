@@ -78,10 +78,10 @@
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: <desmetyarne@gmail.com>' . "\r\n";
+    $headers .= 'From: Barezo <desmetyarne@gmail.com>' . "\r\n";
 
     // send email
-    mail($to, $subject, $message, $headers);
+    wp_mail($to, $subject, $message, $headers);
 
     header('Location: /reservatie');
 ?>
