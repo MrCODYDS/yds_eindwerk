@@ -5,7 +5,7 @@
 ?>
 
 <header class="c-header">
-    <div class="c-header__top py-2 d-none d-lg-block">
+    <div class="c-header__top pt-2 d-none d-lg-block">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-auto">
