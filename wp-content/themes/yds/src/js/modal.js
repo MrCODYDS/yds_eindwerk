@@ -62,7 +62,6 @@ jQuery(document).ready(function ($) {
       type: request_method,
       data : form_data
     }).done(function(response){ //
-      window.location.href = '/reservatie';
       toggleConfirmModal();
       alert(response);
     });

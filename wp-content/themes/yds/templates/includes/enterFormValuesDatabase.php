@@ -15,7 +15,7 @@
         // Check which session is chosen and add length to database
         switch($session) {
             case 1:
-                $timeslot = $_POST['final-time'];
+                $timeslot = $_POST['radioTimeslots'];
             break;
             case 2:
                 $value = $_POST['radioTimeslots'];
