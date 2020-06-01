@@ -109,8 +109,12 @@
 }
 
 .ui-datepicker-today {
-    background: $light-blue !important;
+    background: $primary !important;
     font-weight: 700 !important;
+
+    a {
+        color: $white !important;
+    }
 }
 
 .ui-datepicker-current-day {

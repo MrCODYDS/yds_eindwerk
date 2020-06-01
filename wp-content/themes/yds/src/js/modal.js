@@ -228,7 +228,6 @@ jQuery(document).ready(function ($) {
     if($(this).prop('checked')){
       $('.btn-next[data-next="form-dates"]').removeAttr("disabled");
     }
-    console.log($(this).val());
     showAmountOfPeople($(this).val());
   });
 
