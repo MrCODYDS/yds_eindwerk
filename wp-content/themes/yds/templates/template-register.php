@@ -41,7 +41,7 @@ $redirect_to = '';
                                 </form>
                             </div>
                             <div class="text-center pb-3">
-                                <a href="/register" class="btn btn-link btn-link--dark">
+                                <a href="/login" class="btn btn-link btn-link--dark">
                                     Ik heb al een account
                                     <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
                                 </a>
