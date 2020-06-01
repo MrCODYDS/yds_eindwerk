@@ -3,44 +3,44 @@
 
 
 <div class="modal modal--reservation modal--hidden">
-    <div class="row justify-content-center w-100">
-        <div class="col-11 col-sm-9 col-lg-7 col-xl-5 col-xxl-4 modal__dialog py-3 px-4">
+    <div class="row justify-content-center align-items-center w-100 h-100">
+        <div class="col-11 col-sm-9 col-lg-7 col-xl-5 col-xxl-4 modal__dialog my-4 py-3 px-4">
             <div class="modal__header">
                 <span>X</span>
             </div>
             <div class="modal__content">
                 <form action="/wp-content/themes/yds/templates/includes/enterFormValuesDatabase.php" class="reservation-form" id="reservation-form" method="POST">
-                    <h3 class="text-center mb-5">Reservatie</h3>
+                    <h3 class="text-center mb-3">Reservatie</h3>
                     <div class="form-choices form-part">
                         <hr class="hr-text mt-0 mb-md-3" data-content="Maak je keuze">
                         <div class="row form-choices__radio">
                             <input type="radio" id="radioSpelers" name="radioChoices" value="Individuele spelers">
                             <label for="radioSpelers" class="col text-center btn btn-primary mr-3 mr-md-5 mb-3 mb-md-5">
                                 <svg class="icon"><use xlink:href="#badminton" /></svg>
-                                <p class="mb-0 mt-4">Individuele spelers</p>
+                                <p class="mb-0 mt-2 mt-md-4">Individuele spelers</p>
                             </label>
 
                             <input type="radio" id="radioClubs" name="radioChoices" value="Clubs">
                             <label for="radioClubs" class="col text-center btn btn-primary mb-3 mb-md-5">
                                 <svg class="icon"><use xlink:href="#medal" /></svg>
-                                <p class="mb-0 mt-4">Clubs</p>
+                                <p class="mb-0 mt-2 mt-md-4">Clubs</p>
                             </label>
 
                             <div class="w-100"></div>
                             <input type="radio" id="radioBedrijf" name="radioChoices" value="Bedrijven">
                             <label for="radioBedrijf" class="col text-center btn btn-primary mr-3 mr-md-5">
                                 <svg class="icon"><use xlink:href="#business" /></svg>
-                                <p class="mb-0 mt-4">Bedrijven</p>
+                                <p class="mb-0 mt-2 mt-md-4">Bedrijven</p>
                             </label> 
 
                             <input type="radio" id="radioLorem" name="radioChoices" value="Privé training">
                             <label for="radioLorem" class="col text-center btn btn-primary">
                                 <svg class="icon"><use xlink:href="#badminton" /></svg>
-                                <p class="mb-0 mt-4">Privé training</p>
+                                <p class="mb-0 mt-2 mt-md-4">Privé training</p>
                             </label>
                         </div>
 
-                        <div class="w-100 text-right mt-5">
+                        <div class="w-100 text-right mt-3">
                             <button type="button" data-next="form-dates" class="btn btn-link btn-link--primary btn-next" disabled>Volgende
                                 <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
                             </button>
@@ -50,7 +50,7 @@
                     <div class="form-dates form-part form-part--hidden">
                         <hr class="hr-text mt-0 mb-3" data-content="Kies een datum">
                         <div id="datepicker"></div>
-                        <div class="d-flex justify-content-between w-100 mt-5">
+                        <div class="d-flex justify-content-between w-100 mt-3">
                             <div>
                                 <button type="button" data-previous="form-choices" class="btn btn-link btn-link--primary btn-previous">
                                     <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
@@ -80,7 +80,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between w-100 mt-5">
+                        <div class="d-flex justify-content-between w-100 mt-3">
                             <div>
                                 <button type="button" data-previous="form-dates" class="btn btn-link btn-link--primary btn-previous">
                                     <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="form-times form-part form-part--hidden">
-                        <div class="form-times__sessions row flex-column mb-5">
+                        <div class="form-times__sessions row flex-column mb-3">
                             <div class="col text-center">
                                 <hr class="hr-text mt-0 mb-3" data-content="Kies de lengte van de sessie">
                                 <select name="sessions" id="selectTimes" >
@@ -114,7 +114,7 @@
                                 <div class="form-timeslots row justify-content-start" id="entreeTimeslots"></div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between w-100 mt-5">
+                        <div class="d-flex justify-content-between w-100 mt-3">
                             <div>
                                 <button type="button" data-previous="form-grounds" class="btn btn-link btn-link--primary btn-previous">
                                     <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
@@ -134,7 +134,7 @@
                         <div id="formAmountPeople" class="form-amountpeople row justify-content-center">
                             
                         </div>
-                        <div class="d-flex justify-content-between w-100 mt-5">
+                        <div class="d-flex justify-content-between w-100 mt-3">
                             <div>
                                 <button type="button" data-previous="form-times" class="btn btn-link btn-link--primary btn-previous">
                                     <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
@@ -168,7 +168,7 @@
                                 <p>Uw gekozen aantal spelers: <input type="text" name="final-people" id="final-people" readonly value=""></p>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between w-100 mt-5">
+                        <div class="d-flex justify-content-between w-100 mt-3">
                             <div>
                                 <svg class="icon icon--arrow"><use xlink:href="#arrow-left" /></svg>
                                 <button type="button" data-previous="form-people" class="btn btn-link btn-link--primary btn-previous">Vorige</button>

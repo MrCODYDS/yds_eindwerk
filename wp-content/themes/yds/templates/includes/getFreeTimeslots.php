@@ -72,7 +72,7 @@ foreach ($exploded as $single) {
 foreach ($hours as $hour) {
     $hourlength = strlen((string)$hour);
     
-    echo '<div class="col-3 mb-3 text-center">';
+    echo '<div class="col-4 col-sm-3 mb-3 text-center">';
     echo '<input type="radio" id="radiotimeslot' . $hour . '" name="radioTimeslots" value="' . $hour .'">';
     if ($hourlength == 1) {
         echo '<label for="radiotimeslot' . $hour . '" class="w-100">0'. $hour . ':00</label>';
