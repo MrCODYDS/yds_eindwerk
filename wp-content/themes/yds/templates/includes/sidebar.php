@@ -5,7 +5,7 @@
 ?>
 
 <aside class="c-sidebar">
-	<div class="c-sidebar-inner py-2">
+	<div class="c-sidebar-inner py-3">
         <div class="c-sidebar__close d-flex mx-4">
             <div class="c-hamburger c-hamburger-open is-open">
                 <div class="bar1"></div>
