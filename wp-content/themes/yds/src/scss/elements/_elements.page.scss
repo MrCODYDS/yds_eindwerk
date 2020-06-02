@@ -113,3 +113,7 @@ body.page-template-template-register::before {
     border-radius: 8px;
     box-shadow: 5px 5px 70px rgba($body-color, .35); 
 }
+
+.modal-open {
+    overflow-y: hidden;
+}

@@ -26,6 +26,7 @@ const toggleReservationModal = () => {
     .classList.toggle('modal--hidden');
     hideAllFormParts();
     document.querySelector('.form-choices').classList.remove('form-part--hidden');
+    document.querySelector('body').classList.toggle('modal-open');
   } else {
     window.location.href = "/login";
   }
