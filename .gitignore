@@ -2,3 +2,4 @@
 node_modules
 source/scripts/all/*
 wp-config.php
+vendor
