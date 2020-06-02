@@ -14,7 +14,7 @@
 
     @include media-breakpoint-down(md) {
         &__bottom {
-            height: 65px;;
+            height: 100%;
         }
 
         .container,
@@ -60,7 +60,12 @@
         transform: translateX(-300px) !important;
     }
 
+    .c-header__top {
+        display: none !important;
+    }
+
     .c-header__line {
+        display: none !important;
         hr {
             color: $secondary;
             background-color: $secondary;

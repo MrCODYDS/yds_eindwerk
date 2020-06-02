@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="c-header__bottom py-2 py-md-4">
+    <div class="c-header__bottom py-2 py-md-3">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-auto d-flex align-items-center">
