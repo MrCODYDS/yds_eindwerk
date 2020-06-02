@@ -36,14 +36,14 @@
             </div>
         </div>
     </div>
-    <div class="c-header__line">
+    <div class="c-header__line d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col"><hr></div>
             </div>
         </div>
     </div>
-    <div class="c-header__bottom py-4">
+    <div class="c-header__bottom py-2 py-md-4">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-auto d-flex align-items-center">

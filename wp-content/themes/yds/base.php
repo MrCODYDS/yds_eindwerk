@@ -16,6 +16,7 @@
 
 <main role="main">
     <?php include yds_template_path(); ?>
+    <a id="scrollTop" href="#"><svg class="icon icon--top"><use xlink:href="#arrow-up" /></svg></a>
 </main>
 
 <?php include 'templates/includes/reservation.php'; ?>

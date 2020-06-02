@@ -117,3 +117,26 @@ body.page-template-template-register::before {
 .modal-open {
     overflow-y: hidden;
 }
+
+#scrollTop {
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 999;
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba($secondary, .5);
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+
+    svg {
+        fill: $white;
+    }
+}
+#scrollTop:hover {
+    background-color: rgba($secondary, 1);
+}
