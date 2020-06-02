@@ -5,7 +5,7 @@
 ?>
 
 <header class="c-header">
-    <div class="c-header__top pt-2 d-none d-lg-block">
+    <div class="c-header__top py-2 d-none d-lg-block">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-auto">
@@ -36,7 +36,14 @@
             </div>
         </div>
     </div>
-    <div class="c-header__bottom py-2">
+    <div class="c-header__line">
+        <div class="container">
+            <div class="row">
+                <div class="col"><hr></div>
+            </div>
+        </div>
+    </div>
+    <div class="c-header__bottom py-4">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-auto d-flex align-items-center">

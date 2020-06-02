@@ -22,6 +22,16 @@
             height: 100%;
         }
     }
+
+    &__line {
+        hr {
+            height: 1.5px;
+            border: none;
+            color: $white;
+            background-color: $white;
+            margin: 0;
+        }
+    }
 }
 
 .c-logo {
@@ -48,6 +58,14 @@
 
     .is-open-sidebar & {
         transform: translateX(-300px) !important;
+    }
+
+    .c-header__line {
+        hr {
+            color: $secondary;
+            background-color: $secondary;
+            margin: 0;
+        }
     }
 }
 
