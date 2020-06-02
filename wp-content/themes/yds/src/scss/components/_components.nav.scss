@@ -33,6 +33,7 @@
     a {
         color: $white;
         transition: all .3s ease-in-out;
+        border-bottom: 2px solid transparent;
     }
 
     .current-menu-item {
@@ -118,6 +119,7 @@
     .c-nav-main {
         a {
             color: $primary;
+            border-bottom: 2px solid transparent;
         }
 
         li:not(.btn-contact) a:hover {
