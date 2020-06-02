@@ -64,6 +64,10 @@
     &--dark {
         color: $dark;
         border: none;
+
+        svg {
+            fill: $dark;
+        }
     }
 }
 
