@@ -32,6 +32,7 @@
 .c-nav-main {
     a {
         color: $white;
+        transition: all .3s ease-in-out;
     }
 
     .current-menu-item {
