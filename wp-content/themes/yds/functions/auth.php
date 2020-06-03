@@ -1,5 +1,6 @@
 <?php
 
+global $attr;
 $attr = [];
 
 // Redirect users/admins to homepage after login
