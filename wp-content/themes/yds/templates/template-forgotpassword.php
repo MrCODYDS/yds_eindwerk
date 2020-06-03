@@ -1,14 +1,16 @@
 <?php
 /* Template Name: Template - Lost Password */
 
-$test = get_query_var('test');
+$attributes['lost_password_sent'] = isset( $_REQUEST['checkemail'] ) && $_REQUEST['checkemail'] == 'confirm';
 ?>
 
 <div id="password-lost-form" class="widecolumn">>
     <h3><?php _e( 'Forgot Your Password?'); ?></h3>
-    <?php if ( $test ) : ?>
-        <h3><?php _e( 'Forgot Your Password?'); ?></h3>
-    <?php endif; ?>
+    <?php if ( $attributes['lost_password_sent'] ) : ?>
+    <p class="login-info">
+        <?php _e( 'Check your email for a link to reset your password.', 'personalize-login' ); ?>
+    </p>
+<?php endif; ?>
     <p>
         <?php
             _e(
