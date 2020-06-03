@@ -107,3 +107,53 @@ function replace_retrieve_password_message( $message, $key, $user_login, $user_d
  
     return $msg;
 }
+
+
+/////////////////////
+// Login functions //
+/////////////////////
+
+add_action( 'login_form_login', 'redirect_to_custom_login');
+
+/**
+ * Redirect the user to the custom login page instead of wp-login.php.
+ */
+function redirect_to_custom_login() {
+    if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
+        $redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : null;
+     
+        if ( is_user_logged_in() ) {
+            $this->redirect_logged_in_user( $redirect_to );
+            exit;
+        }
+ 
+        // The rest are redirected to the login page
+        $login_url = home_url( 'login' );
+        if ( ! empty( $redirect_to ) ) {
+            $login_url = add_query_arg( 'redirect_to', $redirect_to, $login_url );
+        }
+ 
+        wp_redirect( home_url( ('login')));
+        exit;
+    }
+}
+
+////////////////////////
+// Register functions //
+////////////////////////
+add_action( 'login_form_register','redirect_to_custom_register' );
+
+/**
+ * Redirects the user to the custom registration page instead
+ * of wp-login.php?action=register.
+ */
+function redirect_to_custom_register() {
+    if ( 'GET' == $_SERVER['REQUEST_METHOD'] ) {
+        if ( is_user_logged_in() ) {
+            $this->redirect_logged_in_user();
+        } else {
+            wp_redirect( home_url( 'register' ) );
+        }
+        exit;
+    }
+}
