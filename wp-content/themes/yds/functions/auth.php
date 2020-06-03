@@ -63,6 +63,7 @@ add_action( 'login_form_lostpassword', 'do_password_lost' );
 /**
  * Initiates password reset.
  */
+$lala = "";
 function do_password_lost() {
     if ( 'POST' == $_SERVER['REQUEST_METHOD'] ) {
         $errors = retrieve_password();
@@ -70,13 +71,15 @@ function do_password_lost() {
             // Errors found
             $redirect_url = home_url( 'forgot-password' );
             $redirect_url = add_query_arg( 'errors', join( ',', $errors->get_error_codes() ), $redirect_url );
+            echo '<script type="text/javascript">alert("hello!");</script>';
         } else {
             // Email sent
             $redirect_url = home_url( 'login' );
             $redirect_url = add_query_arg( 'checkemail', 'confirm', $redirect_url );
         }
- 
+        echo '<script type="text/javascript">alert("hello!");</script>';
         wp_redirect( $redirect_url );
+        echo '<script type="text/javascript">alert("hello!");</script>';
         exit;
     }
 }

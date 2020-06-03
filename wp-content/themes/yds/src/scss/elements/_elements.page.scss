@@ -88,7 +88,8 @@ body.home {
 }
 
 body.page-template-template-login::before,
-body.page-template-template-register::before {
+body.page-template-template-register::before,
+body.page-template-template-forgotpassword:before {
     @include media-breakpoint-down(md) {
         content: '';
         position: absolute;
@@ -104,7 +105,8 @@ body.page-template-template-register::before {
 }
 
 .page-template-template-login,
-.page-template-template-register {
+.page-template-template-register,
+.page-template-template-forgotpassword {
     @include media-breakpoint-down(md) {
         .c-footer {
             display: none;
