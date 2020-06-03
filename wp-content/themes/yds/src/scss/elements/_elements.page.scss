@@ -119,6 +119,7 @@ body.page-template-template-register::before {
 }
 
 #scrollTop {
+    display: none;
     width: 60px;
     line-height: 60px;
     border-radius: 50px;
@@ -135,6 +136,15 @@ body.page-template-template-register::before {
 
     svg {
         fill: $white;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 40px;
+        line-height: 40px;
+        svg {
+            width: 20px !important;
+            height: 20px !important;
+        }
     }
 }
 #scrollTop:hover {

@@ -3,9 +3,9 @@ jQuery(document).ready(function($) {
     $(window).scroll(function() {
         var height = $(window).scrollTop();
         if (height >= 300) {
-            $('#scrollTop').css({'opacity': 1});
+            $('#scrollTop').css({'opacity': 1, "display": "block"});
         } else {
-            $('#scrollTop').css({'opacity': 0});
+            $('#scrollTop').css({'opacity': 0, "display": "block"});
         }
     });
     $(document).ready(function() {
