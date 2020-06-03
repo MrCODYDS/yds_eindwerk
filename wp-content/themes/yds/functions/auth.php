@@ -63,7 +63,6 @@ add_action( 'login_form_lostpassword', 'do_password_lost' );
 /**
  * Initiates password reset.
  */
-$lala = "";
 function do_password_lost() {
     if ( 'POST' == $_SERVER['REQUEST_METHOD'] ) {
         $errors = retrieve_password();
@@ -71,15 +70,38 @@ function do_password_lost() {
             // Errors found
             $redirect_url = home_url( 'forgot-password' );
             $redirect_url = add_query_arg( 'errors', join( ',', $errors->get_error_codes() ), $redirect_url );
-            echo '<script type="text/javascript">alert("hello!");</script>';
         } else {
             // Email sent
             $redirect_url = home_url( 'login' );
             $redirect_url = add_query_arg( 'checkemail', 'confirm', $redirect_url );
         }
-        echo '<script type="text/javascript">alert("hello!");</script>';
         wp_redirect( $redirect_url );
-        echo '<script type="text/javascript">alert("hello!");</script>';
+        
         exit;
     }
+}
+
+add_filter( 'retrieve_password_message', 'replace_retrieve_password_message', 10, 4 );
+
+/**
+ * Returns the message body for the password reset mail.
+ * Called through the retrieve_password_message filter.
+ *
+ * @param string  $message    Default mail message.
+ * @param string  $key        The activation key.
+ * @param string  $user_login The username for the user.
+ * @param WP_User $user_data  WP_User object.
+ *
+ * @return string   The mail message to send.
+ */
+function replace_retrieve_password_message( $message, $key, $user_login, $user_data ) {
+    // Create new message
+    $msg  = __( 'Hello!') . "\r\n\r\n";
+    $msg .= sprintf( __( 'You asked us to reset your password for your account using the email address %s.'), $user_login ) . "\r\n\r\n";
+    $msg .= __( "If this was a mistake, or you didn't ask for a password reset, just ignore this email and nothing will happen.") . "\r\n\r\n";
+    $msg .= __( 'To reset your password, visit the following address:') . "\r\n\r\n";
+    $msg .= site_url( "wp-login.php?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . "\r\n\r\n";
+    $msg .= __( 'Thanks!') . "\r\n";
+ 
+    return $msg;
 }
