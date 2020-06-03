@@ -74,8 +74,7 @@ function do_password_lost() {
             // Email sent
             $redirect_url = home_url( 'login' );
             $redirect_url = add_query_arg( 'checkemail', 'confirm', $redirect_url );
-            $message = "succes!";
-            echo "<script type='text/javascript'>alert('$message');</script>";
+
         }
  
         wp_redirect( $redirect_url );
