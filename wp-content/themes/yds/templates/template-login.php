@@ -15,6 +15,11 @@ $redirect_to = '';
                                 <div class="c-login__image"></div>
                                 <h5 class="text-dark mt-2 d-block d-lg-none">Log in</h5>
                                 <form name="loginform" id="loginform" class="text-center mt-5 px-4 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8" action="<?php echo wp_login_url(); ?>" method="post">
+                                <?php if ( $attr['lost_password'] ) : ?>
+                                    <p>
+                                        <?php _e( 'Check your email for a link to reset your password.'); ?>
+                                    </p>
+                                <?php endif; ?>
                                     <p>
                                         <label for="user_login" class="label-hide"></label>
                                         <input id="user_login" type="text" value="" name="log" placeholder="Gebruikersnaam">
