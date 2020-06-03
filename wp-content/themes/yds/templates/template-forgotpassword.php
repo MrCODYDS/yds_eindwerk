@@ -1,10 +1,14 @@
 <?php
 /* Template Name: Template - Lost Password */
+
+$test = get_query_var('test');
 ?>
 
 <div id="password-lost-form" class="widecolumn">>
     <h3><?php _e( 'Forgot Your Password?'); ?></h3>
- 
+    <?php if ( $test ) : ?>
+        <h3><?php _e( 'Forgot Your Password?'); ?></h3>
+    <?php endif; ?>
     <p>
         <?php
             _e(
