@@ -1,8 +1,5 @@
 <?php
 
-global $attr;
-$attr = [];
-
 // Redirect users/admins to homepage after login
 add_filter( 'login_redirect', 'redirect_users', 10, 3 );
 function redirect_users( $redirect_to, $request, $user ){
@@ -40,6 +37,11 @@ function auto_redirect_after_logout(){
   exit();
 }
 
+
+
+
+
+
 add_action( 'login_form_lostpassword', 'redirect_to_custom_lostpassword' );
 /**
  * Redirects the user to the custom "Forgot your password?" page instead of
@@ -72,7 +74,8 @@ function do_password_lost() {
             // Email sent
             $redirect_url = home_url( 'login' );
             $redirect_url = add_query_arg( 'checkemail', 'confirm', $redirect_url );
-            $attr['lost_password'] = true;
+            $message = "succes!";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
  
         wp_redirect( $redirect_url );
