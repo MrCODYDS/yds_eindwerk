@@ -13,6 +13,10 @@
         form {
             width: 100%;
         }
+
+        .label-hide {
+            display: none;
+        }
     
         input[type=text],
         input[type=password],
@@ -20,12 +24,9 @@
             padding: .6rem .8rem;
             border: 1px solid $light-blue;
             border-radius: 10px;
-            width: 70%;
+            width: 100%;
             background-color: rgba($primary, .1);
 
-            @include media-breakpoint-down(sm) {
-                width: 90%;
-            }
         }
     }
 

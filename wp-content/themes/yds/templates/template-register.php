@@ -24,17 +24,17 @@ $redirect_to = '';
                             <div class=" d-flex flex-column justify-content-center align-items-center h-100">
                                 <div class="c-login__image"></div>
                                 <h5 class="text-dark mt-2 d-block d-lg-none">Registreer</h5>
-                                <form name="loginform" id="loginform" class="text-center mt-5" action="<?php echo site_url( '/wp-login.php?action=register' ); ?>" method="post">
+                                <form name="loginform" id="loginform" class="text-center mt-5 mt-5 px-4 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8" action="<?php echo wp_registration_url(); ?>" method="post">
                                     <p>
-                                        <label for="user_login"></label>
+                                        <label for="user_login" class="label-hide"></label>
                                         <input id="user_login" type="text" value="" name="log" placeholder="Gebruikersnaam">
                                     </p>
                                     <p>
-                                        <label for="user_email"></label>
+                                        <label for="user_email" class="label-hide"></label>
                                         <input id="user_email" type="email" value="" name="email" placeholder="Email">
                                     </p>
                                     <p class="mt-6 mb-0">
-                                        <input id="wp-submit" class="btn btn-secondary" type="submit" value="Registreer" name="wp-submit">
+                                        <input id="wp-submit" class="btn btn-secondary btn-stretched" type="submit" value="Registreer" name="wp-submit">
                                         <input type="hidden" value="<?php echo esc_attr( $redirect_to ); ?>" name="redirect_to">
                                         <input type="hidden" value="1" name="testcookie">
                                     </p>

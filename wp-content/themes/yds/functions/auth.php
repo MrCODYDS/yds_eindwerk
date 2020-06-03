@@ -36,3 +36,42 @@ function auto_redirect_after_logout(){
   wp_redirect( home_url() );
   exit();
 }
+
+add_action( 'login_form_lostpassword', 'redirect_to_custom_lostpassword' );
+/**
+ * Redirects the user to the custom "Forgot your password?" page instead of
+ * wp-login.php?action=lostpassword.
+ */
+function redirect_to_custom_lostpassword() {
+    if ( 'GET' == $_SERVER['REQUEST_METHOD'] ) {
+        if ( is_user_logged_in() ) {
+            $this->redirect_logged_in_user();
+            exit;
+        }
+ 
+        wp_redirect( home_url( 'forgot-password' ) );
+        exit;
+    }
+}
+
+add_action( 'login_form_lostpassword', 'do_password_lost' );
+/**
+ * Initiates password reset.
+ */
+function do_password_lost() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] ) {
+        $errors = retrieve_password();
+        if ( is_wp_error( $errors ) ) {
+            // Errors found
+            $redirect_url = home_url( 'forgot-password' );
+            $redirect_url = add_query_arg( 'errors', join( ',', $errors->get_error_codes() ), $redirect_url );
+        } else {
+            // Email sent
+            $redirect_url = home_url( 'login' );
+            $redirect_url = add_query_arg( 'checkemail', 'confirm', $redirect_url );
+        }
+ 
+        wp_redirect( $redirect_url );
+        exit;
+    }
+}
