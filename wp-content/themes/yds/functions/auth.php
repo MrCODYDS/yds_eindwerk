@@ -44,14 +44,12 @@ function logout_page() {
 }
 add_action('wp_logout','logout_page');
 
-/**
- * Redirect users when they fail to register
- */
-add_filter( 'register_url', 'custom_register_url' );
-function custom_register_url( $register_url )
-{
-    $register_url = home_url('/register/' );
-    return $register_url;
+add_action(  'login_init', 'user_registration_login_init'  );
+function user_registration_login_init () {
+     if( ! is_user_logged_in() ) {
+        wp_redirect( '/register' );
+        exit;
+      }
 }
 
 /**
