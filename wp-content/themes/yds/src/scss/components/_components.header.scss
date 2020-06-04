@@ -36,9 +36,9 @@
 
 .c-logo {
     display: block;
-    width: 160px;
-    height: 40px;
-    background-image: url(sprites/logo-white.png);
+    width: 180px;
+    height: 60px;
+    background-image: url(sprites/sporezo-logo-white.png);
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 0;
@@ -53,7 +53,7 @@
     background-color: $white;
 
     .c-logo {
-        background-image: url(sprites/logo-color.png);
+        background-image: url(sprites/sporezo-logo-color.png);
     }
 
     .is-open-sidebar & {
