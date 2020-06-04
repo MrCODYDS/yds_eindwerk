@@ -28,6 +28,9 @@ function load_assets() {
     // Include scrolltop.js
     wp_enqueue_script('scrolltop-js', get_template_directory_uri() . '/src/js/scrolltop.js', array(), false, true);
 
+     // Include loginform.js
+     wp_enqueue_script('loginform-js', get_template_directory_uri() . '/src/js/loginform.js', array(), false, true);
+
     // Include mobilemenu.js
     wp_enqueue_script('mobilemenu-js', get_template_directory_uri() . '/src/js/mobilemenu.js', array(), false, true );
 

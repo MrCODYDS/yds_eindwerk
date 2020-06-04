@@ -2,6 +2,25 @@
 /* Template Name: Template - Register */
 
 $redirect_to = '';
+
+$register  = (isset($_GET['register']) ) ? $_GET['register'] : 0;
+
+
+if ( isset( $_POST['user_login'] ) && is_string( $_POST['user_login'] ) ) {
+    $user_login = wp_unslash( $_POST['user_login'] );
+}
+
+if ( isset( $_POST['user_email'] ) && is_string( $_POST['user_email'] ) ) {
+    $user_email = wp_unslash( $_POST['user_email'] );
+}
+
+$errors = register_new_user( $user_login, $user_email );
+
+var_dump($errors);
+if ($errors) {
+    echo "lala";
+}
+
 ?>
 
 <section class="c-login py-4 py-lg-6">

@@ -2,6 +2,26 @@
 /* Template Name: Template - Login */
 
 $redirect_to = '';
+
+$args = array(
+    'redirect' => home_url(),
+    'label_username' => __( 'Gebruikersnaam' ),
+    'label_password' => __( 'Wachtwoord' ),
+    'label_log_in'   => __( 'Log in' ),
+    'id_username'    => 'user',
+    'id_password'    => 'pass',
+);
+
+$login  = (isset($_GET['login']) ) ? $_GET['login'] : 0;
+
+if ( $login === "failed" ) {
+    echo '<p class="login-msg"><strong>ERROR:</strong> Invalid username and/or password.</p>';
+} elseif ( $login === "empty" ) {
+    echo '<p class="login-msg"><strong>ERROR:</strong> Username and/or Password is empty.</p>';
+} elseif ( $login === "false" ) {
+    echo '<p class="login-msg"><strong>ERROR:</strong> You are logged out.</p>';
+}
+
 ?>
 
 <section class="c-login py-4 py-lg-6">
@@ -12,37 +32,15 @@ $redirect_to = '';
                     <div class="c-login-content--first col-lg-7">
                         <div class="c-login--login d-flex flex-column justify-content-around">
                             <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                <div class="c-login__image"></div>
+                                <div class="c-login__image mt-3 mt-lg-0"></div>
                                 <h5 class="text-dark mt-2 d-block d-lg-none">Log in</h5>
-                                <form name="loginform" id="loginform" class="text-center mt-5 px-4 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8" action="<?php echo wp_login_url(); ?>" method="post">
-                                <?php if ( $attr['lost_password'] ) : ?>
-                                    <p>
-                                        <?php _e( 'Check your email for a link to reset your password.'); ?>
+                                <div class="w-100 mt-5 px-3 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8">
+                                    <?php wp_login_form( $args ); ?>
+                                    <p class="text-center">
+                                        <a href="<?php echo site_url('wp-login.php?action=lostpassword');?>" class="text-dark">Wachtwoord vergeten?</a>
                                     </p>
-                                <?php endif; ?>
-                                    <p>
-                                        <label for="user_login" class="label-hide"></label>
-                                        <input id="user_login" type="text" value="" name="log" placeholder="Gebruikersnaam">
-                                    </p>
-                                    <p>
-                                        <label for="user_pass" class="label-hide"></label>
-                                        <input id="user_pass" type="password" value="" name="pwd" placeholder="Wachtwoord">
-                                    </p>
-                                    <div class="d-flex flex-column flex-sm-row justify-content-between">
-                                        <p class="text-dark m-0">
-                                            <input id="rememberme" type="checkbox" value="forever" name="rememberme">
-                                            <label for="rememberme">Remember me</label>
-                                        </p>
-                                        <a href="<?php echo esc_url( wp_lostpassword_url( get_permalink() ) ); ?>" alt="<?php esc_attr_e( 'Forgot your password?', 'textdomain' ); ?>" class="text-dark">
-                                            <?php esc_html_e( 'Forgot your password?', 'textdomain' ); ?>
-                                        </a>
-                                    </div>
-                                    <p class="mt-3 mb-0">
-                                        <input id="wp-submit" class="btn btn-secondary btn-stretched" type="submit" value="Login" name="wp-submit">
-                                        <input type="hidden" value="<?php echo esc_attr( $redirect_to ); ?>" name="redirect_to">
-                                        <input type="hidden" value="1" name="testcookie">
-                                    </p>
-                                </form>
+                                </div>
+                                
                             </div>
                             <div class="text-center pb-3">
                                 <a href="/register" class="btn btn-link btn-link--dark">

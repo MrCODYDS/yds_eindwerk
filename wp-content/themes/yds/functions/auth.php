@@ -1,28 +1,73 @@
 <?php
 
-// Redirect users/admins to homepage after login
-add_filter( 'login_redirect', 'redirect_users', 10, 3 );
-function redirect_users( $redirect_to, $request, $user ){
-    //is there a user to check?
-    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
-        //check for admins
-        if ( in_array( 'administrator', $user->roles ) || in_array( 'subscriber', $user->roles ) ) {
-            $redirect_to = '/'; // Your redirect URL
-        }
+/**
+ * Redirect users when trying to get wp-login.php
+ */
+function redirect_login_page() {
+    $login_page  = home_url( '/login/' );
+    $page_viewed = basename($_SERVER['REQUEST_URI']);
+   
+    if( $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+      wp_redirect($login_page);
+      exit;
     }
-    return $redirect_to;
+  }
+add_action('init','redirect_login_page');
+
+/**
+ * Redirect users when trying to get wp-login.php
+ * Redirect users when failing to login
+ */
+function login_failed() {
+    $login_page  = home_url( '/login/' );
+    wp_redirect( $login_page . '?login=failed' );
+    exit;
+}
+add_action( 'wp_login_failed', 'login_failed' );
+   
+function verify_username_password( $user, $username, $password ) {
+    $login_page  = home_url( '/login/' );
+    if( $username == "" || $password == "" ) {
+        wp_redirect( $login_page . "?login=empty" );
+        exit;
+    }
+}
+add_filter( 'authenticate', 'verify_username_password', 1, 3);
+
+/**
+ * Redirect users when they log out (or access wp-logout.php)
+ */
+function logout_page() {
+    $login_page  = home_url( '/' );
+    wp_redirect( $login_page );
+    exit;
+}
+add_action('wp_logout','logout_page');
+
+/**
+ * Redirect users when they fail to register
+ */
+add_filter( 'register_url', 'custom_register_url' );
+function custom_register_url( $register_url )
+{
+    $register_url = home_url('/register/' );
+    return $register_url;
 }
 
-// Block non-administrators from accessing the WordPress back-end
-add_action( 'init', 'wpabsolute_block_users_backend' );
+/**
+ * Block non-administrators from accessing the WordPress back-end
+ */
 function wpabsolute_block_users_backend() {
 	if ( is_admin() && ! current_user_can( 'administrator' ) && ! wp_doing_ajax() ) {
 		wp_redirect( home_url() );
 		exit;
 	}
 }
+add_action( 'init', 'wpabsolute_block_users_backend' );
 
-// Hide admin bar for users
+/**
+ * Hide admin bar for users
+ */
 add_action('after_setup_theme', 'remove_admin_bar');
 function remove_admin_bar() {
     if (!current_user_can('administrator') && !is_admin()) {
@@ -30,12 +75,8 @@ function remove_admin_bar() {
     }
 }
 
-// Redirect users to homepage after logout
-add_action('wp_logout','auto_redirect_after_logout');
-function auto_redirect_after_logout(){
-  wp_redirect( home_url() );
-  exit();
-}
+
+
 
 
 
