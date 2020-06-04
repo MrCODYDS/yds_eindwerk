@@ -44,13 +44,8 @@ function logout_page() {
 }
 add_action('wp_logout','logout_page');
 
-add_action(  'login_init', 'user_registration_login_init'  );
-function user_registration_login_init () {
-     if( ! is_user_logged_in() ) {
-        wp_redirect( '/register' );
-        exit;
-      }
-}
+
+
 
 /**
  * Block non-administrators from accessing the WordPress back-end
