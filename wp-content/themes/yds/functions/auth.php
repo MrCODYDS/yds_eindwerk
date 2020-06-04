@@ -69,17 +69,7 @@ function remove_admin_bar() {
 }
 
 
-// Redirect Registration Page
-function my_registration_page_redirect()
-{
-	global $pagenow;
 
-	if ( ( strtolower($pagenow) == 'wp-login.php') && ( strtolower( $_GET['action']) == 'register' ) ) {
-		wp_redirect( home_url('/register'));
-	}
-}
-
-add_filter( 'init', 'my_registration_page_redirect' );
 
 
 
