@@ -31,11 +31,11 @@ $amount = get_field('number_of_columns_flex');
     </div>
 </section>
 
-<section class="block b-flex d-block d-lg-none">
+<section class="block b-flex d-block d-lg-none pt-5 pt-md-4 pt-lg-5 pb-5 pb-md-4 pb-lg-5">
     <div class="b-flex-items">
         <?php foreach($repeater as $column): ?>
-            <div class="items text-center mx-1 mx-sm-3">
-                <div class="block-background b-flex-item my-5 pb-4">
+            <div class="items text-center mx-2 mx-sm-4">
+                <div class="block-background b-flex-item">
                     <?= wp_get_attachment_image($column['image_flex'], 'full', false, array("title" => get_the_title($column['image_flex']), 'class' => 'img-fluid mb-3')); ?>
                     <div class="px-4">
                         <?php if($column['title_flex']): ?>
@@ -43,7 +43,7 @@ $amount = get_field('number_of_columns_flex');
                         <?php endif; ?>
 
                         <?php if($column['text_flex']): ?>
-                            <p class="m-0"><?= $column['text_flex']; ?></p>
+                            <p class=""><?= $column['text_flex']; ?></p>
                         <?php endif; ?>
                     </div>
                 </div>
