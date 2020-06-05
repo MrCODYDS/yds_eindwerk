@@ -99,8 +99,11 @@
     }
 }
 
-.c-login__errors {
-    p {
-        color: red;
-    }
+
+.error-fail {
+    color: red;
+}
+
+.error-success {
+    color: green;
 }

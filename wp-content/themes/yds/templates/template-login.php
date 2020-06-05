@@ -16,7 +16,9 @@ $errors = "";
 $login  = (isset($_GET['login']) ) ? $_GET['login'] : 0;
 
 if ( $login === "failed" ) {
-    $errors .= '<p class="">Er is iets misgelopen bij het inloggen, probeer opnieuw.</p>';
+    $errors .= '<p class="error-fail">Er is iets misgelopen bij het inloggen, probeer opnieuw.</p>';
+} elseif (isset($_GET['checkemail']) == 'confirm') {
+    $errors = '<p class="error-succes">Er is een mail verstuurd naar het opgegeven emailadres om uw wachtwoord opnieuw in te stellen.</p>';
 }
 
 ?>

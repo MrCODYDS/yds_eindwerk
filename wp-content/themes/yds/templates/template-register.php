@@ -5,16 +5,16 @@ $redirect_to = '';
 $errors = "";
 
 if ( isset($_GET['username_exists']) ==  true) {
-    $errors .= '<p class="">De ingevoerde gebruikersnaam bestaat al.</p>';
+    $errors .= '<p class="error-fail">De ingevoerde gebruikersnaam bestaat al.</p>';
 }
 if ( isset($_GET['empty_username']) ==  true) {
-    $errors .= '<p class="">Er is geen gebruikersnaam ingevuld.</p>';
+    $errors .= '<p class="error-fail">Er is geen gebruikersnaam ingevuld.</p>';
 }
 if ( isset($_GET['empty_email']) ==  true ) {
-    $errors .= '<p class="">Er is geen email ingevuld.</p>';
+    $errors .= '<p class="error-fail">Er is geen email ingevuld.</p>';
 }
 if ( isset($_GET['invalid_email']) ==  true ) {
-    $errors .= '<p class="">Er is geen geldig emailadres ingevuld.</p>';
+    $errors .= '<p class="error-fail">Er is geen geldig emailadres ingevuld.</p>';
 }
 
 ?>
