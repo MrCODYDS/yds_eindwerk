@@ -28,11 +28,11 @@ $redirect_to = '';
                                 <form name="loginform" id="loginform" class="text-center mt-5 mt-5 px-4 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8" action="<?php echo wp_registration_url(); ?>" method="post">
                                     <p>
                                         <label for="user_login" class="label-hide"></label>
-                                        <input id="user_login" type="text" value="" name="log" placeholder="Gebruikersnaam">
+                                        <input id="user_login" type="text" value="" name="user_login" placeholder="Gebruikersnaam">
                                     </p>
                                     <p>
                                         <label for="user_email" class="label-hide"></label>
-                                        <input id="user_email" type="email" value="" name="email" placeholder="Email">
+                                        <input id="user_email" type="email" value="" name="user_email" placeholder="Email">
                                     </p>
                                     <p class="mt-6 mb-0">
                                         <input id="wp-submit" class="btn btn-secondary btn-stretched" type="submit" value="Registreer" name="wp-submit">

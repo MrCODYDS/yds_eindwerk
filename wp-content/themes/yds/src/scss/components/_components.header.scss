@@ -38,10 +38,14 @@
     display: block;
     width: 180px;
     height: 60px;
-    background-image: url(sprites/sporezo-logo-white.png);
+    background-image: url(sprites/sporezo-logo-white.svg);
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 0;
+
+    @include media-breakpoint-down(md) {
+        background-image: url(sprites/sporezo-logo-normal.svg);
+    }
 }
 
 .is-fixed {
@@ -53,7 +57,7 @@
     background-color: $white;
 
     .c-logo {
-        background-image: url(sprites/sporezo-logo-color.png);
+        background-image: url(sprites/sporezo-logo-normal.svg);
     }
 
     .is-open-sidebar & {

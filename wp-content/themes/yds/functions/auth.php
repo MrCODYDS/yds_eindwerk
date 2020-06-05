@@ -155,11 +155,6 @@ add_action( 'login_form_login', 'redirect_to_custom_login');
 function redirect_to_custom_login() {
     if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : null;
-     
-        if ( is_user_logged_in() ) {
-            $this->redirect_logged_in_user( $redirect_to );
-            exit;
-        }
  
         // The rest are redirected to the login page
         $login_url = home_url( 'login' );
