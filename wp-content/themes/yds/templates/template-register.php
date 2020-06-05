@@ -3,6 +3,21 @@
 
 $redirect_to = '';
 
+$register  = (isset($_GET['register']) ) ? $_GET['register'] : 0;
+
+if ( isset($_GET['username_exists']) ==  true) {
+    echo '<p class="login-msg"><strong>ERROR:</strong>De ingevoerde gebruikersnaam bestaat al.</p>';
+}
+if ( isset($_GET['empty_username']) ==  true) {
+    echo '<p class="login-msg"><strong>ERROR:</strong>Er is geen gebruikersnaam ingevuld.</p>';
+}
+if ( isset($_GET['empty_email']) ==  true ) {
+    echo '<p class="login-msg"><strong>ERROR:</strong>Er is geen email ingevuld..</p>';
+}
+if ( isset($_GET['invalid_email']) ==  true ) {
+    echo '<p class="login-msg"><strong>ERROR:</strong>Er is geen geldig emailadres ingevuld.</p>';
+}
+
 ?>
 
 <section class="c-login py-4 py-lg-6">
