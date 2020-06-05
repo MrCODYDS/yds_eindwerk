@@ -2,20 +2,19 @@
 /* Template Name: Template - Register */
 
 $redirect_to = '';
-
-$register  = (isset($_GET['register']) ) ? $_GET['register'] : 0;
+$errors = "";
 
 if ( isset($_GET['username_exists']) ==  true) {
-    echo '<p class="login-msg"><strong>ERROR:</strong>De ingevoerde gebruikersnaam bestaat al.</p>';
+    $errors .= '<p class="">De ingevoerde gebruikersnaam bestaat al.</p>';
 }
 if ( isset($_GET['empty_username']) ==  true) {
-    echo '<p class="login-msg"><strong>ERROR:</strong>Er is geen gebruikersnaam ingevuld.</p>';
+    $errors .= '<p class="">Er is geen gebruikersnaam ingevuld.</p>';
 }
 if ( isset($_GET['empty_email']) ==  true ) {
-    echo '<p class="login-msg"><strong>ERROR:</strong>Er is geen email ingevuld..</p>';
+    $errors .= '<p class="">Er is geen email ingevuld.</p>';
 }
 if ( isset($_GET['invalid_email']) ==  true ) {
-    echo '<p class="login-msg"><strong>ERROR:</strong>Er is geen geldig emailadres ingevuld.</p>';
+    $errors .= '<p class="">Er is geen geldig emailadres ingevuld.</p>';
 }
 
 ?>
@@ -40,7 +39,10 @@ if ( isset($_GET['invalid_email']) ==  true ) {
                             <div class=" d-flex flex-column justify-content-center align-items-center h-100">
                                 <div class="c-login__image"></div>
                                 <h5 class="text-dark mt-2 d-block d-lg-none">Registreer</h5>
-                                <form name="loginform" id="loginform" class="text-center mt-5 mt-5 px-4 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8" action="<?php echo wp_registration_url(); ?>" method="post">
+                                <div class="c-login__errors w-100 mt-5 px-4 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8">
+                                    <?php echo $errors ?>
+                                </div>
+                                <form name="loginform" id="loginform" class="text-center px-4 px-sm-6 px-md-8 px-lg-5 px-xl-7 px-xxl-8" action="<?php echo wp_registration_url(); ?>" method="post">
                                     <p>
                                         <label for="user_login" class="label-hide"></label>
                                         <input id="user_login" type="text" value="" name="user_login" placeholder="Gebruikersnaam">

@@ -28,7 +28,7 @@ add_action( 'wp_login_failed', 'login_failed' );
 function verify_username_password( $user, $username, $password ) {
     $login_page  = home_url( '/login/' );
     if( $username == "" || $password == "" ) {
-        wp_redirect( $login_page . "?login=empty" );
+        wp_redirect( $login_page . "?login=failed" );
         exit;
     }
 }
@@ -40,7 +40,7 @@ function verify_registration( $sanitized_user_login, $user_email, $errors ){
 
     $register_page  = home_url( '/register/' );
 
-    if ( $errors->get_error_code() ){
+    if ( $errors->get_error_code() ) {
         foreach ( $errors->errors as $e => $m ){
             $register_page = add_query_arg( $e, 'true', $register_page );    
         }
