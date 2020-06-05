@@ -48,6 +48,15 @@
     }
 }
 
+.page-template-template-login,
+.page-template-template-register,
+.page-template-template-forgotpassword {
+
+    .c-logo {
+        background-image: url(sprites/sporezo-logo-white.svg);
+    }
+}
+
 .is-fixed {
     position: fixed;
     z-index: 900;
@@ -57,7 +66,7 @@
     background-color: $white;
 
     .c-logo {
-        background-image: url(sprites/sporezo-logo-normal.svg);
+        background-image: url(sprites/sporezo-logo-normal.svg) !important;
     }
 
     .is-open-sidebar & {
