@@ -45,7 +45,7 @@
     
 
     $to = $current_user->user_email;
-    $subject = "Barezo - Je registratie is voltooid!";
+    $subject = "Sporezo - Je registratie is voltooid!";
     $message = '
         <html>
             <head>
@@ -78,7 +78,8 @@
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: Barezo <desmetyarne@gmail.com>' . "\r\n";
+    $headers .= 'From: Sporezo <info.sporezo@gmail.com
+    >' . "\r\n";
 
     // send email
     wp_mail($to, $subject, $message, $headers);

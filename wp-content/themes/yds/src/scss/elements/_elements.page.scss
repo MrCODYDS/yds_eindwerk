@@ -145,12 +145,8 @@ body.page-template-template-forgotpassword:before {
     }
 
     @include media-breakpoint-down(sm) {
-        width: 40px;
-        line-height: 40px;
-        svg {
-            width: 20px !important;
-            height: 20px !important;
-        }
+        width: 55px;
+        line-height: 55px;
     }
 }
 #scrollTop:hover {

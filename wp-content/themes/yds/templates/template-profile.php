@@ -8,16 +8,9 @@ $sql = "SELECT * FROM wp_user_reservations WHERE user_id = '" . $user_id . "'";
 
 $result = $wpdb->get_results($sql);
 
-if ($_POST['action'] && $_POST['id']) {
-    if ($_POST['action'] == 'Annuleren') {
-        $wpdb->delete( "wp_user_reservations", array('id' => $_POST['id']));
-        echo "<script>window.location = '/user-reservations'</script>";
-    }
-}
-
 ?>
 <?php if(is_user_logged_in()): ?>
-<?php the_content(); ?>
+    <?php the_content(); ?>
     <section class="c-profile pt-2 pt-md-4 pb-4 pb-md-6">
         <div class="container">
             <div class="row">
@@ -57,10 +50,10 @@ if ($_POST['action'] && $_POST['id']) {
                                         ?>
                                         <td class="column4" data-content="Sessie"><?php echo $reservation_time?></td>
                                         <td class="column5" data-content="Aantal personen"><?php echo $row->reservation_people ?></td>
-                                        <form action="" method="post">
+                                        <form action="/wp-content/themes/yds/templates/includes/deleteRowFromDatabase.php" method="POST" id="profile-cancel">
                                             <td class="column6" data-content="">
-                                                <input type="submit" name="action" value="Annuleren" class="btn btn-primary">
-                                                <input type="hidden" name="id" value="<?php echo $row->id; ?>">
+                                                <input type="submit" name="profile-action" value="Annuleren" class="btn btn-primary" id="profile-action" onclick="return confirm('Bent u zeker dat u uw reservatie wilt annuleren?')">
+                                                <input type="hidden" name="profile-id" value="<?php echo $row->id; ?>" id="profile-id">
                                             </td>
                                         </form>
                                     </tr>
