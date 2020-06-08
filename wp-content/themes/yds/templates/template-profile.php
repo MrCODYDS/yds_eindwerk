@@ -9,7 +9,7 @@ $sql = "SELECT * FROM wp_user_reservations WHERE user_id = '" . $user_id . "'";
 $result = $wpdb->get_results($sql);
 
 if ($_POST['action'] && $_POST['id']) {
-    if ($_POST['action'] == 'Delete') {
+    if ($_POST['action'] == 'Annuleren') {
         $wpdb->delete( "wp_user_reservations", array('id' => $_POST['id']));
         echo "<script>window.location = '/user-reservations'</script>";
     }
@@ -59,7 +59,7 @@ if ($_POST['action'] && $_POST['id']) {
                                         <td class="column5" data-content="Aantal personen"><?php echo $row->reservation_people ?></td>
                                         <form action="" method="post">
                                             <td class="column6" data-content="">
-                                                <input type="submit" name="action" value="Delete" class="btn btn-dark">
+                                                <input type="submit" name="action" value="Annuleren" class="btn btn-primary">
                                                 <input type="hidden" name="id" value="<?php echo $row->id; ?>">
                                             </td>
                                         </form>
