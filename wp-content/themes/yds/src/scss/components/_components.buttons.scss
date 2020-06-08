@@ -110,6 +110,11 @@
     background-color: $dark;
     border-color: $dark;
     color: $white;
+
+    &:hover {
+        background-color: red;
+        border-color: red;
+    }
 }
 
 .btn-cta {

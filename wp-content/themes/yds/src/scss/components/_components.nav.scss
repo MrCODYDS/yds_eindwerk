@@ -18,18 +18,18 @@
     justify-content: flex-end;
     align-items: center;
     padding: 0;
+}
 
+.c-nav-main {
     li {
-        padding-left: .5rem;
-        padding-right: .5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
 
         &:last-child {
             padding-right: 0;
         }
     }
-}
 
-.c-nav-main {
     a {
         color: $white;
         transition: all .3s ease-in-out;
@@ -103,10 +103,13 @@
     li {
         border-right: 1px solid $white;
         line-height: 1;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         &:last-child {
             border-left: 1px solid transparent;
             border-right: none;
+            padding-right: 0;
         }
     }
     
