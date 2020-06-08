@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="c-footer-top__content col-lg-3 mb-4">
                     <div>
-                        <div>
-                            Dit is het logo
+                        <div class="d-flex justify-content-center justify-content-sm-start">
+                            <a href="<?php echo get_home_url(); ?>" class="c-logo-footer mb-2" title="Home">Sporezo</a>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
                     </div>

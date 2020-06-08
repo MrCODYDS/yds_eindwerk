@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-auto d-flex align-items-center">
-                    <a href="<?php echo get_home_url(); ?>" class="c-logo" title="Home">Sporezo</a>
+                    <a href="<?php echo get_home_url(); ?>" class="c-logo-header" title="Home">Sporezo</a>
                 </div>
                 <div class="col-auto ml-auto text-right">
                     <nav role="navigation" class="c-nav-main d-none d-lg-flex">

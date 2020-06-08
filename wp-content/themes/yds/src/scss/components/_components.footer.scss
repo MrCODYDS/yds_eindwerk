@@ -60,3 +60,13 @@
         margin: 0;
     }
 }
+
+.c-logo-footer {
+    display: block;
+    width: 180px;
+    height: 60px;
+    background-image: url(sprites/sporezo-logo-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+}
