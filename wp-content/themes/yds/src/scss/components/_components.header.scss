@@ -52,7 +52,7 @@
 .page-template-template-register,
 .page-template-template-forgotpassword {
 
-    .c-logo {
+    .c-logo-header {
         background-image: url(sprites/sporezo-logo-white.svg);
     }
 }
@@ -65,7 +65,7 @@
     animation: 1s headerDown;
     background-color: $white;
 
-    .c-logo {
+    .c-logo-header {
         background-image: url(sprites/sporezo-logo-normal.svg) !important;
     }
 
