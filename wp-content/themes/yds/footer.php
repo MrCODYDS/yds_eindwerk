@@ -31,21 +31,18 @@
                         <h5>Contact</h5>
                         <ul class="flex-column justify-content-center align-items-start text-center text-sm-left">
                             <li class="d-flex mb-1">
-                                <img src="" alt="">
                                 <div class="">
-                                    <p><?php _e('Straatnaam 25</br>2000 Antwerpen', 'yds'); ?></p>
+                                    <p>Straatnaam 25</br>2000 Antwerpen</p>
                                 </div>
                             </li>
                             <li class="d-flex mb-1">
-                                <img src="" alt="">
                                 <div>
-                                    <p>yarne@info.com</p>
+                                    <a href="mailto:info.sporezo@gmail.com">info.sporezo@gmail.com</a>
                                 </div>
                             </li>
                             <li class="d-flex">
-                                <img src="" alt="">
                                 <div>
-                                    <p>+32 1 23 45 56 78</p>
+                                    <a href="">+32 1 23 45 56 78</a>
                                 </div>
                             </li>
                         </ul>

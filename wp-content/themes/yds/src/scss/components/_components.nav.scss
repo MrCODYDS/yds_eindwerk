@@ -97,8 +97,15 @@
 }
 
 .c-nav-legal {
-    a {
-        color: $white;
+    li {
+        a {
+            transition: all .3s ease-in-out;
+            color: $white;
+        }
+
+        &:hover a {
+            color: $secondary;
+        }
     }
 }
 

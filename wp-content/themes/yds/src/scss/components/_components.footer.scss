@@ -39,6 +39,15 @@
     ul, li {
         padding: 0;
     }
+    
+    a {
+        color: $white;
+        transition: all .3s ease-in-out;
+        
+        &:hover {
+            color: $secondary;
+        }
+    }
 
     p {
         margin: 0;
