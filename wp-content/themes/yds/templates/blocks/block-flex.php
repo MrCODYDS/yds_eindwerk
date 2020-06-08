@@ -15,7 +15,7 @@ $amount = get_field('number_of_columns_flex');
                 <?php if($amount == '2'): ?><div class="col-sm-12 col-md-6 mb-4 mb-lg-0"><?php endif; ?>
                 <?php if($amount == '3'): ?><div class="col-sm-12 col-lg-4 mb-4 mb-lg-0"><?php endif; ?>
                     <div class="block-background h-100 py-5 px-4">
-                        <?= wp_get_attachment_image($column['image_flex'], 'full', false, array("title" => get_the_title($column['image_flex']), 'class' => 'img-fluid mb-3')); ?>
+                        <?= wp_get_attachment_image($column['image_flex'], 'block-flex', false, array("title" => get_the_title($column['image_flex']), 'class' => 'img-fluid mb-3')); ?>
 
                         <?php if($column['title_flex']): ?>
                             <h3 class="mb-3"><?= $column['title_flex']; ?></h3>
