@@ -40,6 +40,9 @@ function load_assets() {
     // Include slick.min.js
     wp_enqueue_script('slick-js', get_template_directory_uri() . '/src/slick/slick.min.js', array(), false, true);
 
+    // Include datapicker-nl-BE.js
+    wp_enqueue_script('datapicker-nl-BE-js', get_template_directory_uri() . '/src/js/datepicker-nl-BE.js', array(), false, true);
+
 }
 
 add_action('wp_enqueue_scripts', 'load_assets');

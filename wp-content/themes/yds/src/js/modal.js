@@ -6,6 +6,11 @@ var datepickerDate;
 var groundValue;
 var $loggedIn;
 
+// Set all datepickers to dutch - belgium
+jQuery(document).ready(function ($) {
+  $.datepicker.setDefaults( $.datepicker.regional[ "nl-BE" ] );
+});
+
 // Check is user is logged in
 function checkIfLoggedIn() {
   jQuery(document).ready(function ($) {
@@ -167,7 +172,8 @@ function fillInEndScreen() {
 // On select date --> get datevalue and put in var
 // On select date --> delete "disabled" from btn-next
 jQuery(document).ready(function ($) {
-  $("#datepicker").datepicker({
+  $("#datepicker").datepicker(
+    {
     minDate: 0,
     dateFormat: "dd-mm-yy",
     onSelect: function(dateText, inst) { 

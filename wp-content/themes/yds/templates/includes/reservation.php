@@ -9,7 +9,7 @@
                 <form action="/wp-content/themes/yds/templates/includes/enterFormValuesDatabase.php" class="reservation-form" id="reservation-form" method="POST">
                     <h3 class="text-center mb-3">Reservatie</h3>
                     <div class="form-choices form-part">
-                        <hr class="hr-text mt-0 mb-md-3" data-content="Maak je keuze">
+                        <hr class="hr-text mt-0 mb-md-3" data-content="Waarvoor wil je reserveren?">
                         <div class="row form-choices__radio">
                             <input type="radio" id="radioSpelers" name="radioChoices" value="Individuele spelers">
                             <label for="radioSpelers" class="col text-center btn btn-primary mr-3 mr-md-5 mb-3 mb-md-5">
