@@ -1,6 +1,7 @@
 <?php
 
 include_once($_SERVER['DOCUMENT_ROOT'].'/wp-load.php' );
+date_default_timezone_set("Europe/Brussels");
 
 global $wpdb;
 $dateValue = $_GET['date'];
@@ -66,9 +67,16 @@ foreach ($exploded as $single) {
             }
         break;
     }
-    
 }
 
+// Hide hours that are in the past
+$nowHour = date('H');
+for ($i = 0; $i <= $nowHour; $i++) {
+    unset($hours[$i]);
+}
+
+
+// Show all timeslots in modal
 foreach ($hours as $hour) {
     $hourlength = strlen((string)$hour);
     
