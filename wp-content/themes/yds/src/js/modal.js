@@ -55,6 +55,8 @@ document.querySelector('#reservation-form')
     
   });
 
+
+// Send data to enterFormValuesDatabase.php
 jQuery(document).ready(function ($) {
   $('reservation-form').submit(function(event) {
     event.preventDefault();
@@ -172,14 +174,24 @@ function fillInEndScreen() {
 // On select date --> get datevalue and put in var
 // On select date --> delete "disabled" from btn-next
 jQuery(document).ready(function ($) {
-  $("#datepicker").datepicker(
-    {
+  $("#datepicker").datepicker({
     minDate: 0,
     dateFormat: "dd-mm-yy",
     onSelect: function(dateText, inst) { 
       datepickerDate = dateText;
       $('.btn-next[data-next="form-grounds"]').removeAttr("disabled");
     }
+  });
+});
+
+jQuery(document).ready(function ($) {
+  $('#selectGround').change(function() {
+    $('#selectTimes option').prop('selected', function() {
+      $("#entreeTimeslots").empty();
+      $('.btn-next[data-next="form-people"]').attr("disabled", true);
+      return this.defaultSelected;
+    });
+    
   });
 });
 
