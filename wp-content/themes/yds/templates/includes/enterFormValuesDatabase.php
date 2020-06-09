@@ -47,16 +47,6 @@
     $to = $current_user->user_email;
     $subject = "Sporezo - Je registratie is voltooid!";
 
-    $message = '<html><body>';
-    $message .= '<p>Je reservatie is voltooid. Jouw reservatiegegevens:</p>';
-    $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-    $message .= "<tr style='background: #eee;'><td><strong>Keuze</strong> </td><td>" . $choice . "</td></tr>";
-    $message .= "<tr><td><strong>Datum</strong> </td><td>" . $date . "</td></tr>";
-    $message .= "<tr><td><strong>Speelveld</strong> </td><td>" . $ground . "</td></tr>";
-    $message .= "<tr><td><strong>Tijd</strong> </td><td>" . $timeslot . "</td></tr>";
-    $message .= "<tr><td><strong>Aantal personen</strong> </td><td>" . $people . "</td></tr>";
-    $message .= "</table>";
-    $message .= "</body></html>";
     
 
     $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
