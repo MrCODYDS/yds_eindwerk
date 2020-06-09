@@ -8,3 +8,8 @@ include_once 'functions/images.php';
 include_once 'functions/database.php';
 include_once 'functions/auth.php';
 include_once 'functions/walker.php';
+
+
+add_filter('wp_mail_content_type', function( $content_type ) {
+    return 'text/html';
+});
