@@ -16,6 +16,36 @@
     // Check which session is chosen and add length to database
     switch($session) {
         case 1:
+            $timeslot = $_POST['radioTimeslots'];
+        break;
+        case 2:
+            $value = $_POST['radioTimeslots'];
+            $timeslot = $value . "," . ($value+1);
+        break;
+        case 3:
+            $value = $_POST['radioTimeslots'];
+            $timeslot = $value . "," . ($value+1) . "," . ($value+2);
+        break;
+        case 4:
+            $value = $_POST['radioTimeslots'];
+            $timeslot = $value . "," . ($value+1) . "," . ($value+2) . "," . ($value+3);
+        break;
+    }
+
+    $table = $wpdb->prefix . "user_reservations";
+    
+    $success=$wpdb->insert($table, array(
+        "user_id" => $userId,
+        "reservation_choice" => $choice,
+        "reservation_date" => $date,
+        "reservation_ground" => $ground,
+        "reservation_time" => $timeslot,
+        "reservation_people" => $people
+    ));
+
+    // Fill timeslot value in again to show in mail
+    switch($session) {
+        case 1:
             $value = $_POST['radioTimeslots'];
             $timeslot = $value . ":00 - " . ($value+1) . ":00";
         break;
@@ -32,17 +62,6 @@
             $timeslot = $value . ":00 - " . ($value+4) . ":00";
         break;
     }
-
-    $table = $wpdb->prefix . "user_reservations";
-    
-    $success=$wpdb->insert($table, array(
-        "user_id" => $userId,
-        "reservation_choice" => $choice,
-        "reservation_date" => $date,
-        "reservation_ground" => $ground,
-        "reservation_time" => $timeslot,
-        "reservation_people" => $people
-    ));
     
 
     $to = $current_user->user_email;
@@ -216,7 +235,7 @@
                             <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Bekijk al jouw reservaties via onderstaande knop!</p></td> 
                             </tr> 
                             <tr style="border-collapse:collapse;"> 
-                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px;"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#2660C3;border-width:0px;display:inline-block;border-radius:8px;width:auto;"><a href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/profiel" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, arial, verdana, sans-serif;font-size:18px;color:#FFFFFF;border-style:solid;border-color:#2660C3;border-width:15px 30px;display:inline-block;background:#2660C3;border-radius:8px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">Mijn reservaties</a></span></td> 
+                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px;"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#2660C3;border-width:0px;display:inline-block;border-radius:2px;width:auto;"><a href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/profiel" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, arial, verdana, sans-serif;font-size:18px;color:#FFFFFF;border-style:solid;border-color:#2660C3;border-width:15px 30px;display:inline-block;background:#2660C3;border-radius:8px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">Mijn reservaties</a></span></td> 
                             </tr> 
                             <tr style="border-collapse:collapse;"> 
                             <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Cheers,</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Het Sporezo Team</p></td> 
@@ -303,7 +322,7 @@
         </html>'
     ;
 
-
+    
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
