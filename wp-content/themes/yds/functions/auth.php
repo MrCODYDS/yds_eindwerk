@@ -223,7 +223,7 @@ function my_loginlogo() {
 add_action('login_head', 'my_loginlogo');
 
 function my_loginURL() {
-    return 'https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/';
+    return home_url();
 }
 add_filter('login_headerurl', 'my_loginURL');
 
@@ -231,3 +231,13 @@ function my_loginURLtext() {
     return 'Sporezo';
 }
 add_filter('login_headertitle', 'my_loginURLtext');
+
+
+///////////////////////////////////
+// Add custom reset password css //
+///////////////////////////////////
+
+function my_logincustomCSSfile() {
+    wp_enqueue_style('login-styles', get_template_directory_uri() . '/src/css/login_styles.css');
+}
+add_action('login_enqueue_scripts', 'my_logincustomCSSfile');
