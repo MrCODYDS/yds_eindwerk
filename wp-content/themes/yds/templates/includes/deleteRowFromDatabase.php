@@ -9,7 +9,7 @@ global $wpdb;
 if ($_POST['profile-action'] && $_POST['profile-id']) {
     if ($_POST['profile-action'] == 'Annuleren') {
         $success=$wpdb->delete( "wp_user_reservations", array('id' => $_POST['profile-id']));
-        echo "<script>window.location = '/user-reservations'</script>";
+        echo "<script>window.location = '/profiel'</script>";
     }
 }
 

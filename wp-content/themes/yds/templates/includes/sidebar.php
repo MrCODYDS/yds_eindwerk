@@ -19,7 +19,7 @@
                     <h3 class="text-white c-sidebar__user"><?php echo "Hi, " . $current_user->user_login ?></h3>
                 </div>
                 <div class="d-flex justify-content-between">
-                <a href="/user-reservations" class="btn btn-outline btn-outline--mobile">Reservations</a>
+                <a href="/profiel" class="btn btn-outline btn-outline--mobile">Reservations</a>
                     <a href="<?php echo wp_logout_url() ?>" class="btn btn-outline btn-outline--mobile">Log out</a>
                 </div>
             <?php else: ?>
