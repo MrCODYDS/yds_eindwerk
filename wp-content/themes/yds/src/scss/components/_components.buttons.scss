@@ -9,8 +9,6 @@
 }
 
 .btn-primary,
-.btn-secondary,
-.btn-dark,
 .btn-white {
     &:hover {
         box-shadow: 2px 4px 10px #4d5061;
@@ -21,15 +19,6 @@
     &:hover {
         background-color: $dark-secondary !important;
         border-color: $dark-secondary !important;
-    }
-}
-
-.btn-secondary {
-    color: $white;
-
-    &:hover {
-        background-color: $dark-secondary;
-        border-color: $dark-secondary;
     }
 }
 
@@ -103,17 +92,6 @@
     &--white {
         color: $white;
         border-color: $white;
-    }
-}
-
-.btn-dark {
-    background-color: $dark;
-    border-color: $dark;
-    color: $white;
-
-    &:hover {
-        background-color: red;
-        border-color: red;
     }
 }
 

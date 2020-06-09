@@ -84,5 +84,5 @@
     // send email
     wp_mail($to, $subject, $message, $headers);
 
-    header('Location: /reservatie');
+    header('Location: /reserveren');
 ?>

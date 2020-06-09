@@ -23,7 +23,7 @@ $cta_settings = get_field('cta_settings_reservation');
                         <p class="text-white my-3"><?= $text; ?></p>
                     <?php endif; ?>
                     <?php if($cta): ?>
-                        <button class="btn btn-white btn-stretched px-4 show-modal">
+                        <button class="btn btn-white btn-stretched text-secondary px-4 show-modal">
                                 <?= $cta_settings['cta_text_reservation']; ?>
                         </button>
                     <?php endif; ?>
