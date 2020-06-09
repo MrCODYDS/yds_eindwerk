@@ -46,8 +46,35 @@
 
     $to = $current_user->user_email;
     $subject = "Sporezo - Je registratie is voltooid!";
-
-    
+    $message = '
+        <html>
+            <head>
+                <title>Jouw reservatie</title>
+                <style type="text/css">
+                    p {color:#2660c3;}
+                </style>
+            </head>
+            <body>
+                
+                <table>
+                    <tr>
+                        <th>Keuze</th>
+                        <th>Datum</th>
+                        <th>Speelveld</th>
+                        <th>Tijd</th>
+                        <th>Aantal personen</th>
+                    </tr>
+                    <tr>
+                        <td>' . $choice . '</td>
+                        <td>' . $date . '</td>
+                        <td>' . $ground . '</td>
+                        <td>' . $timeslot . '</td>
+                        <td>' . $people . '</td>
+                    </tr>
+                </table>
+            </body>
+        </html>
+    ';
 
     $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html style="width:100%;font-family: Raleway, Oxygen, oxygen, arial, sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;">
@@ -191,13 +218,23 @@
                          <tr style="border-collapse:collapse;"> 
                           <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Allemaal gegevens sé</p></td></tr>';
     $message .= '<tr style="border-collapse:collapse;"><td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;">';
-    $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-    $message .= "<tr style='background: #eee;'><td><strong>Keuze</strong> </td><td>" . $choice . "</td></tr>";
-    $message .= "<tr><td><strong>Datum</strong> </td><td>" . $date . "</td></tr>";
-    $message .= "<tr><td><strong>Speelveld</strong> </td><td>" . $ground . "</td></tr>";
-    $message .= "<tr><td><strong>Tijd</strong> </td><td>" . $timeslot . "</td></tr>";
-    $message .= "<tr><td><strong>Aantal personen</strong> </td><td>" . $people . "</td></tr>";
-    $message .= "</table></td></tr>";
+    $message .= '<table>
+    <tr>
+        <th>Keuze</th>
+        <th>Datum</th>
+        <th>Speelveld</th>
+        <th>Tijd</th>
+        <th>Aantal personen</th>
+    </tr>
+    <tr>
+        <td>' . $choice . '</td>
+        <td>' . $date . '</td>
+        <td>' . $ground . '</td>
+        <td>' . $timeslot . '</td>
+        <td>' . $people . '</td>
+    </tr>
+</table>;';
+    $message .= "</td></tr>";
     $message .= '<tr style="border-collapse:collapse;"> 
                           <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px;"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#2660C3;border-width:0px;display:inline-block;border-radius:2px;width:auto;"><a href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/profiel" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:oxygen, arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#2660C3;border-width:15px 30px;display:inline-block;background:#2660C3;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">Bekijk jouw reservaties</a></span></td> 
                          </tr> 
