@@ -212,7 +212,7 @@ function redirect_to_custom_register() {
 function my_loginlogo() {
     echo '<style type="text/css">
       h1 a {
-        background-image: url(' . get_template_directory_uri() . '/dest/sporezo-logo-normal.svg) !important;
+        background-image: url(' . get_template_directory_uri() . '/dest/sprites/sporezo-logo-small-normal.svg) !important;
       }
     </style>';
   }
