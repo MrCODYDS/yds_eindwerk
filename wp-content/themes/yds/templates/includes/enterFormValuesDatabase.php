@@ -49,7 +49,7 @@
     $message = '
         <html>
             <head>
-                <title style="background-color:#2660c3">Jouw reservatie</title>
+                <title style="color:#2660c3">Jouw reservatie</title>
                 </head>
             <body>
                 <p>Je reservatie is voltooid. Jouw reservatiegegevens:</p>
