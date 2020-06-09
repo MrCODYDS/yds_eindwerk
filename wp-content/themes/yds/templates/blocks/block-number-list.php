@@ -19,7 +19,7 @@ $repeater = get_field('repeater_numberlist');
                 <?php foreach($repeater as $column): ?>
                     <div class="b-numberlist-wrapper col-12 col-md-6 col-lg-3">
                         <div class="block-background b-numberlist-content h-100 py-4 py-md-5 px-3 px-md-4">
-                            <?= wp_get_attachment_image($column['repeater_image_numberlist'], 'full', false, array("title" => get_the_title($column['repeater_image_numberlist']), 'class' => 'img-fluid mb-0 mb-md-3 p-3 p-md-0')); ?>
+                            <?= wp_get_attachment_image($column['repeater_image_numberlist'], 'block-numbers', false, array("title" => get_the_title($column['repeater_image_numberlist']), 'class' => 'img-fluid mb-0 mb-md-3 p-3 p-md-0')); ?>
                             <div class="text-left text-md-center ml-3 ml-md-0 pr-2 pr-md-0">
                                 <?php if($column['repeater_title_numberlist']): ?>
                                     <h5 class="mb-0 mb-md-2"><?= $column['repeater_title_numberlist']; ?></h5>

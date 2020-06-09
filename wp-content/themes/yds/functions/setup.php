@@ -51,3 +51,31 @@ class Yds_Wrapping
 }
 
 add_filter('template_include', array('Yds_Wrapping', 'wrap'), 99);
+
+
+////////////////////////////////////////
+// Change login logo and URL and text //
+////////////////////////////////////////
+
+function my_loginlogo() {
+    echo '<style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(' . get_template_directory_uri() . '/dest/sprites/sporezo-logo-normal.svg) !important;
+            width: 180px !important;
+            height: 60px !important;
+            background-size: 180px 60px !important;
+            background-repeat: no-repeat !important;
+        }
+    </style>';
+}
+add_action('login_head', 'my_loginlogo');
+
+function my_loginURL() {
+    return home_url();
+}
+add_filter('login_headerurl', 'my_loginURL');
+
+function my_loginURLtext() {
+    return 'Sporezo';
+}
+add_filter('login_headertitle', 'my_loginURLtext');
