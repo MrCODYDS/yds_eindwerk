@@ -46,35 +46,17 @@
 
     $to = $current_user->user_email;
     $subject = "Sporezo - Je registratie is voltooid!";
-    $message = '
-        <html>
-            <head>
-                <title>Jouw reservatie</title>
-                <style type="text/css">
-                    p {color:#2660c3;}
-                </style>
-            </head>
-            <body>
-                <p>Je reservatie is voltooid. Jouw reservatiegegevens:</p>
-                <table>
-                    <tr>
-                        <th>Keuze</th>
-                        <th>Datum</th>
-                        <th>Speelveld</th>
-                        <th>Tijd</th>
-                        <th>Aantal personen</th>
-                    </tr>
-                    <tr>
-                        <td>' . $choice . '</td>
-                        <td>' . $date . '</td>
-                        <td>' . $ground . '</td>
-                        <td>' . $timeslot . '</td>
-                        <td>' . $people . '</td>
-                    </tr>
-                </table>
-            </body>
-        </html>
-    ';
+   
+
+    $message = '<html><body>';
+    $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
+    $message .= "<tr style='background: #eee;'><td><strong>Keuze</strong> </td><td>" . $choice . "</td></tr>";
+    $message .= "<tr><td><strong>Datum</strong> </td><td>" . $date . "</td></tr>";
+    $message .= "<tr><td><strong>Speelveld</strong> </td><td>" . $ground . "</td></tr>";
+    $message .= "<tr><td><strong>Tijd</strong> </td><td>" . $timeslot . "</td></tr>";
+    $message .= "<tr><td><strong>Aantal personen</strong> </td><td>" . $people . "</td></tr>";
+    $message .= "</table>";
+    $message .= "</body></html>";
 
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
