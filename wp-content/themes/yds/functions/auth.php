@@ -202,3 +202,18 @@ function redirect_to_custom_register() {
         exit;
     }
 }
+
+
+
+///////////////////////
+// Change login logo //
+///////////////////////
+
+function my_loginlogo() {
+    echo '<style type="text/css">
+      h1 a {
+        background-image: url(' . get_template_directory_uri() . '/dest/sporezo-logo-normal.svg) !important;
+      }
+    </style>';
+  }
+  add_action('login_head', 'my_loginlogo');
