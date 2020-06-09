@@ -155,7 +155,7 @@
                       <td width="600" valign="top" align="center" style="padding:0;Margin:0;"> 
                        <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFFFFF;border-radius:4px;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation"> 
                          <tr style="border-collapse:collapse;"> 
-                          <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"><h1 style="Margin:0;line-height:34px;mso-line-height-rule:exactly;font-family:oxygen, arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;color:#000000;">Uw reservatie is voltooid!</h1></td> 
+                          <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"><h1 style="Margin:0;line-height:34px;mso-line-height-rule:exactly;font-family:oxygen, arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;color:#000000;">Je reservatie is voltooid!</h1></td> 
                          </tr> 
                          <tr style="border-collapse:collapse;"> 
                           <td bgcolor="#ffffff" align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;font-size:0;"> 
@@ -190,15 +190,16 @@
                          </tr> 
                          <tr style="border-collapse:collapse;"> 
                           <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Allemaal gegevens sé</p></td></tr>';
+    $message .= '<tr style="border-collapse:collapse;"><td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;">';
     $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
     $message .= "<tr style='background: #eee;'><td><strong>Keuze</strong> </td><td>" . $choice . "</td></tr>";
     $message .= "<tr><td><strong>Datum</strong> </td><td>" . $date . "</td></tr>";
     $message .= "<tr><td><strong>Speelveld</strong> </td><td>" . $ground . "</td></tr>";
     $message .= "<tr><td><strong>Tijd</strong> </td><td>" . $timeslot . "</td></tr>";
     $message .= "<tr><td><strong>Aantal personen</strong> </td><td>" . $people . "</td></tr>";
-    $message .= "</table>";
+    $message .= "</table></td></tr>";
     $message .= '<tr style="border-collapse:collapse;"> 
-                          <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px;"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#2660C3;border-width:0px;display:inline-block;border-radius:2px;width:auto;"><a href="https://viewstripo.email/" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:oxygen, arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#2660C3;border-width:15px 30px;display:inline-block;background:#2660C3;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;"> Confirm Account</a></span></td> 
+                          <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px;"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#2660C3;border-width:0px;display:inline-block;border-radius:2px;width:auto;"><a href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/profiel" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:oxygen, arial, verdana, sans-serif;font-size:20px;color:#FFFFFF;border-style:solid;border-color:#2660C3;border-width:15px 30px;display:inline-block;background:#2660C3;border-radius:2px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">Bekijk jouw reservaties</a></span></td> 
                          </tr> 
                          <tr style="border-collapse:collapse;"> 
                           <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Cheers,</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">The Sporezo Team</p></td> 
