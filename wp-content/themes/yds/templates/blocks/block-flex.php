@@ -22,7 +22,14 @@ $amount = get_field('number_of_columns_flex');
                         <?php endif; ?>
 
                         <?php if($column['text_flex']): ?>
-                            <p class="m-0"><?= $column['text_flex']; ?></p>
+                            <?= $column['text_flex']; ?>
+                        <?php endif; ?>
+
+                        <?php if($column['cta_flex']): ?>
+                            <a href="<?= $column['cta_link_flex']["url"]; ?>" class="btn btn-link btn-link--primary">
+                                <?= $column['cta_link_flex']['title']; ?>
+                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                            </a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -43,7 +50,14 @@ $amount = get_field('number_of_columns_flex');
                         <?php endif; ?>
 
                         <?php if($column['text_flex']): ?>
-                            <p class=""><?= $column['text_flex']; ?></p>
+                            <?= $column['text_flex']; ?>
+                        <?php endif; ?>
+
+                        <?php if($column['cta_flex']): ?>
+                            <a href="<?= $column['cta_link_flex']["url"]; ?>" class="btn btn-link btn-link--primary mb-3">
+                                <?= $column['cta_link_flex']['title']; ?>
+                                <svg class="icon icon--arrow"><use xlink:href="#arrow-right" /></svg>
+                            </a>
                         <?php endif; ?>
                     </div>
                 </div>
