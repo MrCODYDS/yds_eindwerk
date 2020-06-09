@@ -17,7 +17,7 @@ $text = get_field('text_editor');
                         <?php endif; ?>
 
                         <?php if($text): ?>
-                            <p><?= $text; ?></p>
+                            <?= $text; ?>
                         <?php endif; ?>
                     </div>
                 </div>

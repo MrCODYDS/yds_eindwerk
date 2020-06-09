@@ -26,7 +26,7 @@ $repeater = get_field('repeater_numberlist');
                                 <?php endif; ?>
 
                                 <?php if($column['repeater_text_numberlist']): ?>
-                                    <p class="m-0"><?= $column['repeater_text_numberlist']; ?></p>
+                                    <div class="m-0"><?= $column['repeater_text_numberlist']; ?></div>
                                 <?php endif; ?>
                             </div>
                         </div>

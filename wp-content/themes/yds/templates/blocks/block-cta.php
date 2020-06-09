@@ -20,7 +20,7 @@ $cta_settings = get_field('cta_settings');
                         <?php endif; ?>
 
                         <?php if($text): ?>
-                            <p class="b-cta__content__text my-3"><?= $text; ?></p>
+                            <div class="b-cta__content__text my-3"><?= $text; ?></div>
                         <?php endif; ?>
                     </div>
 

@@ -25,7 +25,7 @@ $id = (get_field('redirect_id_textimage')) ? get_field('redirect_id_textimage') 
                         <?php endif; ?>
 
                         <?php if($text): ?>
-                            <p class="mt-3 mb-0"><?= $text; ?></p>
+                            <div class="mt-3 mb-0"><?= $text; ?></div>
                         <?php endif; ?>
 
                         <?php if($cta): ?>

@@ -26,4 +26,8 @@
   @include media-breakpoint-down(sm) {
     flex-direction: row;
   }
+
+  p {
+    margin: 0;
+  }
 }

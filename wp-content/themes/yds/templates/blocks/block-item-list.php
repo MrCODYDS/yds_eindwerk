@@ -22,7 +22,7 @@ $repeater = get_field('item_list_itemlist');
                         <?php endif; ?>
 
                         <?php if($text): ?>
-                            <p class="m-0"><?= $text; ?></p>
+                            <div class="m-0"><?= $text; ?></div>
                         <?php endif; ?>
                     </div>
                     <div class="col col-lg-6 col-xxl-5 offset-xxl-1">
