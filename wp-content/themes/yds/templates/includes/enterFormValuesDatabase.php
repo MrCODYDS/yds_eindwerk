@@ -16,19 +16,20 @@
     // Check which session is chosen and add length to database
     switch($session) {
         case 1:
-            $timeslot = $_POST['radioTimeslots'];
+            $value = $_POST['radioTimeslots'];
+            $timeslot = $value . ":00 - " . ($value+1) . ":00";
         break;
         case 2:
             $value = $_POST['radioTimeslots'];
-            $timeslot = $value . "," . ($value+1);
+            $timeslot = $value . ":00 - " . ($value+2) . ":00";
         break;
         case 3:
             $value = $_POST['radioTimeslots'];
-            $timeslot = $value . "," . ($value+1) . "," . ($value+2);
+            $timeslot = $value . ":00 - " . ($value+3) . ":00";
         break;
         case 4:
             $value = $_POST['radioTimeslots'];
-            $timeslot = $value . "," . ($value+1) . "," . ($value+2) . "," . ($value+3);
+            $timeslot = $value . ":00 - " . ($value+4) . ":00";
         break;
     }
 
@@ -302,7 +303,7 @@
         </html>'
     ;
 
-    
+
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
