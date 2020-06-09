@@ -8,4 +8,3 @@ include_once 'functions/images.php';
 include_once 'functions/database.php';
 include_once 'functions/auth.php';
 include_once 'functions/walker.php';
-include_once 'functions/mollie.php';
