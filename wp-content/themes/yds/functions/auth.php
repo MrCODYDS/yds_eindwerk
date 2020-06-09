@@ -205,9 +205,9 @@ function redirect_to_custom_register() {
 
 
 
-///////////////////////
-// Change login logo //
-///////////////////////
+////////////////////////////////////////
+// Change login logo and URL and text //
+////////////////////////////////////////
 
 function my_loginlogo() {
     echo '<style type="text/css">
@@ -215,5 +215,15 @@ function my_loginlogo() {
         background-image: url(' . get_template_directory_uri() . '/dest/sprites/sporezo-logo-small-normal.svg) !important;
       }
     </style>';
-  }
-  add_action('login_head', 'my_loginlogo');
+}
+add_action('login_head', 'my_loginlogo');
+
+function my_loginURL() {
+    return 'https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/';
+}
+add_filter('login_headerurl', 'my_loginURL');
+
+function my_loginURLtext() {
+    return 'Sporezo';
+}
+add_filter('login_headertitle', 'my_loginURLtext');
