@@ -211,9 +211,13 @@ function redirect_to_custom_register() {
 
 function my_loginlogo() {
     echo '<style type="text/css">
-      h1 a {
-        background-image: url(' . get_template_directory_uri() . '/dest/sprites/sporezo-logo-small-normal.svg) !important;
-      }
+        #login h1 a, .login h1 a {
+            background-image: url(' . get_template_directory_uri() . '/dest/sprites/sporezo-logo-normal.svg) !important;
+            width: 180px !important;
+            height: 60px !important;
+            background-size: 180px 60px !important;
+            background-repeat: no-repeat !important;
+        }
     </style>';
 }
 add_action('login_head', 'my_loginlogo');
