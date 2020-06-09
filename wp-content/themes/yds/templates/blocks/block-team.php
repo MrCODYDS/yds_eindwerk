@@ -28,7 +28,7 @@ $amount = get_field('number_of_columns_team');
                 <?php if($amount == '3'): ?><div class="b-team-content col-6 col-md-4"><?php endif; ?>
                 <?php if($amount == '4'): ?><div class="b-team-content col-6 col-md-6 col-lg-3"><?php endif; ?>
                     <div class="block-background h-100 py-4 py-md-5 px-3 px-md-4">
-                        <?= wp_get_attachment_image($column['repeater_image_team'], 'full', false, array("title" => get_the_title($column['repeater_image_team']), 'class' => 'img-fluid mb-3')); ?>
+                        <?= wp_get_attachment_image($column['repeater_image_team'], 'block-team', false, array("title" => get_the_title($column['repeater_image_team']), 'class' => 'img-fluid mb-3')); ?>
 
                         <?php if($column['repeater_title_team']): ?>
                             <h5 class="mb-2"><?= $column['repeater_title_team']; ?></h5>
