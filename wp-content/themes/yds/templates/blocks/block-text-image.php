@@ -7,10 +7,11 @@ $title = get_field('title_textimage');
 $text = get_field('text_textimage');
 $cta = get_field('cta_textimage');
 $cta_settings = get_field('cta_settings_textimage');
+$id = (get_field('redirect_id_textimage')) ? get_field('redirect_id_textimage') : '';
 
 ?>
 
-<section class="block b-text-image <?= $spacer_top; ?> <?= $spacer_bottom; ?>">
+<section class="block b-text-image <?= $spacer_top; ?> <?= $spacer_bottom; ?>" id="<?= $id ?>">
     <div class="container">
         <div class="row">
             <div class="col">
