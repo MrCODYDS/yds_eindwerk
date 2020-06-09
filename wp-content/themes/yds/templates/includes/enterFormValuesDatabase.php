@@ -49,8 +49,11 @@
     $message = '
         <html>
             <head>
-                <title style="color:#2660c3">Jouw reservatie</title>
-                </head>
+                <title>Jouw reservatie</title>
+                <style type="text/css">
+                    p {color:#2660c3;}
+                </style>
+            </head>
             <body>
                 <p>Je reservatie is voltooid. Jouw reservatiegegevens:</p>
                 <table>
