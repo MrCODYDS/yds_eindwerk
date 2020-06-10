@@ -53,12 +53,12 @@ document.querySelector('#reservation-form')
   .addEventListener('submit', (event) => {
     toggleReservationModal();
     
-  });
+});
 
 
 // Send data to enterFormValuesDatabase.php
 jQuery(document).ready(function ($) {
-  $('reservation-form').submit(function(event) {
+  $('#reservation-form').submit(function(event) {
     event.preventDefault();
     var post_url = $(this).attr("action"); //get form action url
     var request_method = $(this).attr("method"); //get form GET/POST method
@@ -66,12 +66,12 @@ jQuery(document).ready(function ($) {
     $.ajax({
       url : post_url,
       type: request_method,
-      data : form_data
-    }).done(function(response){ //
-      toggleConfirmModal();
-      alert(response);
+      data : form_data,
+      success: function(response) {
+        toggleConfirmModal();
+      }
     });
-  })
+  });
 });
 
 // Close reservation modal when clicked on cross

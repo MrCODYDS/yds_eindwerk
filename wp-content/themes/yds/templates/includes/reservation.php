@@ -191,7 +191,7 @@
                 <svg class="icon icon--confirm mb-4"><use xlink:href="#confirm" /></svg>
                 <h3 class="text-secondary mb-4">Gelukt!</h3>
                 <p class="px-sm-5 mb-4">Uw reservatie is bevestigd! We hebben een overzicht van uw reservatie naar uw email gestuurd.</p>
-                <a href="/user-reservations" class="btn btn-secondary mb-4">Bekijk reservaties</a>
+                <a href="/profiel" class="btn btn-secondary mb-4">Bekijk reservaties</a>
             </div>
         </div>
     </div>

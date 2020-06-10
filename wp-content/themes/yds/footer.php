@@ -20,7 +20,7 @@
                 </div>
                 <div class="c-footer-top__content col-sm-6 col-md-4 col-lg-3 mb-4">
                     <div>
-                        <h5>Praktische zaken</h5>
+                        <h5>Algemene info</h5>
                         <nav role="navigation" class="c-nav-footer">
                             <?php wp_nav_menu(array('container' => 'ul', 'menu_class' => false, 'theme_location' => 'footer_navigation')); ?>
                         </nav>
