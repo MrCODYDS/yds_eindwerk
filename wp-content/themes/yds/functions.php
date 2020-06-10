@@ -8,24 +8,5 @@ include_once 'functions/images.php';
 include_once 'functions/database.php';
 include_once 'functions/auth.php';
 include_once 'functions/walker.php';
-
-
-add_filter('wp_mail_content_type', function( $content_type ) {
-    return 'text/html';
-});
-
-/*Contact form 7 remove span*/
-
-add_filter('wpcf7_form_elements', function($content) {
-
-    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
-
-
-
-    $content = str_replace('<br />', '', $content);
-
-        
-
-    return $content;
-
-});
+include_once 'functions/contactform7.php';
+include_once 'functions/mail.php';
