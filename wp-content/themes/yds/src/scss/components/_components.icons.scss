@@ -34,4 +34,10 @@
         height: 30px;
         margin-bottom: 5px;
     }
+
+    &--primary {
+        width: 25px;
+        height: 25px;
+        fill: $primary;
+    }
 }

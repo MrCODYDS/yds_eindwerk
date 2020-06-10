@@ -2,17 +2,37 @@
  * Block: Form
  * Styling CF7 contactform
  */
-
-
-.wpcf7 {
-
-    & label {
-        width: 100%;
+  
+.contact-box {
+    .user-box {
+        position: relative;
     }
 
-    &-text,
-    &-textarea {
+    .user-box input,
+    .user-box textarea {
         width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #000;
+        outline: none;
+        background: transparent;
     }
 
+    textarea {
+        height: 120px;
+        min-height: 120px;
+    }
+}
+
+.b-form__info {
+    a {
+        color: $dark;
+        transition: color .3s ease-in-out;
+        &:hover {
+            color: $secondary;
+        }
+    }
 }

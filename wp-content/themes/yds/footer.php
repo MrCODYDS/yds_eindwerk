@@ -7,7 +7,7 @@
                         <div class="d-flex justify-content-center justify-content-sm-start">
                             <a href="<?php echo get_home_url(); ?>" class="c-logo-footer mb-2" title="Home">Sporezo</a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                        <p>Bel je sportmaatje, kies een datum en uur, reserveer een veld en je ontspanning kan starten.</p>
                     </div>
                 </div>
                 <div class="c-footer-top__content col-sm-6 col-md-4 col-lg-3 mb-4">
