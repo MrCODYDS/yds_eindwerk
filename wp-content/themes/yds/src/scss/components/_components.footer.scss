@@ -3,6 +3,17 @@
  * Styling footer
  */
 
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @include media-breakpoint-down(md){
+        position: relative;
+    }
+}
+
 .c-footer {
     transition: all .3s ease-in-out;
 

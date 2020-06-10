@@ -29,7 +29,7 @@
                 <div class="c-footer-top__content col-md-4 col-lg-3">
                     <div>
                         <h5>Contact</h5>
-                        <ul class="flex-column justify-content-center align-items-start text-center text-sm-left">
+                        <ul class="d-flex flex-column justify-content-center align-items-center align-items-sm-start">
                             <li class="d-flex mb-1">
                                 <div class="">
                                     <p>Straatnaam 25</br>2000 Antwerpen</p>
