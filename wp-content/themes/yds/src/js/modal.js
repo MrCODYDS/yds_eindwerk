@@ -40,6 +40,7 @@ const toggleReservationModal = () => {
 const toggleConfirmModal = () => {
   document.querySelector('.modal--confirmation')
     .classList.toggle('modal--hidden');
+  document.querySelector('body').classList.toggle('modal-open');
 }
 
 // Get all buttons with class show-modal & add function on click

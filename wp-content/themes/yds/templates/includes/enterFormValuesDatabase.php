@@ -333,6 +333,4 @@
 
     // send email
     wp_mail($to, $subject, $message, $headers);
-
-    //header('Location: /reserveren');
 ?>
