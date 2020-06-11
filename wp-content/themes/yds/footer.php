@@ -32,7 +32,7 @@
                         <ul class="d-flex flex-column justify-content-center align-items-center align-items-sm-start">
                             <li class="d-flex mb-1">
                                 <div class="">
-                                    <p>Straatnaam 25</br>2000 Antwerpen</p>
+                                    <p>Rozengaard 87</br>2550 Kontich</p>
                                 </div>
                             </li>
                             <li class="d-flex mb-1">
@@ -42,7 +42,7 @@
                             </li>
                             <li class="d-flex">
                                 <div>
-                                    <a href="">+32 1 23 45 56 78</a>
+                                    <a href="">+32 4 96 34 42 57</a>
                                 </div>
                             </li>
                         </ul>
@@ -55,7 +55,7 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-left">
-                    <p>Copyright 2020 - Lorem ipsum dolor sit amet consectetur</p>
+                    <p>Copyright <?php echo date("Y"); ?> - Sporezo</p>
                     <nav role="navigation" class="c-nav-legal">
                         <?php wp_nav_menu(array('container' => 'ul', 'menu_class' => false, 'theme_location' => 'legal_navigation')); ?>
                     </nav>
