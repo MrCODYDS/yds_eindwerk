@@ -32,7 +32,7 @@
 
                             <input type="radio" id="radioLorem" name="radioChoices" value="Privé training">
                             <label for="radioLorem" class="col text-center btn btn-primary">
-                                <svg class="icon"><use xlink:href="#badminton" /></svg>
+                                <svg class="icon"><use xlink:href="#racket" /></svg>
                                 <p class="mb-0 mt-2 mt-md-4">Privé training</p>
                             </label>
                         </div>
