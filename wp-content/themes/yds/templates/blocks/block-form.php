@@ -27,7 +27,7 @@ $text = get_field('text_form');
                         <h4 class="text-primary mb-3 mb-md-5">Contactgegevens</h4>
                         <div class="d-flex align-items-center text-dark mb-3">
                             <svg class="icon icon--primary mr-4"><use xlink:href="#pin" /></svg>
-                            <p class="m-0">Straatnaam 25<br>2000 Antwerpen</p>
+                            <p class="m-0">Rozengaard 87<br>2550 Kontich</p>
                         </div>
                         <div class="d-flex mb-3">
                             <svg class="icon icon--primary mr-4"><use xlink:href="#mail" /></svg>
