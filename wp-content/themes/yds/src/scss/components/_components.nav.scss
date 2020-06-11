@@ -22,8 +22,8 @@
 
 .c-nav-main {
     li {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        position: relative;
+        padding: .5rem 1.5rem 0 1.5rem;
 
         &:last-child {
             padding-right: 0;
@@ -31,21 +31,22 @@
     }
 
     a {
+        display: block;
         color: $white;
         transition: all .3s ease-in-out;
         border-bottom: 2px solid transparent;
+        //padding-bottom: .2rem;
     }
 
     .current-menu-item {
-        a {
+        & > a {
             color: $white;
-            padding-bottom: .2rem;
             border-bottom: 2px solid $white;
         }
     }
 
     a:hover {
-        padding-bottom: .2rem;
+        //padding-bottom: .2rem;
         border-bottom: 2px solid $white;
     }
 
@@ -136,20 +137,16 @@
         }
 
         li:not(.btn-contact) a:hover {
-            padding-bottom: .2rem;
             border-bottom: 2px solid $secondary;
         }
 
         .current-menu-item {
             a {
                 color: $secondary;
-                padding-bottom: .2rem;
                 border-bottom: 2px solid $secondary;
             }
         }
 
-        
-    
         .btn-contact {
             a {
                 border-color: $primary !important;
@@ -170,6 +167,24 @@
                 border-color: $secondary !important;
             }
         }
+    
+        ul li .sub-menu li {
+            padding: 0 !important;
+        }
+    
+        .sub-menu li a {
+            border: none;
+            padding: .5rem 1.5rem !important;
+        }
+    
+        .sub-menu li a:hover {
+            border: none !important;
+        }
+    
+        .sub-menu .current-menu-item a {
+            border: none !important;
+            color: $secondary;
+        }
     }
 
     .c-nav-sub {
@@ -185,5 +200,64 @@
         a {
             color: $primary;
         }
+    }
+}
+
+.c-nav-main {
+
+    ul li .sub-menu {
+        padding-top: .5rem;
+        min-width: 100%;
+        background: $body-color;
+        border-radius: 0 0 8px 8px;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+
+    ul li:hover .sub-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    ul li .sub-menu li {
+        display: block;
+        width: 100%;
+        transition: all .3s ease-in-out;
+        padding: 0 !important;
+    }
+
+    .sub-menu li a {
+        text-align: left;
+        border: none;
+        padding: .5rem 1.5rem !important;
+    }
+
+    .sub-menu li:hover {
+        background-color: $dark;
+    }
+
+    .sub-menu li:hover a {
+        color: $secondary;
+    }
+
+    .sub-menu li a:hover {
+        border: none !important;
+    }
+
+    .sub-menu .current-menu-item {
+        background-color: $dark;
+    }
+
+    .sub-menu .current-menu-item a {
+        border: none !important;
+        color: $secondary;
+    }
+
+    .menu-item-has-children:hover {
+        background-color: #30323d;
+        border-radius: 8px 8px 0 0;
     }
 }
