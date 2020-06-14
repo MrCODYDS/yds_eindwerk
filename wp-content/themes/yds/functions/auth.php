@@ -183,8 +183,11 @@ function redirect_to_custom_register() {
         if ( is_user_logged_in() ) {
             $this->redirect_logged_in_user();
         } else {
-            wp_redirect( home_url( 'register' ) );
+            wp_redirect( home_url( '/register/' ) );
         }
         exit;
     }
 }
+
+
+
