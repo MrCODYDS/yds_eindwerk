@@ -29,7 +29,7 @@ if ( isset($_GET['invalid_email']) ==  true ) {
                             <div class="px-5">
                                 <h5 class="text-white mb-4">Welkom!</h5>
                                 <div class="text-white">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
+                                    <p>Ben je nieuw hier? Geen probleem! Maak snel een account aan en reserveer jouw sportveld. Geniet snel van de sportieve ervaringen!</p>
                                 </div>
                             </div>
                         </div>

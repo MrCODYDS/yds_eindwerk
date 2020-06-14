@@ -57,7 +57,7 @@ if ( $login === "failed" ) {
                             <div class="px-5">
                                 <h5 class="text-white mb-4">Welkom terug!</h5>
                                 <div class="text-white">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
+                                    <p>Geweldig dat je terugbent. Reserveer snel jouw sportveld en geniet van sportieve ervaringen!</p>
                                 </div>
                             </div>
                         </div>

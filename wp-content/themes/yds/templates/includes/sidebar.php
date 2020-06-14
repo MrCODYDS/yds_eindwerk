@@ -12,6 +12,9 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
+            <div class="c-sidebar__logo w-100 d-flex align-items-center justify-content-end">
+                <a href="<?php echo get_home_url(); ?>" class="c-logo-sidebar" title="Home">Sporezo</a>
+            </div>
         </div>
         <div class="mt-5 px-4 pb-2">
             <?php if(is_user_logged_in()): ?>
