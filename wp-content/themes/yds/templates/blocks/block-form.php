@@ -35,7 +35,7 @@ $text = get_field('text_form');
                         </div>
                         <div class="d-flex mb-3">
                             <svg class="icon icon--primary mr-4"><use xlink:href="#phone" /></svg>
-                            <a href="">+32 1 23 45 56 78</a>
+                            <a href="tel:0032496344257">+32 1 23 45 56 78</a>
                         </div>
                     </div>
                 </div>
