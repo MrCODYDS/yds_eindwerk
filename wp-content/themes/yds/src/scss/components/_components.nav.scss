@@ -104,7 +104,24 @@
 }
 
 .c-nav-legal {
+    ul {
+        padding: 0;
+        justify-content: flex-end;
+
+        @include media-breakpoint-down(sm) {
+            justify-content: space-around;
+        }
+    }
+
     li {
+        &:last-child {
+            padding-left: 2rem;
+
+            @include media-breakpoint-down(sm) {
+               padding-left: 0;
+            }
+        }
+
         a {
             transition: all .3s ease-in-out;
             color: $white;

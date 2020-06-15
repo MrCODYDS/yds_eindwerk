@@ -55,8 +55,8 @@
         <div class="container">
             <div class="row">
                 <div class="col d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-left">
-                    <p>Copyright <?php echo date("Y"); ?> - Sporezo</p>
-                    <nav role="navigation" class="c-nav-legal">
+                    <p class="w-100">Copyright <?php echo date("Y"); ?> - Sporezo</p>
+                    <nav role="navigation" class="c-nav-legal w-100">
                         <?php wp_nav_menu(array('container' => 'ul', 'menu_class' => false, 'theme_location' => 'legal_navigation')); ?>
                     </nav>
                 </div>

@@ -11,7 +11,7 @@ $text = get_field('text_editor');
         <div class="row">
             <div class="col">
                 <div class="block-background d-flex flex-wrap py-4 py-md-5 px-3 px-md-4">
-                    <div class="<?= $text_align; ?>">
+                    <div class="<?= $text_align; ?> w-100">
                         <?php if($title): ?>
                             <h3><?= $title; ?></h3>
                         <?php endif; ?>
