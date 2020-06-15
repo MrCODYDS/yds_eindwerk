@@ -7,33 +7,33 @@
             </div>
             <div class="modal__content">
                 <form action="/wp-content/themes/yds/templates/includes/enterFormValuesDatabase.php" class="reservation-form" id="reservation-form" method="POST">
-                    <h3 class="text-center mb-3">Reservatie</h3>
+                    <h3 class="text-center mb-3"><?php _e('Reservatie', 'Sporezo') ?></h3>
                     <div class="form-choices form-part">
                         <hr class="hr-text mt-0 mb-md-3" data-content="Waarvoor wil je reserveren?">
                         <div class="row form-choices__radio">
                             <input type="radio" id="radioSpelers" name="radioChoices" value="Individuele spelers">
                             <label for="radioSpelers" class="col text-center btn btn-primary mr-3 mr-md-5 mb-3 mb-md-5">
                                 <svg class="icon"><use xlink:href="#badminton" /></svg>
-                                <p class="mb-0 mt-2 mt-md-4">Individuele spelers</p>
+                                <p class="mb-0 mt-2 mt-md-4"><?php _e('Individuele Spelers', 'Sporezo') ?></p>
                             </label>
 
                             <input type="radio" id="radioClubs" name="radioChoices" value="Clubs">
                             <label for="radioClubs" class="col text-center btn btn-primary mb-3 mb-md-5">
                                 <svg class="icon"><use xlink:href="#medal" /></svg>
-                                <p class="mb-0 mt-2 mt-md-4">Clubs</p>
+                                <p class="mb-0 mt-2 mt-md-4"><?php _e('Clubs', 'Sporezo') ?></p>
                             </label>
 
                             <div class="w-100"></div>
                             <input type="radio" id="radioBedrijf" name="radioChoices" value="Bedrijven">
                             <label for="radioBedrijf" class="col text-center btn btn-primary mr-3 mr-md-5">
                                 <svg class="icon"><use xlink:href="#business" /></svg>
-                                <p class="mb-0 mt-2 mt-md-4">Bedrijven</p>
+                                <p class="mb-0 mt-2 mt-md-4"><?php _e('Bedrijven', 'Sporezo') ?></p>
                             </label> 
 
                             <input type="radio" id="radioLorem" name="radioChoices" value="Privé training">
                             <label for="radioLorem" class="col text-center btn btn-primary">
                                 <svg class="icon"><use xlink:href="#racket" /></svg>
-                                <p class="mb-0 mt-2 mt-md-4">Privé training</p>
+                                <p class="mb-0 mt-2 mt-md-4"><?php _e('Privé Training', 'Sporezo') ?></p>
                             </label>
                         </div>
 
