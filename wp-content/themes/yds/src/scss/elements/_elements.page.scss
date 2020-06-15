@@ -140,8 +140,8 @@ body.page-template-template-forgotpassword:before {
 
 #scrollTop {
     display: none;
-    width: 60px;
-    line-height: 60px;
+    width: 50px;
+    line-height: 50px;
     border-radius: 50px;
     overflow: hidden;
     z-index: 999;
@@ -157,12 +157,8 @@ body.page-template-template-forgotpassword:before {
     svg {
         fill: $white;
     }
-
-    @include media-breakpoint-down(sm) {
-        width: 55px;
-        line-height: 55px;
-    }
 }
+
 #scrollTop:hover {
     background-color: rgba($secondary, 1);
 }
