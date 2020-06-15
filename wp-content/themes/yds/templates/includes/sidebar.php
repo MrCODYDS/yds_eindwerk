@@ -22,13 +22,13 @@
                     <h3 class="text-white c-sidebar__user"><?php echo "Hi, " . $current_user->user_login ?></h3>
                 </div>
                 <div class="d-flex justify-content-between">
-                <a href="/profiel" class="btn btn-outline btn-outline--mobile">Reservations</a>
-                    <a href="<?php echo wp_logout_url() ?>" class="btn btn-outline btn-outline--mobile">Log out</a>
+                <a href="/profiel" class="btn btn-outline btn-outline--mobile"><?php _e('Reservaties', 'Sporezo') ?></a>
+                    <a href="<?php echo wp_logout_url() ?>" class="btn btn-outline btn-outline--mobile"><?php _e('Log out', 'Sporezo') ?></a>
                 </div>
             <?php else: ?>
                 <div class="d-flex justify-content-between">
-                    <a href="/login" class="btn btn-outline btn-outline--mobile">Log In</a>
-                    <a href="/register" class="btn btn-outline btn-outline--mobile">Sign Up</a>
+                    <a href="/login" class="btn btn-outline btn-outline--mobile"><?php _e('Log In', 'Sporezo') ?></a>
+                    <a href="/register" class="btn btn-outline btn-outline--mobile"><?php _e('Sign Up', 'Sporezo') ?></a>
                 </div>
             <?php endif; ?>
         </div>
