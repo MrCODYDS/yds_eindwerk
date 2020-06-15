@@ -134,12 +134,12 @@ add_filter( 'retrieve_password_message', 'replace_retrieve_password_message', 10
  */
 function replace_retrieve_password_message( $message, $key, $user_login, $user_data ) {
     // Create new message
-    $msg  = __( 'Hello!') . "\r\n\r\n";
-    $msg .= sprintf( __( 'You asked us to reset your password for your account with username "%s".'), $user_login ) . "\r\n\r\n";
-    $msg .= __( "If this was a mistake, or you did't ask for a password reset, just ignore this email and nothing will happen.") . "\r\n\r\n";
-    $msg .= __( 'To reset your password, visit the following address:') . "\r\n\r\n";
+    $msg  = __( 'Hello!', 'Sporezo') . "\r\n\r\n";
+    $msg .= sprintf( __( 'You asked us to reset your password for your account with username "%s".', 'Sporezo'), $user_login ) . "\r\n\r\n";
+    $msg .= __( "If this was a mistake, or you did't ask for a password reset, just ignore this email and nothing will happen.", 'Sporezo') . "\r\n\r\n";
+    $msg .= __( 'To reset your password, visit the following address:', 'Sporezo') . "\r\n\r\n";
     $msg .= site_url( "wp-login.php?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . "\r\n\r\n";
-    $msg .= __( 'Thanks!') . "\r\n";
+    $msg .= __( 'Thanks!', 'Sporezo') . "\r\n";
  
     return $msg;
 }
