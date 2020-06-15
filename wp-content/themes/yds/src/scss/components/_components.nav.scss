@@ -264,4 +264,12 @@
         background-color: #30323d;
         border-radius: 8px 8px 0 0;
     }
+
+    .menu-item-has-children > a:after {
+        color: #fff;
+        content: ' ▼';
+        font-size: 10px;
+        vertical-align: 1px;
+        padding-left: 5px;
+    }
 }

@@ -69,6 +69,10 @@
       fill: $secondary;
     }
   }
+
+  .menu-item-has-children .dropdown-toggle::after {
+    content: none;
+  }
 }
   
 .c-logo-sidebar {
