@@ -17,18 +17,18 @@
     .is-open-sidebar & {
       transform: translateX(0);
     }
+}
 
-    &__spacing {
-      border-color: $secondary;
-    }
+.c-sidebar__spacing {
+  border-color: $secondary;
+}
 
-    &__close {
-      min-height: 40px;
-    }
+.c-sidebar__close {
+  min-height: 40px;
+}
 
-    &__user {
-      overflow-wrap: break-word;
-    }
+.c-sidebar__user {
+  overflow-wrap: break-word;
 }
  
 .c-sidebar-inner {

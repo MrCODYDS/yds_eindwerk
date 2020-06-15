@@ -5,17 +5,17 @@
 
 .c-hero {
     position: relative;
-  
-  .c-hero__content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: $white;
-  }
-  
-  .c-hero__title {
-    color: inherit;
-  }
+}
+
+.c-hero__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: $white;
+}
+
+.c-hero__title {
+  color: inherit;
 }
 
 

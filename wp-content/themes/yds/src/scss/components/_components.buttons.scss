@@ -10,13 +10,15 @@
 
 .btn-primary,
 .btn-white {
-    &:hover {
+    &:hover,
+    &:focus {
         box-shadow: 2px 4px 10px #4d5061;
     }
 }
 
 .btn-primary {
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $dark-secondary !important;
         border-color: $dark-secondary !important;
     }
@@ -33,7 +35,8 @@
         transition: fill 0.15s;
     }
     
-    &:hover {
+    &:hover,
+    &:focus {
         box-shadow: none;
         color: $secondary;
 
@@ -45,7 +48,8 @@
     &--primary {
         color: $primary;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $secondary;
         }
     }
@@ -111,7 +115,8 @@
 }
 
 .is-fixed .btn-link {
-    &:hover {
+    &:hover,
+    &:focus {
         color: $secondary;
     }
 }

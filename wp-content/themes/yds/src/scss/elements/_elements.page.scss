@@ -159,6 +159,7 @@ body.page-template-template-forgotpassword:before {
     }
 }
 
-#scrollTop:hover {
+#scrollTop:hover,
+#scrollTop:focus {
     background-color: rgba($secondary, 1);
 }

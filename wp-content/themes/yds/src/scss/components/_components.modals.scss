@@ -10,29 +10,29 @@
     height: 100%;
     width: 100%;
     display: flex;
-    
-    &--hidden {
-        display: none;
-    }
+}   
+.modal--hidden {
+    display: none;
+}
 
-    &__header {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: -2rem;
-        cursor: pointer;
+.modal__header {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -2rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal__dialog {
+    background-color: $white;
+    border-radius: 10px;
+
+    input[type=text] {
         width: 100%;
-    }
-
-    &__dialog {
-        background-color: $white;
-        border-radius: 10px;
-
-        input[type=text] {
-            width: 100%;
-            padding: .5rem;
-        }
+        padding: .5rem;
     }
 }
+
 
 .modal--reservation {
     justify-content: center;

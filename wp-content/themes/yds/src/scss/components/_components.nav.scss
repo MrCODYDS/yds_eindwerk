@@ -56,7 +56,8 @@
             @extend .btn-outline;
             @extend .btn-outline--white;
     
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: $white;
                 color: $primary;
             }
@@ -91,7 +92,8 @@
             padding: 0;
         }
 
-        &:hover a {
+        &:hover a,
+        &:focus a {
             color: $secondary;
         }
     }
@@ -108,7 +110,8 @@
             color: $white;
         }
 
-        &:hover a {
+        &:hover a,
+        &:focus a {
             color: $secondary;
         }
     }
@@ -156,7 +159,8 @@
                 border-color: $primary !important;
                 color: $primary !important;
         
-                &:hover {
+                &:hover,
+                &:focus  {
                     background-color: $secondary !important;
                     color: $white !important;
                     border-color: $secondary !important;
@@ -220,7 +224,8 @@
         left: 0;
     }
 
-    ul li:hover .sub-menu{
+    ul li:hover .sub-menu,
+    ul li:focus .sub-menu {
         display: flex;
         flex-direction: column;
         align-items: self-start;
@@ -239,15 +244,18 @@
         padding: .5rem 1.5rem !important;
     }
 
-    .sub-menu li:hover {
+    .sub-menu li:hover,
+    .sub-menu li:focus {
         background-color: $dark;
     }
 
-    .sub-menu li:hover a {
+    .sub-menu li:hover a,
+    .sub-menu li:focus a {
         color: $secondary;
     }
 
-    .sub-menu li a:hover {
+    .sub-menu li a:hover,
+    .sub-menu li a:focus {
         border: none !important;
     }
 
@@ -260,7 +268,8 @@
         color: $secondary;
     }
 
-    .menu-item-has-children:hover {
+    .menu-item-has-children:hover,
+    .menu-item-has-children:focus {
         background-color: #30323d;
         border-radius: 8px 8px 0 0;
     }

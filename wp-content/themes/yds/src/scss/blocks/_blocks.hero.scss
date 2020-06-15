@@ -5,15 +5,15 @@
 
 .b-hero {
     position: relative;
-  
-  .b-hero__content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: $white;
-  }
-  
-  .b-hero__title {
-    color: inherit;
-  }
+}
+
+.b-hero__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: $white;
+}
+
+.b-hero__title {
+  color: inherit;
 }
