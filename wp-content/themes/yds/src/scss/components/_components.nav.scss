@@ -58,7 +58,7 @@
     
             &:hover {
                 background-color: $white;
-                color: $secondary;
+                color: $primary;
             }
         }
     }
@@ -66,7 +66,7 @@
     .btn-contact.current-menu-item {
         a {
             background-color: $white;
-            color: $secondary;
+            color: $primary;
         }
     }
 }
