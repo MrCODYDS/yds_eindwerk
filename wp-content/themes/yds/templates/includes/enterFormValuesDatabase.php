@@ -306,7 +306,7 @@
                         <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
                         <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
                             <tr style="border-collapse:collapse;"> 
-                            <td class="es-infoblock made_with" align="center" style="padding:0;Margin:0;line-height:0px;font-size:0px;color:#CCCCCC;"><a target="_blank" href="https://sporezo.be/" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:12px;text-decoration:underline;color:#CCCCCC;"><img src="https://https://sporezo.be/wp-content/uploads/2020/06/sporezo-logo-normal.png" alt width="125" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></a></td> 
+                            <td class="es-infoblock made_with" align="center" style="padding:0;Margin:0;line-height:0px;font-size:0px;color:#CCCCCC;"><a target="_blank" href="https://sporezo.be/" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:12px;text-decoration:underline;color:#CCCCCC;"><img src="https://sporezo.be/wp-content/uploads/2020/06/sporezo-logo-normal.png" alt width="125" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></a></td> 
                             </tr> 
                         </table></td> 
                         </tr> 
