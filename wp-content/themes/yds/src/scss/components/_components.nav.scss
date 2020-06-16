@@ -210,6 +210,10 @@
             border: none !important;
             color: $secondary;
         }
+
+        .menu-item-has-children > a:after {
+            color: $primary;
+        }
     }
 
     .c-nav-sub {
@@ -292,7 +296,7 @@
     }
 
     .menu-item-has-children > a:after {
-        color: #fff;
+        color: $white;
         content: ' ▼';
         font-size: 10px;
         vertical-align: 1px;
