@@ -328,8 +328,8 @@
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: Sporezo <info.sporezo@gmail.com
-    >' . "\r\n";
+    $headers .= 'From: Sporezo <wordpress@sporezo.be>' . "\r\n";
+    $headers .= 'Reply-To: Sporezo <info.sporezo@gmail.com>' . "\r\n";
 
     // send email
     wp_mail($to, $subject, $message, $headers);
