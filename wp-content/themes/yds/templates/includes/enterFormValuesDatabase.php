@@ -174,7 +174,7 @@
                         <td width="600" valign="top" align="center" style="padding:0;Margin:0;"> 
                         <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFFFFF;border-radius:4px;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation"> 
                             <tr style="border-collapse:collapse;"> 
-                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"><h1 style="Margin:0;line-height:34px;mso-line-height-rule:exactly;font-family:oxygen, arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;color:#000000;">Uw reservatie is voltooid!</h1></td> 
+                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"><h1 style="Margin:0;line-height:34px;mso-line-height-rule:exactly;font-family:oxygen, arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;color:#000000;">Je reservatie is voltooid!</h1></td> 
                             </tr> 
                             <tr style="border-collapse:collapse;"> 
                             <td bgcolor="#ffffff" align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;font-size:0;"> 

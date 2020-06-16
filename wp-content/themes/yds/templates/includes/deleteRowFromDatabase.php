@@ -101,7 +101,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
                         <td width="580" valign="top" align="center" style="padding:0;Margin:0;"> 
                         <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
                             <tr style="border-collapse:collapse;"> 
-                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0px;"><a href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:14px;text-decoration:underline;color:#111111;"><img src="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/wp-content/uploads/2020/06/sporezo-logo-white.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="250"></a></td> 
+                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0px;"><a href="https://sporezo.be/" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:14px;text-decoration:underline;color:#111111;"><img src="https://sporezo.be/wp-content/uploads/2020/06/sporezo-logo-white.png" alt style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="250"></a></td> 
                             </tr> 
                         </table></td> 
                         </tr> 
@@ -121,7 +121,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
                         <td width="600" valign="top" align="center" style="padding:0;Margin:0;"> 
                         <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFFFFF;border-radius:4px;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff" role="presentation"> 
                             <tr style="border-collapse:collapse;"> 
-                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"><h1 style="Margin:0;line-height:34px;mso-line-height-rule:exactly;font-family:oxygen, arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;color:#000000;">Uw reservatie is geannuleerd.</h1></td> 
+                            <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px;"><h1 style="Margin:0;line-height:34px;mso-line-height-rule:exactly;font-family:oxygen, arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;color:#000000;">Je reservatie is geannuleerd.</h1></td> 
                             </tr> 
                             <tr style="border-collapse:collapse;"> 
                             <td bgcolor="#ffffff" align="center" style="Margin:0;padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;font-size:0;"> 
@@ -155,7 +155,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
                             <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Bekijk al jouw reservaties via onderstaande knop!</p></td> 
                             </tr> 
                             <tr style="border-collapse:collapse;"> 
-                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px;"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#2660C3;border-width:0px;display:inline-block;border-radius:2px;width:auto;"><a href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/profiel" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, arial, verdana, sans-serif;font-size:18px;color:#FFFFFF;border-style:solid;border-color:#2660C3;border-width:15px 30px;display:inline-block;background:#2660C3;border-radius:8px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">Mijn reservaties</a></span></td> 
+                            <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:35px;padding-bottom:35px;"><span class="es-button-border" style="border-style:solid;border-color:#FFA73B;background:#2660C3;border-width:0px;display:inline-block;border-radius:2px;width:auto;"><a href="https://sporezo.be/profiel" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, arial, verdana, sans-serif;font-size:18px;color:#FFFFFF;border-style:solid;border-color:#2660C3;border-width:15px 30px;display:inline-block;background:#2660C3;border-radius:8px;font-weight:normal;font-style:normal;line-height:24px;width:auto;text-align:center;">Mijn reservaties</a></span></td> 
                             </tr> 
                             <tr style="border-collapse:collapse;"> 
                             <td class="es-m-txt-l" align="left" style="Margin:0;padding-top:20px;padding-left:30px;padding-right:30px;padding-bottom:40px;"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Cheers,</p><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:raleway, oxygen, arial, sans-serif;line-height:27px;color:#666666;">Het Sporezo Team</p></td> 
@@ -206,7 +206,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
                             <td align="center" style="padding:0;Margin:0;padding-top:30px;padding-left:30px;padding-right:30px;"><h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:oxygen, arial, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#FFFFFF;">Vragen?</h3></td> 
                             </tr> 
                             <tr style="border-collapse:collapse;"> 
-                            <td esdev-links-color="#ffa73b" align="center" style="padding:0;Margin:0;padding-bottom:30px;padding-left:30px;padding-right:30px;"><a target="_blank" href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/contact" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:18px;text-decoration:underline;color:#FFFFFF;">Neem contact met ons op</a></td> 
+                            <td esdev-links-color="#ffa73b" align="center" style="padding:0;Margin:0;padding-bottom:30px;padding-left:30px;padding-right:30px;"><a target="_blank" href="https://sporezo.be/contact" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:18px;text-decoration:underline;color:#FFFFFF;">Neem contact met ons op</a></td> 
                             </tr> 
                         </table></td> 
                         </tr> 
@@ -226,7 +226,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
                         <td width="560" valign="top" align="center" style="padding:0;Margin:0;"> 
                         <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"> 
                             <tr style="border-collapse:collapse;"> 
-                            <td class="es-infoblock made_with" align="center" style="padding:0;Margin:0;line-height:0px;font-size:0px;color:#CCCCCC;"><a target="_blank" href="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:12px;text-decoration:underline;color:#CCCCCC;"><img src="https://eindwerk.1819.yarne.desmet.nxtmediatech.eu/wp-content/uploads/2020/06/sporezo-logo-normal.png" alt width="125" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></a></td> 
+                            <td class="es-infoblock made_with" align="center" style="padding:0;Margin:0;line-height:0px;font-size:0px;color:#CCCCCC;"><a target="_blank" href="https://sporezo.be/" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:raleway, oxygen, arial, sans-serif;font-size:12px;text-decoration:underline;color:#CCCCCC;"><img src="https://sporezo.be/wp-content/uploads/2020/06/sporezo-logo-normal.png" alt width="125" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;"></a></td> 
                             </tr> 
                         </table></td> 
                         </tr> 
@@ -247,8 +247,9 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$headers .= 'From: Sporezo <info.sporezo@gmail.com
->' . "\r\n";
+$headers .= 'From: Sporezo <wordpress@sporezo.be>' . "\r\n";
+$headers .= 'Reply-To: Sporezo <info.sporezo@gmail.com>' . "\r\n";
+
 
 // send email
 wp_mail($to, $subject, $message, $headers);
