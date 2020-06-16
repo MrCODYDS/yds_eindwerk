@@ -189,5 +189,23 @@ function redirect_to_custom_register() {
     }
 }
 
+/////////////////////////////////////////////////////////
+// Redirect to login after registration or show errors //
+/////////////////////////////////////////////////////////
+function verify_registration( $sanitized_user_login, $user_email, $errors ){
 
+	$register_page  = home_url( '/register/' );
 
+	if ( $errors->get_error_code() ) {
+		foreach ( $errors->errors as $e => $m ){
+			$register_page = add_query_arg( $e, 'true', $register_page );
+		}
+		wp_redirect( $register_page );
+	}
+}
+add_action( 'register_post', 'verify_registration', 99, 3);
+
+function redirect_after_registration() {
+	return home_url( '/login/' );
+}
+add_filter( 'registration_redirect', 'redirect_after_registration' );
