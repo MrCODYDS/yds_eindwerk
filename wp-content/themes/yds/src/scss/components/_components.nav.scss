@@ -169,6 +169,9 @@
                 color: $secondary;
                 border-bottom: 2px solid $secondary;
             }
+            a:after {
+                color: $primary;
+            }
         }
 
         .btn-contact {
