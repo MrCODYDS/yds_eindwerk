@@ -163,3 +163,7 @@ body.page-template-template-forgotpassword:before {
 #scrollTop:focus {
     background-color: rgba($secondary, 1);
 }
+
+.grecaptcha-badge {
+    opacity: 0;
+ }
