@@ -70,11 +70,12 @@ foreach ($exploded as $single) {
 }
 
 // Hide hours that are in the past
-$nowHour = date('H');
-for ($i = 0; $i <= $nowHour; $i++) {
-    unset($hours[$i]);
+if ($dateValue == date("Y-m-d")) {
+    $nowHour = date('H');
+    for ($i = 0; $i <= $nowHour; $i++) {
+        unset($hours[$i]);
+    }
 }
-
 
 // Show all timeslots in modal
 if (!empty($hours)) {
