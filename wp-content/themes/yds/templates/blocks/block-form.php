@@ -20,7 +20,7 @@ $text = get_field('text_form');
                         <?php if($text): ?>
                             <div class="contact-box">
                                 <?= $text; ?>
-                                <p class="m-0">Deze site wordt beschermd door reCAPTCHA en de <a href="https://policies.google.com/privacy">Privacy Policy</a> en <a href="https://policies.google.com/terms">Terms of Service</a> van Google zijn van toepassing.</p>
+                                <p class="m-0">Deze site wordt beschermd door reCAPTCHA en de <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a> en <a target="_blank" href="https://policies.google.com/terms">Terms of Service</a> van Google zijn van toepassing.</p>
                             </div>
                         <?php endif; ?>
                     </div>
